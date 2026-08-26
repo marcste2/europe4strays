@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Cheerful Kindergarten Blog · Europe4strays</title>
+<meta name="description" content="Build diary of the Cheerful Kindergarten (Grădinița veselă), the dog lodge Mirela Mistodinis and Europe4strays are building in Vrancea, Romania.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="scrollcraft.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  :root {
+    --sc-canvas:     #E9F7F9;
+    --sc-surface:    #D8EFF2;
+    --sc-ink:        #0C3247;
+    --sc-ink-soft:   #45707E;
+    --sc-accent:     #D6231B;
+    --sc-accent-ink: #FFF7F2;
+    --sc-font-display: "Fraunces", Georgia, serif;
+    --sc-font-text:    "Archivo", system-ui, sans-serif;
+  }
+  body { background: var(--sc-canvas); }
+
+  .blog-hero { padding: clamp(3rem, 8vh, 6rem) var(--sc-gutter) clamp(2rem, 5vh, 3.5rem); border-bottom: 1px solid var(--sc-hairline-strong); }
+  .blog-hero .inner, .post-list { max-width: 46rem; margin: 0 auto; }
+  .blog-kicker { font: 500 var(--sc-t-xs)/1.4 var(--sc-font-text); letter-spacing: .16em; text-transform: uppercase; color: var(--sc-accent); margin: 0 0 .8rem; }
+  .blog-title { font-family: var(--sc-font-display); font-size: clamp(2.2rem, 5.5vw, 3.8rem); line-height: 1.02; font-weight: 560; margin: 0 0 1rem; text-wrap: balance; }
+  .blog-intro { font-size: var(--sc-t-lg); line-height: 1.55; color: var(--sc-ink-soft); max-width: 40rem; margin: 0; text-wrap: pretty; }
+
+  .post-list { padding: clamp(2.5rem, 6vh, 4.5rem) var(--sc-gutter) 4rem; }
+  .post { border-top: 1px solid var(--sc-hairline-strong); padding: clamp(2rem, 5vh, 3.2rem) 0; }
+  .post:first-child { border-top: 0; padding-top: 0; }
+  .post-date { font: 500 var(--sc-t-xs)/1 var(--sc-font-text); letter-spacing: .14em; text-transform: uppercase; color: var(--sc-ink-soft); margin: 0 0 .7rem; }
+  .post h2 { font-family: var(--sc-font-display); font-size: clamp(1.6rem, 3.4vw, 2.4rem); line-height: 1.08; font-weight: 560; margin: 0 0 1rem; text-wrap: balance; }
+  .post p { font-size: var(--sc-t-base); line-height: 1.65; margin: 0 0 1em; max-width: 62ch; }
+  .post a { color: var(--sc-accent); text-underline-offset: .22em; }
+  .post ul { margin: 0 0 1em; padding-left: 1.2em; line-height: 1.65; }
+  .post-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: .7rem; margin: 1.4rem 0 .4rem; }
+  .post-gallery img { width: 100%; height: 10rem; object-fit: cover; border-radius: var(--sc-r-sm); display: block; }
+  .post-gallery .wide { grid-column: span 2; }
+  .post-gallery .wide img { height: 14rem; }
+  .post .video-frame { margin: 1.4rem 0 .4rem; }
+
+  .blog-foot { border-top: 1px solid var(--sc-hairline-strong); padding: 2rem var(--sc-gutter) 3rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; max-width: 46rem; margin: 0 auto; }
+  .blog-foot .small { font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
+  .blog-foot .row { display: flex; align-items: center; gap: .9rem; }
+
+  ::selection { background: var(--sc-accent); color: var(--sc-accent-ink); }
+  a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid var(--sc-accent); outline-offset: 3px; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="head-brand" href="index.html">
+    <img class="head-logo" src="assets/logo.webp" width="500" height="500" alt="">
+    <span>Europe4strays</span>
+  </a>
+  <nav class="head-nav" aria-label="Main">
+    <a href="index.html" data-i18n="navHome">Home</a>
+    <a href="index.html#help" data-i18n="navHelp">How to help</a>
+    <a href="blog.html" aria-current="page">The Cheerful Kindergarten Blog</a>
+    <a href="index.html#faces" data-i18n="navGallery">The Dogs gallery</a>
+  </nav>
+  <div class="head-actions">
+    <a class="soc" href="https://www.instagram.com/EUROPE4STRAYSBYMIRELA" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a class="soc" href="https://www.facebook.com/share/17VeQ2vmzp/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 4.5H16V1.8c-.5-.07-1.4-.15-2.4-.15-2.4 0-4 1.5-4 4.2V8.5H7v3h2.6V22h3.1V11.5h2.6l.4-3h-3V6.3c0-.9.24-1.8 1.8-1.8z"/></svg>
+    </a>
+    <label for="langSel" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Language</label>
+    <select id="langSel">
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+      <option value="it">IT</option>
+      <option value="ro">RO</option>
+    </select>
+    <a class="donate-btn" href="https://www.paypal.me/europe4straysRO" target="_blank" rel="noopener" data-i18n="donate">Donate now</a>
+  </div>
+</header>
+
+<main>
+  <section class="blog-hero">
+    <div class="inner">
+      <p class="blog-kicker">Grădinița veselă · <span data-i18n="blogKicker">build diary</span></p>
+      <h1 class="blog-title">The Cheerful Kindergarten Blog</h1>
+      <p class="blog-intro" data-i18n="blogIntro">Spring 2020: Mirela and Dragoș start building the lodge on their own land, and write down how it goes. These are their original posts.</p>
+    </div>
+  </section>
+
+  <div class="post-list">
+
+    <article class="post" id="concrete-base">
+      <p class="post-date">May 26, 2020</p>
+      <h2>Concrete base for the second building, done!</h2>
+      <p>My dear friends, concrete base done for the second building. I am so happy I am able to show you what my projects are, to offer a better and safe future to the stray dogs of my town.</p>
+      <p>Please share far and wide and donate, any amount is important... there is no small amount to donate. Thank you very much and much love from all of us. ❤️</p>
+      <p><a href="https://www.paypal.me/europe4straysRO" target="_blank" rel="noopener">PayPal.me/europe4straysRO</a></p>
+      <div class="post-gallery">
+        <div class="wide"><img src="assets/blog/dfe03501.webp" alt="A worker levels the freshly poured concrete base." loading="lazy"></div>
+        <div><img src="assets/blog/badd5669.webp" alt="The chute of the concrete mixer pouring." loading="lazy"></div>
+        <div><img src="assets/blog/15b2fd06.webp" alt="The concrete mixer truck arriving on the field." loading="lazy"></div>
+        <div><img src="assets/blog/87410932.webp" alt="Steel reinforcement laid out for the slab." loading="lazy"></div>
+        <div><img src="assets/blog/36130717.webp" alt="Smoothing the wet concrete surface." loading="lazy"></div>
+        <div><img src="assets/blog/c584e1b1.webp" alt="Raking the concrete level." loading="lazy"></div>
+        <div><img src="assets/blog/119587c7.webp" alt="Two helpers carrying a formwork panel." loading="lazy"></div>
+        <div><img src="assets/blog/c3702d66.webp" alt="The finished slab being cured with water." loading="lazy"></div>
+        <div><img src="assets/blog/f859443f.webp" alt="Setting the timber formwork." loading="lazy"></div>
+        <div><img src="assets/blog/b5d84128.webp" alt="The mixer truck crossing the plot." loading="lazy"></div>
+      </div>
+    </article>
+
+    <article class="post" id="second-building">
+      <p class="post-date">May 18, 2020</p>
+      <h2>Second building at the Cheerful Kindergarten</h2>
+      <p>Second building... work in progress. 💪</p>
+      <p>Please share far and wide and donate, any amount is important. Thank you very much and much love from all of us: <a href="https://www.paypal.me/europe4straysRO" target="_blank" rel="noopener">PayPal.me/europe4straysRO</a></p>
+      <div class="post-gallery">
+        <div class="wide"><img src="assets/blog/92b7da6a.webp" alt="A small excavator preparing the ground beside the formwork." loading="lazy"></div>
+        <div><img src="assets/blog/0dbc1c48.webp" alt="Checking the formwork for the second building." loading="lazy"></div>
+        <div><img src="assets/blog/1b6921ce.webp" alt="Bringing timber with the wheelbarrow." loading="lazy"></div>
+      </div>
+    </article>
+
+    <article class="post" id="architectural-project">
+      <p class="post-date">Apr 29, 2020</p>
+      <h2>The architectural project</h2>
+      <p>Let us know if you like it, and if you please, donate. Funds are much needed to achieve the project: <a href="https://www.paypal.me/europe4straysRO" target="_blank" rel="noopener">PayPal.me/europe4straysRO</a></p>
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/LClrerinW6w" title="Casa Cheerful Kindergarten architectural project presentation" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </article>
+
+    <article class="post" id="update-casa">
+      <p class="post-date">Apr 25, 2020</p>
+      <h2>Update: Casa Cheerful Kindergarten</h2>
+      <p>An update concerning the progress of the Casa Cheerful Kindergarten works: Fabio Lehnert and Luis Ke (Hunderunde) have kindly donated 9050 EUR to Mirela. Thanks to this amount Mirela could fence the whole plot and construct the main building with the exterior walls and the roof.</p>
+      <p>Last week we launched our crowdfunding campaign to raise 20000 EUR, to help Mirela finish the works and move in to the new shelter before the winter comes. Still to be funded for the main building:</p>
+      <ul>
+        <li>Air ventilation and filtration system</li>
+        <li>Air conditioning and heating</li>
+        <li>Smoke detectors and emergency lighting</li>
+        <li>Flooring, ceiling and interior walls</li>
+        <li>Kitchen and wash facilities</li>
+        <li>Medical facility (second building)</li>
+        <li>Food and supply storage</li>
+      </ul>
+      <p>A huge thank you from the deep of our hearts to our German friends from Hunderunde, and to all our donors who have already contributed and will contribute to reach the goal for Mirela. ❤️</p>
+      <div class="post-gallery">
+        <div class="wide"><img src="assets/blog/5492f727.webp" alt="Mirela with the visitors from Hunderunde and a group of her dogs." loading="lazy"></div>
+        <div class="wide"><img src="assets/blog/68119059.webp" alt="Working on the roof of the main building." loading="lazy"></div>
+      </div>
+    </article>
+
+    <article class="post" id="crowdfunding">
+      <p class="post-date">Apr 18, 2020</p>
+      <h2>We are building the future for them... are you with us?</h2>
+      <p>Check out our crowdfunding video campaign on YouTube. 😉</p>
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/jg95E1hi67Y" title="Casa Cheerful Kindergarten crowdfunding campaign by Europe4strays" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </article>
+
+    <article class="post" id="works-in-progress">
+      <p class="post-date">Apr 13, 2020</p>
+      <h2>Works in progress</h2>
+      <p>We are back on track, even if we never stopped working for the doggies. We wanted to show you how the Kindergarten is progressing... as you can see, pretty good. 😃 We still have a long way ahead, but if finances allow us to keep going with the works, we expect to move in this summer.</p>
+      <p>To help Mirela make this dream happen you can donate through PayPal: <a href="https://www.paypal.me/europe4straysRO" target="_blank" rel="noopener">PayPal.me/europe4straysRO</a></p>
+      <div class="post-gallery">
+        <div class="wide"><img src="assets/blog/1c362312.webp" alt="The main building standing in the field, roof finished." loading="lazy"></div>
+        <div><img src="assets/blog/2dab5c16.webp" alt="The building with its multicolored roof panels." loading="lazy"></div>
+        <div><img src="assets/blog/0fc45355.webp" alt="Inside the main building, roof structure visible." loading="lazy"></div>
+        <div class="wide"><img src="assets/blog/d025f887.webp" alt="The corner of the building with materials under a tarp." loading="lazy"></div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="blog-foot">
+  <span class="small">Europe4strays · <span data-i18n="footNgo">registered Romanian NGO</span> · Bizighești, Vrancea</span>
+  <span class="row">
+    <a class="soc" href="https://www.instagram.com/EUROPE4STRAYSBYMIRELA" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a class="soc" href="https://www.facebook.com/share/17VeQ2vmzp/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 4.5H16V1.8c-.5-.07-1.4-.15-2.4-.15-2.4 0-4 1.5-4 4.2V8.5H7v3h2.6V22h3.1V11.5h2.6l.4-3h-3V6.3c0-.9.24-1.8 1.8-1.8z"/></svg>
+    </a>
+    <a class="donate-btn" href="https://www.paypal.me/europe4straysRO" target="_blank" rel="noopener" data-i18n="donate">Donate now</a>
+  </span>
+</footer>
+
+<script src="i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+lab/
+node_modules/
+photos/
+package.json
+package-lock.json
+BRIEF.md

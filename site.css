@@ -1,0 +1,31 @@
+/* Europe4strays shared chrome: masthead, donate, socials, card row.
+   Used by index.html and blog.html. Tokens come from scrollcraft.css. */
+
+.site-head { position: relative; z-index: var(--sc-z-chrome); display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.4rem); flex-wrap: wrap; padding: .9rem var(--sc-gutter); background: var(--sc-canvas); border-bottom: 1px solid var(--sc-hairline-strong); }
+.head-brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--sc-ink); text-decoration: none; font: 560 1.15rem/1 var(--sc-font-display); }
+.head-brand .head-logo { width: 2.4rem; height: 2.4rem; border-radius: 8px; display: block; box-shadow: 0 1px 3px rgba(12, 50, 71, .25); }
+.head-nav { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.7rem); margin-right: auto; overflow-x: auto; scrollbar-width: none; }
+.head-nav::-webkit-scrollbar { display: none; }
+.head-nav a { color: var(--sc-ink-soft); text-decoration: none; font: 500 var(--sc-t-sm)/1.2 var(--sc-font-text); letter-spacing: .04em; white-space: nowrap; transition: color 140ms var(--sc-ease-out); }
+.head-nav a:hover { color: var(--sc-accent); }
+.head-nav a[aria-current="page"] { color: var(--sc-ink); font-weight: 600; }
+.head-actions { display: flex; align-items: center; gap: .8rem; }
+.soc { display: inline-flex; color: var(--sc-ink-soft); transition: color 140ms var(--sc-ease-out); }
+.soc:hover { color: var(--sc-accent); }
+.soc svg { width: 1.15rem; height: 1.15rem; }
+.donate-btn { display: inline-block; font: 600 var(--sc-t-sm)/1 var(--sc-font-text); color: var(--sc-accent-ink); background: var(--sc-accent); border-radius: var(--sc-r-sm); padding: .62rem .95rem; text-decoration: none; white-space: nowrap; transition: transform 140ms var(--sc-ease-out); }
+.donate-btn:hover { transform: translateY(-1px); }
+.donate-btn:active { transform: translateY(1px) scale(.97); }
+.site-head select { font: 500 var(--sc-t-xs)/1 var(--sc-font-text); color: var(--sc-ink-soft); background: transparent; border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-sm); padding: .38rem .45rem; cursor: pointer; }
+@media (max-width: 900px) {
+  .head-nav { order: 3; flex-basis: 100%; }
+}
+
+/* video embed frame */
+.video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: var(--sc-r-md); overflow: hidden; box-shadow: var(--sc-e2); }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* donate row with payment marks */
+.donate-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.card-row { display: inline-flex; align-items: center; gap: .4rem; }
+.card-row svg { height: 1.5rem; width: auto; display: block; border-radius: 3px; box-shadow: 0 1px 2px rgba(36, 28, 18, .18); }

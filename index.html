@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Europe4strays · Romanian dog rescue by Mirela Mistodinis</title>
+<meta name="description" content="Europe4strays is a volunteer-run Romanian NGO caring for 260 rescued stray dogs in Vrancea County. Read the story, then help: donate, volunteer, adopt.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="scrollcraft.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  :root {
+    --sc-canvas:     #E9F7F9;
+    --sc-surface:    #D8EFF2;
+    --sc-ink:        #0C3247;
+    --sc-ink-soft:   #45707E;
+    --sc-accent:     #D6231B;
+    --sc-accent-ink: #FFF7F2;
+    --sc-font-display: "Fraunces", Georgia, serif;
+    --sc-font-text:    "Archivo", system-ui, sans-serif;
+    --paper-2: #DDF2F5;
+    --dark-canvas: #082C40;
+    --dark-ink: #E9F6F9;
+  }
+
+  /* ============ chapters: hard grounds, no drift ============ */
+  .chapter { position: relative; }
+  .ch-light   { background: var(--sc-canvas); }
+  .ch-light-2 { background: var(--paper-2); }
+  .ch-dark {
+    background: var(--dark-canvas);
+    --sc-ink: var(--dark-ink);
+    --sc-ink-soft: #92B9C7;
+    --sc-surface: #10405A;
+    --sc-accent: #FF6A57;
+    color: var(--sc-ink);
+  }
+
+  /* ============ title page ============ */
+  .title-page { min-height: 84vh; display: grid; align-content: center; }
+  .title-page .sc-wrap { max-width: 62rem; }
+  .title-kicker { font: 500 var(--sc-t-sm)/1.4 var(--sc-font-text); letter-spacing: .14em; text-transform: uppercase; color: var(--sc-ink-soft); margin: 0; }
+  .title-name { font-family: var(--sc-font-display); font-size: clamp(3.1rem, 9.5vw, 7.6rem); line-height: .96; letter-spacing: var(--sc-track-tight); font-weight: 560; }
+  .title-name em { font-style: italic; font-weight: 480; color: var(--sc-accent); }
+  .title-deck { max-width: 34rem; font-size: var(--sc-t-lg); line-height: 1.5; }
+  .title-page .donate-row { position: relative; margin: .4rem 0 .2rem; }
+  .title-page .donate-row .donate-btn { font-size: var(--sc-t-base); padding: .78rem 1.35rem; }
+  .title-place { color: var(--sc-ink-soft); font-size: var(--sc-t-sm); letter-spacing: .06em; }
+
+  /* ============ chapter openers ============ */
+  .ch-open { border-top: 1px solid var(--sc-hairline-strong); padding-top: var(--sc-4); }
+  .ch-num { font: 500 var(--sc-t-xs)/1 var(--sc-font-text); letter-spacing: .18em; color: var(--sc-accent); }
+  .ch-title { font-family: var(--sc-font-display); font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.04; font-weight: 560; text-wrap: balance; }
+
+  /* ============ ch1 scrub plate ============ */
+  .plate-stage { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 100%; }
+  .plate-frame { grid-column: 2; position: relative; aspect-ratio: 853 / 1223; width: min(61vh, 88vw); border-radius: var(--sc-r-md); overflow: hidden; box-shadow: var(--sc-e3); }
+  .plate-frame video, .plate-frame .sc-stage__poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .plate-side { grid-column: 3; align-self: end; padding: 0 var(--sc-gutter) var(--sc-7); max-width: 21rem; }
+  .plate-side .sc-label { color: var(--sc-ink-soft); }
+  @media (max-width: 860px) {
+    .plate-stage { grid-template-columns: 1fr; }
+    .plate-frame { grid-column: 1; max-height: 74vh; margin: 0 auto; width: min(92vw, 60vh); }
+    .plate-side { grid-column: 1; padding: var(--sc-3) var(--sc-gutter) var(--sc-5); max-width: none; }
+  }
+
+  /* ============ ch2 rail ============ */
+  .faces-rail { display: flex; align-items: stretch; gap: clamp(1.2rem, 3vw, 2.6rem); padding: 0 var(--sc-gutter); height: 100%; align-items: center; }
+  .face { flex: 0 0 auto; width: clamp(17rem, 26vw, 24rem); }
+  .face figure { margin: 0; border-radius: var(--sc-r-md); overflow: hidden; box-shadow: var(--sc-e2); }
+  .face img { width: 100%; height: clamp(20rem, 54vh, 30rem); object-fit: cover; display: block; }
+  .face--tall img { height: clamp(24rem, 62vh, 34rem); }
+  .face figcaption { padding: var(--sc-3) 0 0; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); line-height: 1.5; }
+  .face figcaption strong { color: var(--sc-ink); font-weight: 600; }
+  .rail-lead { flex: 0 0 auto; width: clamp(16rem, 24vw, 22rem); align-self: center; }
+  .rail-note { flex: 0 0 auto; width: clamp(15rem, 22vw, 20rem); align-self: center; padding-right: var(--sc-gutter); }
+  .rail-note a { color: var(--sc-accent); }
+
+  /* ============ ch3 editorial prose ============ */
+  .prose-spread { display: grid; grid-template-columns: minmax(0, 58ch) minmax(16rem, 1fr); gap: clamp(1.5rem, 3.5vw, 3.5rem); align-items: start; }
+  .prose p { margin: 0 0 1.1em; }
+  .prose .lede::first-letter { font-family: var(--sc-font-display); font-size: 3.4em; float: left; line-height: .82; padding: .06em .12em 0 0; color: var(--sc-accent); font-weight: 560; }
+  .fig-col figure { margin: 0 0 var(--sc-4); }
+  .fig-col img { width: 100%; height: auto; max-height: 22rem; object-fit: cover; border-radius: var(--sc-r-sm); display: block; }
+  .fig-col figcaption { padding-top: var(--sc-2); font-size: var(--sc-t-xs); letter-spacing: .04em; color: var(--sc-ink-soft); }
+  .big-figure { display: flex; align-items: baseline; gap: 1rem; margin: var(--sc-5) 0 0; }
+  .big-figure .sc-nums { font-family: var(--sc-font-display); font-size: clamp(4rem, 9vw, 7rem); font-weight: 560; line-height: 1; color: var(--sc-accent); }
+  .big-figure .cap { max-width: 16rem; color: var(--sc-ink-soft); font-size: var(--sc-t-sm); line-height: 1.45; }
+  @media (max-width: 860px) { .prose-spread { grid-template-columns: 1fr; } }
+
+  /* silence screen */
+  .silence { min-height: 44vh; display: grid; place-content: center; text-align: center; }
+  .silence p { font-family: var(--sc-font-display); font-style: italic; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--sc-ink-soft); }
+
+  /* peak plate */
+  .peak-stage { overflow: hidden; }
+  .peak-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(calc(1.07 - 0.07 * var(--sc-p, 0))); will-change: transform; }
+  .peak-caption { border-top: 1px solid var(--sc-hairline-strong); }
+  .peak-caption .sc-wrap { display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; padding-top: var(--sc-4); padding-bottom: var(--sc-6); }
+  .peak-caption p { margin: 0; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); max-width: 46ch; }
+
+  /* ============ ch4 lodge ============ */
+  .lodge-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+  .wipe-frame { position: relative; aspect-ratio: 3 / 4; border-radius: var(--sc-r-md); overflow: hidden; box-shadow: var(--sc-e3); }
+  .wipe-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .wipe-tags { display: flex; justify-content: space-between; padding-top: var(--sc-2); font-size: var(--sc-t-xs); color: var(--sc-ink-soft); letter-spacing: .05em; }
+  .lodge-list { margin: var(--sc-5) 0 0; padding: 0; list-style: none; }
+  .lodge-list li { display: flex; gap: .8rem; padding: .55rem 0; border-top: 1px solid var(--sc-hairline); font-size: var(--sc-t-base); }
+  .lodge-list li::before { content: ""; flex: 0 0 .55rem; height: .55rem; margin-top: .45rem; border-radius: 50%; background: var(--sc-accent); }
+  .lodge-list .todo::before { background: transparent; border: 1.5px solid var(--sc-accent); }
+  @media (max-width: 860px) { .lodge-grid { grid-template-columns: 1fr; } }
+
+  /* ============ ch5 help ============ */
+  .help-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+  .help-block { border-top: 1px solid var(--sc-hairline-strong); padding-top: var(--sc-4); margin-bottom: var(--sc-7); }
+  .help-block h3 { font-family: var(--sc-font-display); font-size: var(--sc-t-xl); font-weight: 560; margin: 0 0 .5rem; }
+  .help-block p { margin: 0 0 .8rem; color: var(--sc-ink-soft); max-width: 52ch; }
+  .iban { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin-top: var(--sc-3); }
+  .iban code { font-family: var(--sc-font-mono); font-size: var(--sc-t-base); letter-spacing: .04em; background: var(--sc-surface); border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-sm); padding: .55rem .8rem; }
+  .copy-btn { font: 600 var(--sc-t-sm)/1 var(--sc-font-text); color: var(--sc-accent-ink); background: var(--sc-accent); border: 0; border-radius: var(--sc-r-sm); padding: .68rem 1rem; cursor: pointer; transition: transform 140ms var(--sc-ease-out), background 140ms var(--sc-ease-out); }
+  .copy-btn:hover { transform: translateY(-1px); }
+  .copy-btn:active { transform: translateY(1px) scale(.97); }
+  .adopt-aside { background: var(--sc-surface); border-radius: var(--sc-r-md); padding: var(--sc-5); box-shadow: var(--sc-e1); }
+  .adopt-aside h3 { font-family: var(--sc-font-display); font-size: var(--sc-t-xl); font-weight: 560; margin: 0 0 .6rem; }
+  .adopt-aside p { color: var(--sc-ink-soft); margin: 0 0 .8rem; }
+  .adopt-aside a { color: var(--sc-accent); font-weight: 600; }
+  @media (max-width: 860px) { .help-grid { grid-template-columns: 1fr; } }
+
+  /* ============ colophon ============ */
+  .colophon-stage { display: grid; place-content: center; text-align: center; gap: var(--sc-4); padding: 0 var(--sc-gutter); }
+  .colophon-heart { width: min(46vh, 78vw); margin: 0 auto; }
+  .colophon-heart svg { width: 100%; height: auto; display: block; }
+  .colophon-line { font-family: var(--sc-font-display); font-size: clamp(1.5rem, 3.4vw, 2.4rem); font-weight: 520; max-width: 26ch; margin: 0 auto; text-wrap: balance; }
+  .colophon-cta { font-size: var(--sc-t-lg); }
+  .colophon-cta a { color: var(--sc-accent); text-underline-offset: .3em; }
+  .colophon-actions { display: flex; align-items: center; justify-content: center; gap: 1.1rem; }
+  .colophon-actions .donate-btn { font-size: var(--sc-t-base); padding: .75rem 1.3rem; }
+  .colophon-actions .soc svg { width: 1.35rem; height: 1.35rem; }
+  .colophon-foot { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--sc-4) var(--sc-gutter); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
+
+  /* ============ folio chrome ============ */
+  .folio { position: fixed; left: var(--sc-gutter); top: 1rem; z-index: var(--sc-z-chrome); font: 500 var(--sc-t-xs)/1 var(--sc-font-text); letter-spacing: .1em; color: var(--sc-ink-soft); background: rgba(233, 247, 249, .85); border-radius: var(--sc-r-sm); padding: .45rem .7rem .45rem .55rem; backdrop-filter: blur(4px); opacity: 1; transition: opacity 220ms var(--sc-ease-out); }
+  .folio[hidden] { display: block; opacity: 0; pointer-events: none; }
+  .on-dark .folio { background: rgba(8, 44, 64, .75); color: #92B9C7; }
+  .folio .folio-ch { text-transform: uppercase; }
+  @media (max-width: 860px) { .folio { display: none; } }
+
+  /* ============ signature: the paw trace ============ */
+  .paw-rail { position: fixed; top: 0; right: 0; bottom: 0; width: 3.4rem; z-index: var(--sc-z-chrome); pointer-events: none; }
+  .paw-rail svg { width: 100%; height: 100%; }
+  .paw-rail .paw { opacity: 0; transition: opacity 300ms var(--sc-ease-out); fill: var(--sc-ink-soft); }
+  .paw-rail .paw.lit { opacity: .8; }
+  .paw-rail .tally { font: 600 .62rem/1 var(--sc-font-text); letter-spacing: .08em; fill: var(--sc-ink-soft); }
+  .on-dark .paw-rail .paw { fill: #92B9C7; }
+  .on-dark .paw-rail .tally { fill: #92B9C7; }
+  @media (max-width: 1000px) { .paw-rail { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .paw-rail { display: none; } }
+
+  .heart-paws .hp { fill: var(--sc-accent); opacity: 0; transition: opacity 300ms var(--sc-ease-out); }
+  .heart-paws .hp.lit { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .heart-paws .hp { opacity: 1; } }
+
+  html { scrollbar-color: var(--sc-accent) var(--sc-canvas); }
+  ::selection { background: var(--sc-accent); color: var(--sc-accent-ink); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--sc-accent); outline-offset: 3px; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<span data-sc-progress></span>
+<div class="sc-grain" aria-hidden="true"></div>
+
+<!-- masthead -->
+<header class="site-head">
+  <a class="head-brand" href="#top">
+    <img class="head-logo" src="assets/logo.webp" width="500" height="500" alt="">
+    <span>Europe4strays</span>
+  </a>
+  <nav class="head-nav" aria-label="Main">
+    <a href="#top" data-i18n="navHome">Home</a>
+    <a href="#help" data-i18n="navHelp">How to help</a>
+    <a href="blog.html">The Cheerful Kindergarten Blog</a>
+    <a href="#faces" data-i18n="navGallery">The Dogs gallery</a>
+  </nav>
+  <div class="head-actions">
+    <a class="soc" href="https://www.instagram.com/EUROPE4STRAYSBYMIRELA" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a class="soc" href="https://www.facebook.com/share/17VeQ2vmzp/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 4.5H16V1.8c-.5-.07-1.4-.15-2.4-.15-2.4 0-4 1.5-4 4.2V8.5H7v3h2.6V22h3.1V11.5h2.6l.4-3h-3V6.3c0-.9.24-1.8 1.8-1.8z"/></svg>
+    </a>
+    <label for="langSel" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Language</label>
+    <select id="langSel">
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+      <option value="it">IT</option>
+      <option value="ro">RO</option>
+    </select>
+    <a class="donate-btn" href="https://www.paypal.me/europe4straysRO" target="_blank" rel="noopener" data-i18n="donate">Donate now</a>
+  </div>
+</header>
+
+<!-- folio: chapter marker -->
+<div class="folio" id="folio" hidden>
+  <span class="folio-ch" id="folioCh" aria-live="polite"></span>
+</div>
+
+<!-- signature: 260 paws, one per dog -->
+<div class="paw-rail" aria-hidden="true"><svg id="pawRail" preserveAspectRatio="none"></svg></div>
+
+<main id="top">
+
+  <!-- TITLE PAGE -->
+  <section class="chapter ch-light" data-chapter="" data-chapter-key="ch0">
+    <div class="title-page">
+      <div class="sc-wrap sc-stack" data-sc-in data-sc-stagger="80">
+        <p class="title-kicker" data-i18n="kicker">A Romanian dog rescue, run by one woman</p>
+        <h1 class="title-name">Europe<em>4</em>strays</h1>
+        <p class="title-deck sc-body" data-i18n="deck">Building a better future for the stray dogs of Vrancea County: one rescue, one sterilization, one adoption at a time.</p>
+        <div class="donate-row">
+          <a class="donate-btn donate-btn--lg" href="https://www.paypal.me/europe4straysRO" target="_blank" rel="noopener" data-i18n="donate">Donate now</a>
+          <span class="card-row" aria-hidden="true">
+            <svg viewBox="0 0 34 22"><rect width="34" height="22" rx="3" fill="#fff"/><text x="17" y="15" text-anchor="middle" font-family="Archivo, sans-serif" font-size="8.2" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text></svg>
+            <svg viewBox="0 0 34 22"><rect width="34" height="22" rx="3" fill="#fff"/><circle cx="14" cy="11" r="6.4" fill="#EB001B"/><circle cx="20" cy="11" r="6.4" fill="#F79E1B" fill-opacity=".9"/></svg>
+            <svg viewBox="0 0 34 22"><rect width="34" height="22" rx="3" fill="#2E77BC"/><text x="17" y="14.4" text-anchor="middle" font-family="Archivo, sans-serif" font-size="7" font-weight="700" fill="#fff">AMEX</text></svg>
+            <svg viewBox="0 0 34 22"><rect width="34" height="22" rx="3" fill="#fff"/><text x="14" y="14.4" text-anchor="middle" font-family="Archivo, sans-serif" font-size="6" font-weight="700" fill="#231F20">DISC</text><circle cx="26" cy="11" r="4" fill="#F76E20"/></svg>
+            <svg viewBox="0 0 34 22"><rect width="34" height="22" rx="3" fill="#fff"/><text x="17" y="14.6" text-anchor="middle" font-family="Archivo, sans-serif" font-size="7.4" font-weight="700" font-style="italic" fill="#003087">Pay<tspan fill="#009CDE">Pal</tspan></text></svg>
+          </span>
+          <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Visa, Mastercard, American Express, Discover, PayPal</span>
+        </div>
+        <p class="title-place">Movilița · Vrancea · Romania · <span data-i18n="since">since 2015</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 1: THE DOGS (the one scrub) -->
+  <section class="chapter ch-light-2" data-chapter-key="ch1">
+    <div class="sc-section ch-open" style="padding-bottom: var(--sc-6);">
+      <div class="sc-wrap sc-stack" data-sc-in data-sc-stagger="60">
+        <p class="ch-num" data-i18n="ch1num">Chapter one</p>
+        <h2 class="ch-title" data-i18n="ch1title">The dogs come to meet you</h2>
+        <p class="sc-body" style="max-width: var(--sc-measure); color: var(--sc-ink-soft);" data-i18n="ch1lede">Every morning at the yard begins the same way: a pack of survivors walking toward whoever opens the gate. Scroll slowly. They are in no hurry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter ch-light-2" data-sc-act="scrub" data-sc-span="2.4" data-sc-dwell="0.34" data-chapter-key="ch1">
+    <div data-sc-stage>
+      <div class="plate-stage">
+        <div class="plate-frame">
+          <img class="sc-stage__poster" src="assets/ch1-poster.webp" width="853" height="1223" alt="A pack of rescued dogs walking toward the camera across the shelter yard, colorful dog houses behind them.">
+          <video data-sc-scrub data-sc-src="assets/ch1.mp4" data-sc-src-mobile="assets/ch1-m.mp4" muted playsinline></video>
+        </div>
+        <div class="plate-side" data-sc-cue="0.2 0.9">
+          <p class="sc-label" data-i18n="ch1cap">The yard at feeding time. Not one of them was born in safety.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 2: THEIR FACES (pan rail) -->
+  <section class="chapter ch-light" id="faces" data-sc-act="pan" data-sc-span="4.2" data-chapter-key="ch2">
+    <div data-sc-stage>
+      <div class="faces-rail" data-sc-pan="0.06">
+        <div class="rail-lead sc-stack">
+          <p class="ch-num" data-i18n="ch2num">Chapter two</p>
+          <h2 class="ch-title" data-i18n="ch2title">Their faces</h2>
+          <p class="sc-body" style="color: var(--sc-ink-soft);" data-i18n="ch2lede">Two hundred and sixty is a number. These are not.</p>
+        </div>
+        <article class="face face--tall">
+          <figure>
+            <img src="assets/ch2-white.webp" width="1440" height="1152" alt="Close portrait of a white dog with one blue eye and a mud-flecked muzzle.">
+            <figcaption><strong data-i18n="f1a">One blue eye, one brown.</strong> <span data-i18n="f1b">Found on the streets of Vrancea.</span></figcaption>
+          </figure>
+        </article>
+        <article class="face">
+          <figure>
+            <img src="assets/ch2-bw.webp" width="1440" height="1152" alt="A black and white dog sitting beside a scruffy grey companion.">
+            <figcaption><strong data-i18n="f2a">Most arrive in pairs or packs.</strong> <span data-i18n="f2b">Company is how they survived.</span></figcaption>
+          </figure>
+        </article>
+        <article class="face face--tall">
+          <figure>
+            <img src="assets/ch2-pair.webp" width="1440" height="1152" alt="Two large dogs looking into the camera in front of the shelter building.">
+            <figcaption><strong data-i18n="f3a">The big ones wait longest.</strong> <span data-i18n="f3b">They are the gentlest of all.</span></figcaption>
+          </figure>
+        </article>
+        <article class="face">
+          <figure>
+            <img src="assets/ch2-pup-two.webp" width="690" height="664" alt="Two puppies sitting on river pebbles.">
+            <figcaption><strong data-i18n="f4a">Puppies arrive all year.</strong> <span data-i18n="f4b">Sterilization is the only thing that slows this.</span></figcaption>
+          </figure>
+        </article>
+        <div class="rail-note sc-stack">
+          <p class="sc-body"><span data-i18n="ch2note">Some of these dogs are ready to travel to a family in the EU.</span> <a href="#help" data-i18n="ch2link">How adoption works</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 3: MIRELA (dark, editorial prose + the peak) -->
+  <section class="chapter ch-dark" data-sc-act="flow" data-chapter-key="ch3">
+    <div class="sc-section ch-open">
+      <div class="sc-wrap">
+        <div class="sc-stack" data-sc-in data-sc-stagger="60" style="margin-bottom: var(--sc-7);">
+          <p class="ch-num" data-i18n="ch3num">Chapter three</p>
+          <h2 class="ch-title" data-i18n="ch3title">The woman who stayed</h2>
+        </div>
+        <div class="prose-spread">
+          <div class="prose sc-body" data-sc-in data-sc-stagger="40">
+            <p class="lede" data-i18n="ch3p1">Mirela Mistodinis spent half her life in Italy. In 2015 she came home to Movilița, her village in Vrancea County, and found the streets full of dogs nobody wanted.</p>
+            <p data-i18n="ch3p2">Her first rescue was 24 puppies at once. Fifteen of them had parvovirus, a disease that kills most puppies who catch it. She found veterinary care for every one, and every one survived. Some were adopted abroad. Some never left her side.</p>
+            <p data-i18n="ch3p3">Today she runs Europe4strays as a registered Romanian NGO, one hundred percent volunteer, together with her sister Neli, her husband Dragoș and a handful of activists at home and abroad. The dogs live in her house, in Neli's house, and in the lodge they are building.</p>
+            <p data-i18n="ch3p4">Since 2018 the team has also run spay and neuter campaigns, covering the costs for families who cannot afford them. Sterilization is the only way this ever ends.</p>
+            <div class="big-figure">
+              <span class="sc-nums" data-sc-count="0 260" data-sc-count-at="0.2 0.41">0</span>
+              <span class="cap" data-i18n="ch3count">dogs in her care right now, fed and treated every single day</span>
+            </div>
+          </div>
+          <div class="fig-col">
+            <figure data-sc-in>
+              <img src="assets/ch3-crate.webp" width="1800" height="1200" alt="Mirela and a helper loading a wire crate with three rescued dogs into a car.">
+              <figcaption data-i18n="fig1">A rescue day: three more leave the streets.</figcaption>
+            </figure>
+            <figure data-sc-in>
+              <img src="assets/ch3-cones.webp" width="720" height="960" alt="Mirela walking two dogs wearing post-surgery cones through a garden path.">
+              <figcaption data-i18n="fig2">After surgery: two patients of the sterilization campaign.</figcaption>
+            </figure>
+            <figure data-sc-in>
+              <img src="assets/ch3-car.webp" width="720" height="960" alt="Mirela smiling in her car while a black dog licks its nose over her shoulder.">
+              <figcaption data-i18n="fig3">The passenger seat is never empty.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- authored silence -->
+    <div class="silence">
+      <p data-i18n="silence">Not every dog is one of hers. Not yet.</p>
+    </div>
+  </section>
+
+  <!-- THE PEAK -->
+  <section class="chapter ch-dark" data-sc-act="pin" data-sc-span="1.7" data-chapter-key="ch3">
+    <div data-sc-stage class="peak-stage">
+      <img src="assets/peak-kiss.webp" width="1536" height="2048" alt="Mirela pressing her face to the wire fence of the public shelter to kiss a brown dog on the other side.">
+    </div>
+  </section>
+  <section class="chapter ch-dark peak-caption" data-chapter-key="ch3">
+    <div class="sc-wrap" data-sc-in>
+      <p><strong data-i18n="peakA">The public shelter at Golești.</strong> <span data-i18n="peakB">This is where many of her dogs come from, and why the work does not stop.</span></p>
+      <p class="sc-label" style="color: var(--sc-ink-soft);">Vrancea, România</p>
+    </div>
+  </section>
+
+  <!-- the documentary -->
+  <section class="chapter ch-dark" data-chapter-key="ch3">
+    <div class="sc-section" style="padding-top: var(--sc-7);">
+      <div class="sc-wrap" style="max-width: 54rem;">
+        <div class="sc-stack" data-sc-in data-sc-stagger="60" style="margin-bottom: var(--sc-5);">
+          <h3 class="sc-display sc-display--md" data-i18n="docuTitle">There is a film about all this</h3>
+          <p class="sc-body" style="color: var(--sc-ink-soft); max-width: var(--sc-measure);" data-i18n="docuCap">Hunderunde, the German channel whose donations fenced the plot and raised the main building, travelled to Romania and filmed the journey: "Hunde in Rumänien, eine Reise die wir niemals vergessen." It picks up right where Mirela's part begins.</p>
+        </div>
+        <div class="video-frame" data-sc-in>
+          <iframe src="https://www.youtube-nocookie.com/embed/skqR2h3WgBA?start=394" title="Hunde in Rumänien - Eine Reise die wir niemals vergessen (Hunderunde)" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 4: THE LODGE (reveal wipe) -->
+  <section class="chapter ch-light" data-sc-act="flow" data-chapter-key="ch4">
+    <div class="sc-section ch-open">
+      <div class="sc-wrap">
+        <div class="sc-stack" data-sc-in data-sc-stagger="60" style="margin-bottom: var(--sc-7);">
+          <p class="ch-num" data-i18n="ch4num">Chapter four</p>
+          <h2 class="ch-title" data-i18n="ch4title">The Cheerful Kindergarten</h2>
+          <p class="sc-body" style="max-width: var(--sc-measure); color: var(--sc-ink-soft);" data-i18n="ch4lede">Grădinița veselă: a lodge on the family's own land, started in early 2020 with Mirela and Dragoș's life savings. A forever home for the dogs no one chooses, and a school for family life for the ones who will travel.</p>
+        </div>
+        <div class="lodge-grid">
+          <div>
+            <div class="wipe-frame">
+              <img src="assets/ch4-slab.webp" width="720" height="960" alt="The freshly poured concrete base of the second building, timber stacked behind it.">
+              <img src="assets/ch4-build.webp" width="720" height="960" alt="The finished shell of the second building standing under a blue sky." data-sc-reveal="up" data-sc-reveal-at="0.25 0.7">
+            </div>
+            <div class="wipe-tags">
+              <span data-i18n="wipeA">May 2020 · a concrete base</span>
+              <span data-i18n="wipeB">months later · a building</span>
+            </div>
+          </div>
+          <div class="sc-stack" data-sc-in data-sc-stagger="50">
+            <h3 class="sc-display sc-display--md" data-i18n="ch4done">Built so far</h3>
+            <ul class="lodge-list">
+              <li data-i18n="l1">Fencing around the whole plot</li>
+              <li data-i18n="l2">Water and electricity connected</li>
+              <li data-i18n="l3">Main building in progress, made as comfortable as possible for the dogs, and now the cats too</li>
+              <li data-i18n="l4">Second building: care room for puppies, quarantine area, food and supplies storage</li>
+              <li class="todo" data-i18n="l5">Planned: an education and training space</li>
+              <li class="todo" data-i18n="l6">Planned: a playground</li>
+            </ul>
+            <p class="sc-body" style="color: var(--sc-ink-soft);" data-i18n="ch4close">Every donation goes into finishing this place, and into the food, medicine and surgeries that keep its residents alive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 5: HOW TO HELP -->
+  <section class="chapter ch-light-2" id="help" data-chapter-key="ch5">
+    <div class="sc-section ch-open">
+      <div class="sc-wrap">
+        <div class="sc-stack" data-sc-in data-sc-stagger="60" style="margin-bottom: var(--sc-7);">
+          <p class="ch-num" data-i18n="ch5num">Chapter five</p>
+          <h2 class="ch-title" data-i18n="ch5title">What one person can do</h2>
+        </div>
+        <div class="help-grid">
+          <div>
+            <div class="help-block" data-sc-in>
+              <h3 data-i18n="h1t">Give</h3>
+              <p data-i18n="h1p">Money goes furthest: food, vaccines, deworming, surgeries, and the building work. Any amount, once or monthly.</p>
+              <div class="iban">
+                <code id="ibanCode">RO91 BTRL EURC RT04 0991 0001</code>
+                <button class="copy-btn" id="copyIban" data-i18n="h1btn">Copy IBAN</button>
+              </div>
+            </div>
+            <div class="help-block" data-sc-in>
+              <h3 data-i18n="h2t">Send a parcel</h3>
+              <p data-i18n="h2p">Food, anti-flea and deworming treatments, blankets, beds, treats, toys, puppy supplies. Write to us for the delivery address.</p>
+            </div>
+            <div class="help-block" data-sc-in>
+              <h3 data-i18n="h3t">Come and work</h3>
+              <p data-i18n="h3p">Volunteers clean, feed, groom, walk, paint and play. It is hard work with animals that have known hard lives. Mirela will welcome you and help you plan the trip.</p>
+            </div>
+          </div>
+          <aside class="adopt-aside" data-sc-in>
+            <h3 data-i18n="h4t">Adopt one of them</h3>
+            <p data-i18n="h4p1">Adopting is a long-term commitment, and it starts with a form and a phone call. A home check is done by the nearest Europe4strays member, then your dog is prepared: vaccinated, chipped, sterilized, passported.</p>
+            <p data-i18n="h4p2">Preparation is around 100 EUR, transport between 150 and 300 EUR depending on your country.</p>
+            <p><a href="mailto:contact.europe4strays@gmail.com" data-i18n="ctaLabel">Write to Mirela</a></p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLOPHON -->
+  <section class="chapter ch-dark" data-sc-act="pin" data-sc-span="1.15" data-chapter-key="ch6">
+    <div data-sc-stage>
+      <div class="colophon-stage" style="height: 100%;">
+        <div class="colophon-heart" data-sc-cue="0 1 0 0">
+          <svg class="heart-paws" id="heartPaws" viewBox="0 0 200 180" aria-hidden="true"></svg>
+        </div>
+        <p class="colophon-line" data-sc-cue="0.15" data-i18n="coloLine">One paw print for every dog she keeps alive.</p>
+        <p class="colophon-cta">
+          <span data-i18n="coloCta">Write to Mirela:</span>
+          <a href="mailto:contact.europe4strays@gmail.com">contact.europe4strays@gmail.com</a>
+        </p>
+        <p class="colophon-actions">
+          <a class="donate-btn donate-btn--lg" href="https://www.paypal.me/europe4straysRO" target="_blank" rel="noopener" data-i18n="donate">Donate now</a>
+          <a class="soc" href="https://www.instagram.com/EUROPE4STRAYSBYMIRELA" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a class="soc" href="https://www.facebook.com/share/17VeQ2vmzp/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 4.5H16V1.8c-.5-.07-1.4-.15-2.4-.15-2.4 0-4 1.5-4 4.2V8.5H7v3h2.6V22h3.1V11.5h2.6l.4-3h-3V6.3c0-.9.24-1.8 1.8-1.8z"/></svg>
+          </a>
+        </p>
+      </div>
+      <footer class="colophon-foot">
+        <span>Europe4strays · <span data-i18n="footNgo">registered Romanian NGO</span> · Bizighești, Vrancea</span>
+        <span>IBAN RO91BTRLEURCRT0409910001</span>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<script src="scrollcraft.js"></script>
+<script src="i18n.js"></script>
+<script src="site.js"></script>
+<script>ScrollCraft.mount(document.body);</script>
+</body>
+</html>
