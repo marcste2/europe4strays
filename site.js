@@ -178,3 +178,27 @@
     });
   }
 })();
+
+/* iOS / Low-Power-Mode scrub fallback: on coarse-pointer devices, if the
+   scrub clip provably never advances while its act is mid-flight, hide the
+   video and let the poster carry the act with a gentle scroll-driven zoom.
+   Detection only; the engine's own priming and seek lifecycle stay untouched. */
+(function () {
+  if (!window.matchMedia || !matchMedia("(pointer: coarse)").matches) return;
+  var sec = document.querySelector('[data-sc-act="scrub"]');
+  var vid = sec && sec.querySelector("video[data-sc-scrub]");
+  if (!sec || !vid) return;
+  var strikes = 0, checks = 0;
+  var timer = setInterval(function () {
+    checks++;
+    if (checks > 60) { clearInterval(timer); return; }
+    var p = parseFloat(getComputedStyle(sec).getPropertyValue("--sc-p")) || 0;
+    if (p < 0.12 || p > 0.95) return;
+    if (vid.currentTime > 0.08) { clearInterval(timer); return; }
+    strikes++;
+    if (strikes >= 4) {
+      clearInterval(timer);
+      sec.classList.add("scrub-fallback");
+    }
+  }, 500);
+})();
