@@ -1,7 +1,7 @@
 /* Europe4strays shared chrome: masthead, donate, socials, card row.
    Used by index.html and blog.html. Tokens come from scrollcraft.css. */
 
-.site-head { position: relative; z-index: var(--sc-z-chrome); display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.4rem); flex-wrap: wrap; padding: .9rem var(--sc-gutter); background: var(--sc-canvas); border-bottom: 1px solid var(--sc-hairline-strong); }
+.site-head { position: sticky; top: 0; z-index: var(--sc-z-chrome); display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.4rem); flex-wrap: wrap; padding: .9rem var(--sc-gutter); background: var(--sc-canvas); border-bottom: 1px solid var(--sc-hairline-strong); }
 .head-brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--sc-ink); text-decoration: none; font: 560 1.15rem/1 var(--sc-font-display); }
 .head-brand .head-logo { width: 2.4rem; height: 2.4rem; border-radius: 8px; display: block; box-shadow: 0 1px 3px rgba(12, 50, 71, .25); }
 .head-nav { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.7rem); margin-right: auto; overflow-x: auto; scrollbar-width: none; }
@@ -18,7 +18,13 @@
 .donate-btn:active { transform: translateY(1px) scale(.97); }
 .site-head select { font: 500 var(--sc-t-xs)/1 var(--sc-font-text); color: var(--sc-ink-soft); background: transparent; border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-sm); padding: .38rem .45rem; cursor: pointer; }
 @media (max-width: 900px) {
-  .head-nav { order: 3; flex-basis: 100%; }
+  .site-head { gap: .55rem .8rem; padding: .55rem var(--sc-gutter); }
+  .head-brand { font-size: 1.02rem; }
+  .head-brand .head-logo { width: 2rem; height: 2rem; }
+  .head-nav { order: 3; flex-basis: 100%; gap: 1rem; }
+  .head-nav a { font-size: var(--sc-t-xs); }
+  .donate-btn { padding: .5rem .75rem; }
+  .site-head select { padding: .3rem .35rem; }
 }
 
 /* video embed frame */

@@ -17,16 +17,17 @@
   var folio = document.getElementById("folioCh");
   var folioBox = document.getElementById("folio");
   var current = "ch0";
+  var folioVis = function () {};
   if (folioBox) {
     var folioTick = false;
-    function folioVis() {
+    folioVis = function () {
       folioTick = false;
-      var show = window.scrollY > innerHeight * 0.5;
+      var show = window.scrollY > innerHeight * 0.5 && current !== "ch6";
       if (show === folioBox.hasAttribute("hidden")) {
         if (show) folioBox.removeAttribute("hidden");
         else folioBox.setAttribute("hidden", "");
       }
-    }
+    };
     window.addEventListener("scroll", function () {
       if (!folioTick) { folioTick = true; requestAnimationFrame(folioVis); }
     }, { passive: true });
@@ -43,6 +44,7 @@
         if (en.isIntersecting) {
           current = en.target.getAttribute("data-chapter-key") || current;
           folioText();
+          folioVis();
           var dark = en.target.classList.contains("ch-dark");
           document.body.classList.toggle("on-dark", dark);
         }
