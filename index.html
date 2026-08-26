@@ -41,6 +41,9 @@
 
   /* ============ title page ============ */
   .title-page { min-height: 84vh; display: grid; align-content: center; }
+  @media (max-width: 860px) {
+    .title-page { min-height: 0; align-content: start; padding: 2.4rem 0 3.5rem; }
+  }
   .title-page .sc-wrap { max-width: 62rem; }
   .title-kicker { font: 500 var(--sc-t-sm)/1.4 var(--sc-font-text); letter-spacing: .14em; text-transform: uppercase; color: var(--sc-ink-soft); margin: 0; }
   .title-name { font-family: var(--sc-font-display); font-size: clamp(3.1rem, 9.5vw, 7.6rem); line-height: .96; letter-spacing: var(--sc-track-tight); font-weight: 560; }
@@ -142,7 +145,14 @@
   .colophon-actions { display: flex; align-items: center; justify-content: center; gap: 1.1rem; }
   .colophon-actions .donate-btn { font-size: var(--sc-t-base); padding: .75rem 1.3rem; }
   .colophon-actions .soc svg { width: 1.35rem; height: 1.35rem; }
-  .colophon-foot { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--sc-4) var(--sc-gutter); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
+  .colophon-foot { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--sc-4) var(--sc-gutter); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); pointer-events: none; }
+  @media (max-width: 860px) {
+    .colophon-stage { gap: var(--sc-3); padding-top: 8.5rem; padding-bottom: 6rem; }
+    .colophon-heart { width: min(30vh, 60vw); }
+    .colophon-line { font-size: 1.3rem; }
+    .colophon-cta { font-size: var(--sc-t-base); }
+    .colophon-foot { flex-direction: column; gap: .2rem; align-items: center; text-align: center; padding-bottom: .9rem; }
+  }
 
   /* ============ folio chrome ============ */
   .folio { position: fixed; left: var(--sc-gutter); bottom: 1.1rem; z-index: var(--sc-z-chrome); font: 500 var(--sc-t-xs)/1 var(--sc-font-text); letter-spacing: .1em; color: var(--sc-ink-soft); background: rgba(233, 247, 249, .85); border-radius: var(--sc-r-sm); padding: .45rem .7rem .45rem .55rem; backdrop-filter: blur(4px); opacity: 1; transition: opacity 220ms var(--sc-ease-out); }
