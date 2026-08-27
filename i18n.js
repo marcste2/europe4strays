@@ -2,6 +2,7 @@
 (function () {
   const STRINGS = {
     en: {
+      aiNote: "*AI-animated from a real photo",
       docuTitle: "There is a film about all this",
       docuCap: "Hunderunde, the German channel whose donations fenced the plot and raised the main building, travelled to Romania and filmed the journey: \"Hunde in Rumänien, eine Reise die wir niemals vergessen.\" It picks up right where Mirela's part begins.",
       blogKicker: "build diary",
@@ -82,6 +83,7 @@
       ch_ch6: "Colophon"
     },
     de: {
+      aiNote: "*KI-animiert aus einem echten Foto",
       docuTitle: "Es gibt einen Film über all das",
       docuCap: "Hunderunde, der deutsche Kanal, dessen Spenden den Zaun und das Hauptgebäude finanziert haben, ist nach Rumänien gereist und hat die Reise gefilmt: \"Hunde in Rumänien, eine Reise die wir niemals vergessen.\" Der Film startet genau dort, wo Mirelas Teil beginnt.",
       blogKicker: "Bautagebuch",
@@ -162,6 +164,7 @@
       ch_ch6: "Kolophon"
     },
     it: {
+      aiNote: "*Animazione IA da una foto reale",
       docuTitle: "C’è un film su tutto questo",
       docuCap: "Hunderunde, il canale tedesco le cui donazioni hanno recintato il terreno e costruito l’edificio principale, ha viaggiato in Romania e filmato il percorso: \"Hunde in Rumänien, eine Reise die wir niemals vergessen.\" Il video parte proprio dove inizia la parte di Mirela.",
       blogKicker: "diario di cantiere",
@@ -242,6 +245,7 @@
       ch_ch6: "Colophon"
     },
     ro: {
+      aiNote: "*Animație IA dintr-o fotografie reală",
       docuTitle: "Există un film despre toate acestea",
       docuCap: "Hunderunde, canalul german ale cărui donații au împrejmuit terenul și au ridicat clădirea principală, a călătorit în România și a filmat drumul: \"Hunde in Rumänien, eine Reise die wir niemals vergessen.\" Filmul pornește exact de unde începe partea Mirelei.",
       blogKicker: "jurnal de șantier",

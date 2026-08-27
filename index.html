@@ -67,6 +67,7 @@
   .scrub-fallback .sc-stage__poster { opacity: 1 !important; transform: scale(calc(1.02 + 0.09 * var(--sc-p, 0))); will-change: transform; }
   .plate-side { grid-column: 3; align-self: end; padding: 0 var(--sc-gutter) var(--sc-7); max-width: 21rem; }
   .plate-side .sc-label { color: var(--sc-ink-soft); }
+  .ai-note { margin: .6rem 0 0; font: 500 .58rem/1.4 var(--sc-font-text); letter-spacing: .12em; text-transform: uppercase; color: var(--sc-ink-soft); opacity: .85; }
   @media (max-width: 860px) {
     .plate-stage { grid-template-columns: 1fr; }
     .plate-frame { grid-column: 1; max-height: 74vh; margin: 0 auto; width: min(92vw, 60vh); }
@@ -273,8 +274,9 @@
           <img class="sc-stage__poster" src="assets/ch1-poster.webp" width="853" height="1223" alt="A pack of rescued dogs walking toward the camera across the shelter yard, colorful dog houses behind them.">
           <video data-sc-scrub data-sc-src="assets/ch1.mp4" data-sc-src-mobile="assets/ch1-m.mp4" muted playsinline></video>
         </div>
-        <div class="plate-side" data-sc-cue="0.2 0.9">
-          <p class="sc-label" data-i18n="ch1cap">The yard at feeding time. Not one of them was born in safety.</p>
+        <div class="plate-side">
+          <p class="sc-label" data-sc-cue="0.2 0.9" data-i18n="ch1cap">The yard at feeding time. Not one of them was born in safety.</p>
+          <p class="ai-note" data-i18n="aiNote">*AI-animated from a real photo</p>
         </div>
       </div>
     </div>
