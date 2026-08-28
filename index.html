@@ -86,12 +86,6 @@
   .rail-note { flex: 0 0 auto; width: clamp(15rem, 22vw, 20rem); align-self: center; padding-right: var(--sc-gutter); }
   .rail-note a { color: var(--sc-accent); }
 
-  /* touch devices: the rail is a native swipe strip */
-  .rail-native .faces-rail { overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; padding-top: var(--sc-7); padding-bottom: var(--sc-7); scrollbar-width: none; }
-  .rail-native .faces-rail::-webkit-scrollbar { display: none; }
-  .rail-native .face, .rail-native .rail-lead, .rail-native .rail-note { scroll-snap-align: center; }
-  .rail-native .rail-lead { min-width: 78vw; }
-
   /* ============ ch3 editorial prose ============ */
   .prose-spread { display: grid; grid-template-columns: minmax(0, 58ch) minmax(16rem, 1fr); gap: clamp(1.5rem, 3.5vw, 3.5rem); align-items: start; }
   .prose p { margin: 0 0 1.1em; }
@@ -502,19 +496,6 @@
 <script src="scrollcraft.js"></script>
 <script src="i18n.js"></script>
 <script src="site.js"></script>
-<script>
-  /* On touch devices the gallery is a native swipe strip, not a pinned
-     scroll-driven pan: a pinned section reads as "the page is stuck" on
-     phones. Must run before mount so the engine never claims the act. */
-  if (matchMedia("(pointer: coarse)").matches) {
-    var facesSec = document.getElementById("faces");
-    if (facesSec) {
-      facesSec.removeAttribute("data-sc-act");
-      facesSec.removeAttribute("data-sc-span");
-      facesSec.classList.add("rail-native");
-    }
-  }
-  ScrollCraft.mount(document.body);
-</script>
+<script>ScrollCraft.mount(document.body);</script>
 </body>
 </html>
