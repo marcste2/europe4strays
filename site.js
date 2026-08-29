@@ -1,8 +1,8 @@
-/* Europe4strays bespoke layer: folio chapter marker, the 260-paw trace rail,
+/* Europe4strays bespoke layer: folio chapter marker, the 350-paw trace rail,
    the colophon heart of paws, and the IBAN copy button.
    Engine untouched; everything here reads scroll state or its own observers. */
 (function () {
-  var DOGS = 260;
+  var DOGS = 350;
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* deterministic jitter */
@@ -68,7 +68,7 @@
       var y = top + (bottom - top) * (i / (DOGS - 1));
       var x = W / 2 + (i % 2 ? 6.5 : -6.5) + (jit(i, 1) - 0.5) * 3;
       var r = (jit(i, 2) - 0.5) * 30;
-      var s = 0.42 + jit(i, 3) * 0.16;
+      var s = 0.34 + jit(i, 3) * 0.14;
       var p = document.createElementNS("http://www.w3.org/2000/svg", "path");
       p.setAttribute("d", PAW);
       p.setAttribute("class", "paw");
@@ -113,7 +113,7 @@
     railUpdate();
   }
 
-  /* ---------- colophon heart of 260 paws ---------- */
+  /* ---------- colophon heart of 350 paws ---------- */
   var heart = document.getElementById("heartPaws");
   if (heart) {
     /* param heart curve, filled row-sampling for interior points */
