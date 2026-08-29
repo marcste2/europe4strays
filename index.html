@@ -74,8 +74,12 @@
     .plate-side { grid-column: 1; padding: var(--sc-3) var(--sc-gutter) var(--sc-5); max-width: none; }
   }
 
-  /* ============ ch2 rail ============ */
-  .faces-rail { display: flex; align-items: stretch; gap: clamp(1.2rem, 3vw, 2.6rem); padding: 0 var(--sc-gutter); height: 100%; align-items: center; }
+  /* ============ ch2 rail: horizontally scrollable at the reader's own pace ============ */
+  .faces-rail { display: flex; align-items: center; gap: clamp(1.2rem, 3vw, 2.6rem); padding: clamp(3rem, 8vh, 5.5rem) var(--sc-gutter); overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--sc-accent) transparent; }
+  .faces-rail::-webkit-scrollbar { height: 6px; }
+  .faces-rail::-webkit-scrollbar-thumb { background: var(--sc-accent); border-radius: 3px; }
+  .faces-rail::-webkit-scrollbar-track { background: transparent; }
+  .faces-rail > * { scroll-snap-align: center; }
   .face { flex: 0 0 auto; width: clamp(17rem, 26vw, 24rem); }
   .face figure { margin: 0; border-radius: var(--sc-r-md); overflow: hidden; box-shadow: var(--sc-e2); }
   .face img { width: 100%; height: clamp(20rem, 54vh, 30rem); object-fit: cover; display: block; }
@@ -196,6 +200,7 @@
   <nav class="head-nav" aria-label="Main">
     <a href="#top" data-i18n="navHome">Home</a>
     <a href="#help" data-i18n="navHelp">How to help</a>
+    <a href="adopt.html" data-i18n="navAdopt">How to adopt</a>
     <a href="blog.html">The Cheerful Kindergarten Blog</a>
     <a href="#faces" data-i18n="navGallery">The Dogs gallery</a>
   </nav>
@@ -276,10 +281,10 @@
     </div>
   </section>
 
-  <!-- CHAPTER 2: THEIR FACES (pan rail) -->
-  <section class="chapter ch-light" id="faces" data-sc-act="pan" data-sc-span="4.2" data-chapter-key="ch2">
-    <div data-sc-stage>
-      <div class="faces-rail" data-sc-pan="0.06">
+  <!-- CHAPTER 2: THEIR FACES (free-scrolling strip) -->
+  <section class="chapter ch-light" id="faces" data-chapter-key="ch2">
+    <div>
+      <div class="faces-rail">
         <div class="rail-lead sc-stack">
           <p class="ch-num" data-i18n="ch2num">Chapter two</p>
           <h2 class="ch-title" data-i18n="ch2title">Their faces</h2>
@@ -310,7 +315,7 @@
           </figure>
         </article>
         <div class="rail-note sc-stack">
-          <p class="sc-body"><span data-i18n="ch2note">Some of these dogs are ready to travel to a family in the EU.</span> <a href="#help" data-i18n="ch2link">How adoption works</a></p>
+          <p class="sc-body"><span data-i18n="ch2note">Some of these dogs are ready to travel to a family in the EU.</span> <a href="adopt.html" data-i18n="ch2link">How adoption works</a></p>
         </div>
       </div>
     </div>
@@ -455,7 +460,7 @@
             <h3 data-i18n="h4t">Adopt one of them</h3>
             <p data-i18n="h4p1">Adopting is a long-term commitment, and it starts with a form and a phone call. A home check is done by the nearest Europe4strays member, then your dog is prepared: vaccinated, chipped, sterilized, passported.</p>
             <p data-i18n="h4p2">Preparation is around 100 EUR, transport between 150 and 300 EUR depending on your country.</p>
-            <p><a href="mailto:contact.europe4strays@gmail.com" data-i18n="ctaLabel">Write to Mirela</a></p>
+            <p><a href="adopt.html" data-i18n="navAdopt">How to adopt</a> · <a href="mailto:contact.europe4strays@gmail.com" data-i18n="ctaLabel">Write to Mirela</a></p>
           </aside>
         </div>
       </div>
