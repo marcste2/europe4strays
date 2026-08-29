@@ -183,6 +183,19 @@
     updArrows();
   }
 
+  /* ---------- deep links: re-aim after the engine grows the pinned acts ---------- */
+  if (location.hash) {
+    var hashTarget = null;
+    try { hashTarget = document.querySelector(location.hash); } catch (e) {}
+    if (hashTarget) {
+      var reAim = function () {
+        window.scrollTo({ top: hashTarget.getBoundingClientRect().top + window.scrollY, behavior: "instant" });
+      };
+      setTimeout(reAim, 400);
+      setTimeout(reAim, 1100);
+    }
+  }
+
   /* ---------- IBAN copy ---------- */
   var btn = document.getElementById("copyIban");
   if (btn) {

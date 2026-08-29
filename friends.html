@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How to adopt · Europe4strays</title>
-<meta name="description" content="Adopting a Europe4strays dog runs through our German partner, Tierschutzgruppe Herzensmenschen: dogs wait in foster homes in Germany, where you can meet them.">
+<title>My Friends · Europe4strays</title>
+<meta name="description" content="Hunderunde, the German social startup behind vegan dog snacks, has stood beside Mirela since 2020: they co-financed the Cheerful Kindergarten and support the dogs every month.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +47,11 @@
   .ad-socials a:hover { text-decoration: underline; }
   .ad-socials svg { width: 1.05rem; height: 1.05rem; flex: 0 0 auto; }
 
+  .fr-figures { display: flex; gap: clamp(1.5rem, 5vw, 3.5rem); flex-wrap: wrap; margin: 1.4rem 0 .4rem; }
+  .fr-figures .fig { display: flex; flex-direction: column; }
+  .fr-figures .num { font-family: var(--sc-font-display); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 560; line-height: 1.05; color: var(--sc-accent); }
+  .fr-figures .lbl { font-size: var(--sc-t-xs); color: var(--sc-ink-soft); letter-spacing: .04em; max-width: 11rem; line-height: 1.4; margin-top: .3rem; }
+
   .ad-foot { border-top: 1px solid var(--sc-hairline-strong); padding: 2rem var(--sc-gutter) 3rem; max-width: 46rem; margin: 0 auto; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
 
   ::selection { background: var(--sc-accent); color: var(--sc-accent-ink); }
@@ -63,8 +68,8 @@
   <nav class="head-nav" aria-label="Main">
     <a href="index.html" data-i18n="navHome">Home</a>
     <a href="index.html#help" data-i18n="navHelp">How to help</a>
-    <a href="adopt.html" aria-current="page" data-i18n="navAdopt">How to adopt</a>
-    <a href="friends.html" data-i18n="navFriends">My Friends</a>
+    <a href="adopt.html" data-i18n="navAdopt">How to adopt</a>
+    <a href="friends.html" aria-current="page" data-i18n="navFriends">My Friends</a>
     <a href="blog.html">The Cheerful Kindergarten Blog</a>
     <a href="index.html#faces" data-i18n="navGallery">The Dogs gallery</a>
   </nav>
@@ -89,47 +94,50 @@
 <main>
   <section class="ad-hero">
     <div class="inner">
-      <p class="ad-kicker">Europe4strays × Tierschutzgruppe Herzensmenschen</p>
-      <h1 class="ad-title" data-i18n="adTitle">How to adopt</h1>
-      <p class="ad-intro" data-i18n="adIntro">Adopting one of Mirela's dogs runs through our German partner association, Tierschutzgruppe Herzensmenschen. They bring the dogs to foster homes in Germany, where you can meet them in person before they move in with you.</p>
+      <p class="ad-kicker">Europe4strays × Hunderunde</p>
+      <h1 class="ad-title" data-i18n="frTitle">My Friends</h1>
+      <p class="ad-intro" data-i18n="frIntro">Without Hunderunde there would be no Cheerful Kindergarten. The German startup found Mirela in 2020 and has stood beside her and the dogs ever since.</p>
     </div>
   </section>
 
   <div class="ad-body">
 
     <div class="ad-block">
-      <h2 data-i18n="adOrgT">Who they are</h2>
-      <p data-i18n="adOrg1">Tierschutzgruppe Herzensmenschen is a German animal welfare group dedicated to sustainable animal protection in Romania: castration campaigns, education work and reliable structures on the ground. Together with their local partners they care for around 400 dogs and cats.</p>
-      <p data-i18n="adOrg2">Their dogs are placed exclusively through foster homes in Germany. The animals have time to arrive and settle, you can get to know them properly, and each one finds a home that truly fits, for a whole dog's life.</p>
+      <h2 data-i18n="frOrgT">Who they are</h2>
+      <p data-i18n="frOrg1">Hunderunde is a social startup founded by Fabio and Luis, two school friends from a village near Bonn. After seeing the plight of street dogs with their own eyes, they decided to build a company that helps: they develop vegan dog snacks and plant-based dog food, and every single product sold donates to street dogs in need.</p>
+      <p data-i18n="frOrg2">Since founding, they have donated more than 200,000 EUR to animal welfare projects. Their motto: animal welfare begins in the bowl.</p>
       <div class="ad-actions">
-        <a class="donate-btn" href="https://tierschutzgruppe-herzensmenschen.de/adoptieren/" target="_blank" rel="noopener" data-i18n="adBtnDogs">See the dogs for adoption</a>
-        <a class="btn-outline" href="https://tierschutzgruppe-herzensmenschen.de/" target="_blank" rel="noopener" data-i18n="adBtnSite">Visit their website</a>
+        <a class="donate-btn" href="https://hunderunde.shop/collections/alle-produkte" target="_blank" rel="noopener" data-i18n="frBtnShop">Visit the Hunderunde shop</a>
+        <a class="btn-outline" href="index.html#film" data-i18n="frBtnFilm">Watch their film about Mirela</a>
+      </div>
+    </div>
+
+    <div class="ad-block">
+      <h2 data-i18n="frForT">What they do for Mirela's dogs</h2>
+      <p data-i18n="frFor1">In 2020 Hunderunde found their animal welfare partner in Mirela. They co-financed the lodge for her street dogs, the Cheerful Kindergarten, support her every month, and travel to Romania several times a year to see that every donation arrives where it should.</p>
+      <p data-i18n="frFor2">In three years, more than 70,000 EUR went into the project. Beyond that, they fight the causes: food donations for the short term, castration campaigns for the long term, and education about the situation of Romania's street dogs. They also filmed the documentary you can watch on our homepage.</p>
+      <div class="fr-figures">
+        <div class="fig"><span class="num">200,000+&nbsp;€</span><span class="lbl" data-i18n="frFigA">donated to animal welfare projects since founding</span></div>
+        <div class="fig"><span class="num">70,000+&nbsp;€</span><span class="lbl" data-i18n="frFigB">into Mirela's Cheerful Kindergarten in three years</span></div>
       </div>
     </div>
 
     <div class="ad-block">
       <h2 data-i18n="adFollowT">Follow their work</h2>
       <div class="ad-socials">
-        <a href="https://www.instagram.com/tierschutz_herzensmenschen/" target="_blank" rel="noopener">
+        <a href="https://www.instagram.com/_hunderunde_/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
-          <span>@tierschutz_herzensmenschen</span>
+          <span>@_hunderunde_</span>
         </a>
-        <a href="https://www.facebook.com/tierschutzherzensmenschen/" target="_blank" rel="noopener">
+        <a href="https://www.facebook.com/Hunderunde.shop/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 4.5H16V1.8c-.5-.07-1.4-.15-2.4-.15-2.4 0-4 1.5-4 4.2V8.5H7v3h2.6V22h3.1V11.5h2.6l.4-3h-3V6.3c0-.9.24-1.8 1.8-1.8z"/></svg>
-          <span>Tierschutzgruppe Herzensmenschen</span>
+          <span>Hunderunde.shop</span>
         </a>
-        <a href="https://www.facebook.com/groups/1378323195552745/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 4.5H16V1.8c-.5-.07-1.4-.15-2.4-.15-2.4 0-4 1.5-4 4.2V8.5H7v3h2.6V22h3.1V11.5h2.6l.4-3h-3V6.3c0-.9.24-1.8 1.8-1.8z"/></svg>
-          <span data-i18n="adGroup">Their Facebook group</span>
+        <a href="https://www.youtube.com/channel/UCb3pBMrYdCW5hhO6hgotz-A" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.28 5 12 5 12 5s-6.28 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.72 19 12 19 12 19s6.28 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8l5.4 3.2z"/></svg>
+          <span>Hunderunde</span>
         </a>
       </div>
-    </div>
-
-    <div class="ad-block">
-      <h2 data-i18n="adPracT">The practical part</h2>
-      <p data-i18n="h4p1">Adopting is a long-term commitment, and it starts with a form and a phone call. A home check is done by the nearest Europe4strays member, then your dog is prepared: vaccinated, chipped, sterilized, passported.</p>
-      <p data-i18n="h4p2">Preparation is around 100 EUR, transport between 150 and 300 EUR depending on your country.</p>
-      <p><span data-i18n="adQ">Questions about a particular dog?</span> <a href="mailto:contact.europe4strays@gmail.com" data-i18n="ctaLabel">Write to Mirela</a></p>
     </div>
 
   </div>
