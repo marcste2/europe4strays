@@ -62,6 +62,9 @@
   .plate-stage { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 100%; }
   .plate-frame { grid-column: 2; position: relative; aspect-ratio: 853 / 1223; width: min(61vh, 88vw); border-radius: var(--sc-r-md); overflow: hidden; box-shadow: var(--sc-e3); }
   .plate-frame video, .plate-frame .sc-stage__poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  /* the clip has no click function: make it inert so taps cannot trigger
+     browser video gestures (double-tap seek, long-press menus) mid-scroll */
+  .plate-frame video, .plate-frame .sc-stage__poster { pointer-events: none; -webkit-touch-callout: none; user-select: none; }
   /* frozen-decoder fallback (set by site.js): poster carries the act */
   .scrub-fallback video[data-sc-scrub] { display: none; }
   .scrub-fallback .sc-stage__poster { opacity: 1 !important; transform: scale(calc(1.02 + 0.09 * var(--sc-p, 0))); will-change: transform; }
@@ -271,7 +274,7 @@
       <div class="plate-stage">
         <div class="plate-frame">
           <img class="sc-stage__poster" src="assets/ch1-poster.webp" width="853" height="1223" alt="A pack of rescued dogs walking toward the camera across the shelter yard, colorful dog houses behind them.">
-          <video data-sc-scrub data-sc-src="assets/ch1.mp4" data-sc-src-mobile="assets/ch1-m.mp4" muted playsinline></video>
+          <video data-sc-scrub data-sc-src="assets/ch1.mp4" data-sc-src-mobile="assets/ch1-m.mp4" muted playsinline disablepictureinpicture disableremoteplayback></video>
         </div>
         <div class="plate-side">
           <p class="sc-label" data-sc-cue="0.2 0.9" data-i18n="ch1cap">The yard at feeding time. Not one of them was born in safety.</p>
