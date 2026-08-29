@@ -2,6 +2,8 @@
 (function () {
   const STRINGS = {
     en: {
+      railPrev: "Previous photos",
+      railNext: "More photos",
       navAdopt: "How to adopt",
       adTitle: "How to adopt",
       adIntro: "Adopting one of Mirela's dogs runs through our German partner association, Tierschutzgruppe Herzensmenschen. They bring the dogs to foster homes in Germany, where you can meet them in person before they move in with you.",
@@ -95,6 +97,8 @@
       ch_ch6: "Colophon"
     },
     de: {
+      railPrev: "Vorherige Fotos",
+      railNext: "Mehr Fotos",
       navAdopt: "So adoptierst du",
       adTitle: "So adoptierst du",
       adIntro: "Die Adoption eines von Mirelas Hunden läuft über unseren deutschen Partnerverein, die Tierschutzgruppe Herzensmenschen. Sie bringt die Hunde auf Pflegestellen in Deutschland, wo du sie persönlich kennenlernen kannst, bevor sie bei dir einziehen.",
@@ -188,6 +192,8 @@
       ch_ch6: "Kolophon"
     },
     it: {
+      railPrev: "Foto precedenti",
+      railNext: "Altre foto",
       navAdopt: "Come adottare",
       adTitle: "Come adottare",
       adIntro: "L'adozione di uno dei cani di Mirela passa attraverso la nostra associazione partner tedesca, Tierschutzgruppe Herzensmenschen. Portano i cani in famiglie affidatarie in Germania, dove puoi conoscerli di persona prima che vengano a vivere con te.",
@@ -281,6 +287,8 @@
       ch_ch6: "Colophon"
     },
     ro: {
+      railPrev: "Fotografiile anterioare",
+      railNext: "Mai multe fotografii",
       navAdopt: "Cum adopți",
       adTitle: "Cum adopți",
       adIntro: "Adopția unuia dintre câinii Mirelei se face prin asociația noastră parteneră din Germania, Tierschutzgruppe Herzensmenschen. Ei duc câinii în familii de plasament din Germania, unde îi poți cunoaște personal înainte să se mute la tine.",

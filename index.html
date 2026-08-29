@@ -77,12 +77,18 @@
     .plate-side { grid-column: 1; padding: var(--sc-3) var(--sc-gutter) var(--sc-5); max-width: none; }
   }
 
-  /* ============ ch2 rail: horizontally scrollable at the reader's own pace ============ */
-  .faces-rail { display: flex; align-items: center; gap: clamp(1.2rem, 3vw, 2.6rem); padding: clamp(3rem, 8vh, 5.5rem) var(--sc-gutter); overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--sc-accent) transparent; }
-  .faces-rail::-webkit-scrollbar { height: 6px; }
-  .faces-rail::-webkit-scrollbar-thumb { background: var(--sc-accent); border-radius: 3px; }
-  .faces-rail::-webkit-scrollbar-track { background: transparent; }
+  /* ============ ch2 rail: browsable strip with arrow controls ============ */
+  .rail-wrap { position: relative; }
+  .faces-rail { display: flex; align-items: center; gap: clamp(1.2rem, 3vw, 2.6rem); padding: clamp(3rem, 8vh, 5.5rem) var(--sc-gutter); overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; scrollbar-width: none; }
+  .faces-rail::-webkit-scrollbar { display: none; }
   .faces-rail > * { scroll-snap-align: center; }
+  .rail-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 2.9rem; height: 2.9rem; display: flex; align-items: center; justify-content: center; border: 1px solid var(--sc-hairline-strong); border-radius: 50%; background: var(--sc-canvas); color: var(--sc-accent); cursor: pointer; box-shadow: var(--sc-e2); transition: transform 140ms var(--sc-ease-out), background 140ms var(--sc-ease-out), color 140ms var(--sc-ease-out); }
+  .rail-arrow svg { width: 1.35rem; height: 1.35rem; }
+  .rail-arrow:hover { background: var(--sc-accent); color: var(--sc-accent-ink); transform: translateY(-50%) scale(1.05); }
+  .rail-arrow:active { transform: translateY(-50%) scale(.95); }
+  .rail-arrow--prev { left: clamp(.6rem, 2vw, 1.4rem); }
+  .rail-arrow--next { right: clamp(.6rem, 2vw, 1.4rem); }
+  .rail-arrow[hidden] { display: none; }
   .face { flex: 0 0 auto; width: clamp(17rem, 26vw, 24rem); }
   .face figure { margin: 0; border-radius: var(--sc-r-md); overflow: hidden; box-shadow: var(--sc-e2); }
   .face img { width: 100%; height: clamp(20rem, 54vh, 30rem); object-fit: cover; display: block; }
@@ -284,9 +290,17 @@
     </div>
   </section>
 
-  <!-- CHAPTER 2: THEIR FACES (free-scrolling strip) -->
+  <!-- CHAPTER 2: THEIR FACES (free-scrolling strip with arrows) -->
   <section class="chapter ch-light" id="faces" data-chapter-key="ch2">
-    <div>
+    <div class="rail-wrap">
+      <button class="rail-arrow rail-arrow--prev" type="button" hidden>
+        <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-i18n="railPrev">Previous photos</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6 8.5 12l6 6"/></svg>
+      </button>
+      <button class="rail-arrow rail-arrow--next" type="button">
+        <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-i18n="railNext">More photos</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg>
+      </button>
       <div class="faces-rail">
         <div class="rail-lead sc-stack">
           <p class="ch-num" data-i18n="ch2num">Chapter two</p>

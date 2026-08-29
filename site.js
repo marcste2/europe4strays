@@ -161,6 +161,28 @@
     if (colo) requestAnimationFrame(heartTick);
   }
 
+  /* ---------- ch2 rail arrows ---------- */
+  var railWrap = document.querySelector(".rail-wrap");
+  if (railWrap) {
+    var strip = railWrap.querySelector(".faces-rail");
+    var aPrev = railWrap.querySelector(".rail-arrow--prev");
+    var aNext = railWrap.querySelector(".rail-arrow--next");
+    var stepBy = function () {
+      var card = strip.querySelector(".face");
+      return (card ? card.getBoundingClientRect().width : 320) + 28;
+    };
+    var updArrows = function () {
+      var max = strip.scrollWidth - strip.clientWidth - 2;
+      aPrev.toggleAttribute("hidden", strip.scrollLeft <= 2);
+      aNext.toggleAttribute("hidden", strip.scrollLeft >= max);
+    };
+    aPrev.addEventListener("click", function () { strip.scrollBy({ left: -stepBy(), behavior: "smooth" }); });
+    aNext.addEventListener("click", function () { strip.scrollBy({ left: stepBy(), behavior: "smooth" }); });
+    strip.addEventListener("scroll", updArrows, { passive: true });
+    window.addEventListener("resize", updArrows);
+    updArrows();
+  }
+
   /* ---------- IBAN copy ---------- */
   var btn = document.getElementById("copyIban");
   if (btn) {
