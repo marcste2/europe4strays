@@ -47,6 +47,13 @@
   .ad-socials a:hover { text-decoration: underline; }
   .ad-socials svg { width: 1.05rem; height: 1.05rem; flex: 0 0 auto; }
 
+  .ad-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin: 1.3rem 0 .3rem; }
+  .ad-gallery img { width: 100%; height: 15rem; object-fit: cover; border-radius: var(--sc-r-sm); display: block; }
+  .ad-gallery .wide { grid-column: span 2; }
+  .ad-gallery .wide img { height: clamp(15rem, 38vh, 22rem); }
+  .ad-credit { font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--sc-ink-soft); opacity: .8; margin: .4rem 0 0; }
+  @media (max-width: 640px) { .ad-gallery { grid-template-columns: 1fr; } .ad-gallery .wide { grid-column: auto; } }
+
   .fr-figures { display: flex; gap: clamp(1.5rem, 5vw, 3.5rem); flex-wrap: wrap; margin: 1.4rem 0 .4rem; }
   .fr-figures .fig { display: flex; flex-direction: column; }
   .fr-figures .num { font-family: var(--sc-font-display); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 560; line-height: 1.05; color: var(--sc-accent); }
@@ -106,6 +113,11 @@
       <h2 data-i18n="frOrgT">Who they are</h2>
       <p data-i18n="frOrg1">Hunderunde is a social startup founded by Fabio and Luis, two school friends from a village near Bonn. After seeing the plight of street dogs with their own eyes, they decided to build a company that helps: they develop vegan dog snacks and plant-based dog food, and every single product sold donates to street dogs in need.</p>
       <p data-i18n="frOrg2">Since founding, they have donated more than 200,000 EUR to animal welfare projects. Their motto: animal welfare begins in the bowl.</p>
+      <div class="ad-gallery">
+        <div><img src="assets/partners/fr-founders.webp" alt="Fabio and Luis, the two founders of Hunderunde, with a dog." loading="lazy"></div>
+        <div><img src="assets/partners/fr-happen.webp" alt="One of the founders holding Hunderunde snack bags, surrounded by dogs." loading="lazy"></div>
+      </div>
+      <p class="ad-credit">Photos: Hunderunde</p>
       <div class="ad-actions">
         <a class="donate-btn" href="https://hunderunde.shop/collections/alle-produkte" target="_blank" rel="noopener" data-i18n="frBtnShop">Visit the Hunderunde shop</a>
         <a class="btn-outline" href="index.html#film" data-i18n="frBtnFilm">Watch their film about Mirela</a>
@@ -120,6 +132,10 @@
         <div class="fig"><span class="num">200,000+&nbsp;€</span><span class="lbl" data-i18n="frFigA">donated to animal welfare projects since founding</span></div>
         <div class="fig"><span class="num">70,000+&nbsp;€</span><span class="lbl" data-i18n="frFigB">into Mirela's Cheerful Kindergarten in three years</span></div>
       </div>
+      <div class="ad-gallery">
+        <div class="wide"><img src="assets/partners/fr-team.webp" alt="Fabio, Luis and Mirela sitting together with the dogs in front of the lodge, a Hunderunde banner on the wall." loading="lazy"></div>
+      </div>
+      <p class="ad-credit">Photo: Hunderunde</p>
     </div>
 
     <div class="ad-block">

@@ -47,6 +47,13 @@
   .ad-socials a:hover { text-decoration: underline; }
   .ad-socials svg { width: 1.05rem; height: 1.05rem; flex: 0 0 auto; }
 
+  .ad-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin: 1.3rem 0 .3rem; }
+  .ad-gallery img { width: 100%; height: 15rem; object-fit: cover; border-radius: var(--sc-r-sm); display: block; }
+  .ad-gallery .wide { grid-column: span 2; }
+  .ad-gallery .wide img { height: clamp(15rem, 38vh, 22rem); }
+  .ad-credit { font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--sc-ink-soft); opacity: .8; margin: .4rem 0 0; }
+  @media (max-width: 640px) { .ad-gallery { grid-template-columns: 1fr; } .ad-gallery .wide { grid-column: auto; } }
+
   .ad-foot { border-top: 1px solid var(--sc-hairline-strong); padding: 2rem var(--sc-gutter) 3rem; max-width: 46rem; margin: 0 auto; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
 
   ::selection { background: var(--sc-accent); color: var(--sc-accent-ink); }
@@ -101,6 +108,11 @@
       <h2 data-i18n="adOrgT">Who they are</h2>
       <p data-i18n="adOrg1">Tierschutzgruppe Herzensmenschen is a German animal welfare group dedicated to sustainable animal protection in Romania: castration campaigns, education work and reliable structures on the ground. Together with their local partners they care for around 400 dogs and cats.</p>
       <p data-i18n="adOrg2">Their dogs are placed exclusively through foster homes in Germany. The animals have time to arrive and settle, you can get to know them properly, and each one finds a home that truly fits, for a whole dog's life.</p>
+      <div class="ad-gallery">
+        <div><img src="assets/partners/ad-happy.webp" alt="A cream-colored rescue dog standing happily on a lawn." loading="lazy"></div>
+        <div><img src="assets/partners/ad-foster.webp" alt="A foster carer gently petting a golden dog on the grass." loading="lazy"></div>
+      </div>
+      <p class="ad-credit">Photos: Tierschutzgruppe Herzensmenschen</p>
       <div class="ad-actions">
         <a class="donate-btn" href="https://tierschutzgruppe-herzensmenschen.de/adoptieren/" target="_blank" rel="noopener" data-i18n="adBtnDogs">See the dogs for adoption</a>
         <a class="btn-outline" href="https://tierschutzgruppe-herzensmenschen.de/" target="_blank" rel="noopener" data-i18n="adBtnSite">Visit their website</a>
@@ -129,6 +141,10 @@
       <h2 data-i18n="adPracT">The practical part</h2>
       <p data-i18n="h4p1">Adopting is a long-term commitment, and it starts with a form and a phone call. A home check is done by the nearest Europe4strays member, then your dog is prepared: vaccinated, chipped, sterilized, passported.</p>
       <p data-i18n="h4p2">Preparation is around 100 EUR, transport between 150 and 300 EUR depending on your country.</p>
+      <div class="ad-gallery">
+        <div class="wide"><img src="assets/partners/ad-mirela.webp" alt="Mirela at the Cheerful Kindergarten, surrounded by her dogs." loading="lazy"></div>
+      </div>
+      <p class="ad-credit">Photo: Tierschutzgruppe Herzensmenschen</p>
       <p><span data-i18n="adQ">Questions about a particular dog?</span> <a href="mailto:contact.europe4strays@gmail.com" data-i18n="ctaLabel">Write to Mirela</a></p>
     </div>
 
