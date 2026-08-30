@@ -184,8 +184,29 @@
       '<p class="ba-cap">' + pair.cap + '</p>';
     var ba = box.firstChild;
     var range = ba.querySelector(".ba-range");
+    var snapping = 0;
     range.addEventListener("input", function () {
       ba.style.setProperty("--p", range.value + "%");
+    });
+    /* on release, glide back to the middle */
+    function snapBack() {
+      var start = parseFloat(range.value);
+      if (Math.abs(start - 50) < 0.5) return;
+      var t0 = performance.now(), id = ++snapping;
+      function step(t) {
+        if (id !== snapping) return;
+        var k = Math.min(1, (t - t0) / 450);
+        var e = 1 - Math.pow(1 - k, 3);
+        var v = start + (50 - start) * e;
+        range.value = v;
+        ba.style.setProperty("--p", v + "%");
+        if (k < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    range.addEventListener("pointerdown", function () { snapping++; });
+    ["pointerup", "pointercancel", "touchend", "mouseup", "mouseleave"].forEach(function (ev) {
+      range.addEventListener(ev, snapBack);
     });
     wrap.appendChild(box);
   });
