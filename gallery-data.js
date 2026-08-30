@@ -1,0 +1,38 @@
+/* Europe4strays gallery manifest.
+   NEWEST FIRST. The page shows the first LATEST_COUNT entries as "Latest",
+   everything below flows into the archive automatically — so adding a new
+   photo at the top of this list is the whole update ritual.
+   credit: shown small under the caption; omit for Europe4strays' own photos. */
+window.E4S_GALLERY = {
+  latestCount: 6,
+  photos: [
+    { src: "assets/partners/ad-happy.webp",   year: "2026", cap: "Waiting on the lawn", credit: "Tierschutzgruppe Herzensmenschen" },
+    { src: "assets/partners/fr-hz1.webp",     year: "2026", cap: "Two of the 350", credit: "Tierschutzgruppe Herzensmenschen" },
+    { src: "assets/partners/ad-mirela.webp",  year: "2026", cap: "Mirela and her pack at the Kindergarten", credit: "Tierschutzgruppe Herzensmenschen" },
+    { src: "assets/partners/pj-dog.webp",     year: "2026", cap: "A young one at the shelter", credit: "Tierschutzgruppe Herzensmenschen" },
+    { src: "assets/partners/ad-foster.webp",  year: "2026", cap: "Learning that hands are kind", credit: "Tierschutzgruppe Herzensmenschen" },
+    { src: "assets/partners/fr-sk1.webp",     year: "2025", cap: "Evening in the yard", credit: "Skayla Dog Rescue" },
+
+    { src: "assets/partners/fr-team.webp",    year: "2024", cap: "Fabio, Luis and Mirela at the lodge", credit: "Hunderunde" },
+    { src: "assets/partners/pj-feed.webp",    year: "2024", cap: "At the fence", credit: "Hunderunde" },
+    { src: "assets/partners/hp-hug.webp",     year: "2024", cap: "Trust", credit: "Tierschutzgruppe Herzensmenschen" },
+    { src: "assets/ch1-pack.webp",            year: "2020", cap: "The yard at feeding time" },
+    { src: "assets/ch2-white.webp",           year: "2020", cap: "One blue eye, one brown" },
+    { src: "assets/ch2-bw.webp",              year: "2020", cap: "Most arrive in pairs" },
+    { src: "assets/ch2-pair.webp",            year: "2020", cap: "The big gentle ones" },
+    { src: "assets/ch2-pup-white.webp",       year: "2020", cap: "Puppy on the river pebbles" },
+    { src: "assets/ch2-pup-bw.webp",          year: "2020", cap: "Little face, big ears" },
+    { src: "assets/ch2-pup-two.webp",         year: "2020", cap: "Two puppies, one blanket of stones" },
+    { src: "assets/ch3-carry.webp",           year: "2020", cap: "Mirela carrying a traveller" },
+    { src: "assets/ch3-cones.webp",           year: "2020", cap: "Two patients of the spay campaign" },
+    { src: "assets/ch3-car.webp",             year: "2020", cap: "The passenger seat is never empty" },
+    { src: "assets/ch3-crate.webp",           year: "2020", cap: "A rescue day" },
+    { src: "assets/blog/5492f727.webp",       year: "2020", cap: "Friends visiting the pack" },
+    { src: "assets/ch4-build.webp",           year: "2020", cap: "The second building rises" }
+  ],
+  /* before/after pairs for the slider. REAL pairs of the same subject only —
+     when the team sends before/after photos of individual dogs, add them here. */
+  pairs: [
+    { before: "assets/ch4-slab.webp", after: "assets/ch4-build.webp", cap: "The second building: from concrete base to walls and roof, 2020" }
+  ]
+};
