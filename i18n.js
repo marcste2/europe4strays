@@ -2,6 +2,8 @@
 (function () {
   const STRINGS = {
     en: {
+      mapAddr: "The address: Movilița, Vrancea",
+      mapShelter: "Our shelter, the Cheerful Kindergarten",
       ctDE: "Germany",
       ctSE: "Sweden",
       ctAT: "Austria",
@@ -122,6 +124,8 @@
       ch_ch6: "Colophon"
     },
     de: {
+      mapAddr: "Die Adresse: Movilița, Vrancea",
+      mapShelter: "Unser Tierheim, der fröhliche Kindergarten",
       ctDE: "Deutschland",
       ctSE: "Schweden",
       ctAT: "Österreich",
@@ -242,6 +246,8 @@
       ch_ch6: "Kolophon"
     },
     it: {
+      mapAddr: "L’indirizzo: Movilița, Vrancea",
+      mapShelter: "Il nostro rifugio, l’asilo allegro",
       ctDE: "Germania",
       ctSE: "Svezia",
       ctAT: "Austria",
@@ -362,6 +368,8 @@
       ch_ch6: "Colophon"
     },
     ro: {
+      mapAddr: "Adresa: Movilița, Vrancea",
+      mapShelter: "Adăpostul nostru, Grădinița veselă",
       ctDE: "Germania",
       ctSE: "Suedia",
       ctAT: "Austria",
