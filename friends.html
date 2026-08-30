@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="scrollcraft.css?v=20260907a">
-<link rel="stylesheet" href="site.css?v=20260907a">
+<link rel="stylesheet" href="scrollcraft.css?v=20260908a">
+<link rel="stylesheet" href="site.css?v=20260908a">
 <style>
   :root {
     --sc-canvas:     #E9F7F9;
@@ -54,6 +54,17 @@
   .ad-gallery .wide img { height: clamp(15rem, 38vh, 22rem); }
   .ad-body p.ad-credit { font: 500 .58rem/1.4 var(--sc-font-text); letter-spacing: .09em; text-transform: uppercase; color: var(--sc-ink-soft); opacity: .75; margin: .35rem 0 0; }
   @media (max-width: 640px) { .ad-gallery { grid-template-columns: 1fr; } .ad-gallery .wide { grid-column: auto; } }
+
+  .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.3rem; }
+  .story-card { background: var(--sc-surface); border-radius: var(--sc-r-md); overflow: hidden; box-shadow: var(--sc-e1); display: flex; flex-direction: column; }
+  .story-card img { width: 100%; height: 16rem; object-fit: cover; display: block; }
+  .story-card .inner { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: .45rem; flex: 1; }
+  .story-card h3 { font-family: var(--sc-font-display); font-size: var(--sc-t-xl); font-weight: 560; margin: 0; }
+  .story-card p { font-size: var(--sc-t-sm); line-height: 1.55; color: var(--sc-ink-soft); margin: 0; flex: 1; }
+  .story-card .src { font-size: .58rem; letter-spacing: .08em; text-transform: uppercase; color: var(--sc-ink-soft); opacity: .75; }
+  .story-card a.more { font: 600 var(--sc-t-xs)/1 var(--sc-font-text); color: var(--sc-accent); text-decoration: none; }
+  .story-card a.more:hover { text-decoration: underline; }
+  @media (max-width: 900px) { .story-grid { grid-template-columns: 1fr; } }
 
   .fr-figures { display: flex; gap: clamp(1.5rem, 5vw, 3.5rem); flex-wrap: wrap; margin: 1.4rem 0 .4rem; }
   .fr-figures .fig { display: flex; flex-direction: column; }
@@ -207,6 +218,42 @@
       </div>
     </div>
 
+    <!-- Adoption stories -->
+    <div class="ad-block" id="stories">
+      <p class="ad-kicker" data-i18n="stTag">The happy endings</p>
+      <h2 data-i18n="stT">Adoption stories</h2>
+      <p data-i18n="stIntro">This is what all the work is for. Three of the many dogs who made it from Vrancea to a family of their own, told by the friends who carried them there.</p>
+      <div class="story-grid">
+        <div class="story-card">
+          <img src="assets/partners/st-leone.webp" alt="Leone, a fluffy dark dog, on a walk in a winter forest in his new home." loading="lazy">
+          <div class="inner">
+            <h3>Leone</h3>
+            <p data-i18n="stLeone">Two years on the cold concrete of a public shelter, until Sina from the Herzensmenschen team found him. Leone waited at Mirela's place until he could travel, and in January he arrived at his family in Germany. For three weeks he hid from the world; then came the snow, and with it his first steps into a new life. Today he greets every morning with joy.</p>
+            <span class="src">Tierschutzgruppe Herzensmenschen</span>
+            <a class="more" href="https://tierschutzgruppe-herzensmenschen.de/happyends/" target="_blank" rel="noopener" data-i18n="stMore">Read more happy ends</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img src="assets/partners/st-kiwi.webp" alt="Kiwi, a white fluffy dog, snuggled on a sofa with her toys." loading="lazy">
+          <div class="inner">
+            <h3>Kiwi</h3>
+            <p data-i18n="stKiwi">Kiwi travelled from Romania under the name Stormy, to a foster home that turned out not to be her place. The very first family who asked about her was the right one: today she is inseparable from her children, comes along to the office, and fills the house with cheerful nonsense.</p>
+            <span class="src">Tierschutzgruppe Herzensmenschen</span>
+            <a class="more" href="https://tierschutzgruppe-herzensmenschen.de/happyends/" target="_blank" rel="noopener" data-i18n="stMore">Read more happy ends</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img src="assets/partners/st-sassy.webp" alt="Sassy, a small black and tan dog, on a sunny forest trail in Sweden." loading="lazy">
+          <div class="inner">
+            <h3>Sassy</h3>
+            <p data-i18n="stSassy">Her adopter in Sweden calls her a tough girl in a luxury package. Sassy arrived as a grown, leash-trained dog and needed only a little time to decide her new human was worth trusting. In her adopter's words: I got so much more than I could ever dream of.</p>
+            <span class="src">Skayla Dog Rescue</span>
+            <a class="more" href="https://www.skayladogrescue.se/hundar-som-hittat-hem/" target="_blank" rel="noopener" data-i18n="stMore2">Read more adoption stories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </main>
 
@@ -214,6 +261,6 @@
   <span>Europe4strays · <span data-i18n="footNgo">registered Romanian NGO</span> · Bizighești, Vrancea · IBAN RO91BTRLEURCRT0409910001</span>
 </footer>
 
-<script src="i18n.js?v=20260907a"></script>
+<script src="i18n.js?v=20260908a"></script>
 </body>
 </html>

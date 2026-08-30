@@ -2,6 +2,14 @@
 (function () {
   const STRINGS = {
     en: {
+      stTag: "The happy endings",
+      stT: "Adoption stories",
+      stIntro: "This is what all the work is for. Three of the many dogs who made it from Vrancea to a family of their own, told by the friends who carried them there.",
+      stLeone: "Two years on the cold concrete of a public shelter, until Sina from the Herzensmenschen team found him. Leone waited at Mirela's place until he could travel, and in January he arrived at his family in Germany. For three weeks he hid from the world; then came the snow, and with it his first steps into a new life. Today he greets every morning with joy.",
+      stKiwi: "Kiwi travelled from Romania under the name Stormy, to a foster home that turned out not to be her place. The very first family who asked about her was the right one: today she is inseparable from her children, comes along to the office, and fills the house with cheerful nonsense.",
+      stSassy: "Her adopter in Sweden calls her a tough girl in a luxury package. Sassy arrived as a grown, leash-trained dog and needed only a little time to decide her new human was worth trusting. In her adopter's words: I got so much more than I could ever dream of.",
+      stMore: "Read more happy ends",
+      stMore2: "Read more adoption stories",
       gaIntro: "The newest faces from Movilița, an archive that grows with every visit, and the before-and-after stories.",
       gaLatestT: "Latest",
       gaLatestSub: "Fresh photos from Mirela and the friends who visit her. When new ones arrive, the older ones move down into the archive.",
@@ -170,6 +178,14 @@
       ch_ch6: "Colophon"
     },
     de: {
+      stTag: "Die Happy Ends",
+      stT: "Adoptionsgeschichten",
+      stIntro: "Dafür ist all die Arbeit: Drei von den vielen Hunden, die es aus Vrancea bis in eine eigene Familie geschafft haben, erzählt von den Freunden, die sie dorthin getragen haben.",
+      stLeone: "Zwei Jahre auf dem kalten Beton eines städtischen Tierheims, bis Sina aus dem Herzensmenschen-Team ihn fand. Leone wartete bei Mirela, bis er reisen konnte, und im Januar kam er bei seiner Familie in Deutschland an. Drei Wochen versteckte er sich vor der Welt; dann kam der Schnee, und mit ihm die ersten Schritte ins neue Leben. Heute begrüßt er jeden Morgen mit Freude.",
+      stKiwi: "Kiwi reiste unter dem Namen Stormy aus Rumänien an, auf eine Pflegestelle, die nicht ihr Platz war. Die allererste Familie, die nach ihr fragte, war die richtige: Heute ist sie unzertrennlich von ihren Kindern, kommt mit ins Büro und füllt das Haus mit fröhlichem Blödsinn.",
+      stSassy: "Ihre Adoptantin in Schweden nennt sie eine harte Braut in Luxusverpackung. Sassy kam als erwachsene, leinengeführte Hündin an und brauchte nur kurz, um zu entscheiden, dass ihr neuer Mensch Vertrauen verdient. In den Worten ihrer Adoptantin: Ich habe so viel mehr bekommen, als ich je träumen konnte.",
+      stMore: "Mehr Happy Ends lesen",
+      stMore2: "Mehr Adoptionsgeschichten lesen",
       gaIntro: "Die neuesten Gesichter aus Movilița, ein Archiv, das mit jedem Besuch wächst, und die Vorher-nachher-Geschichten.",
       gaLatestT: "Aktuell",
       gaLatestSub: "Frische Fotos von Mirela und den Freunden, die sie besuchen. Kommen neue dazu, wandern die älteren von selbst ins Archiv.",
@@ -338,6 +354,14 @@
       ch_ch6: "Kolophon"
     },
     it: {
+      stTag: "I lieto fine",
+      stT: "Storie di adozione",
+      stIntro: "È per questo che si fa tutto il lavoro: tre dei tanti cani che ce l'hanno fatta dalla Vrancea fino a una famiglia tutta loro, raccontati dagli amici che li hanno portati fin lì.",
+      stLeone: "Due anni sul cemento freddo di un canile pubblico, finché Sina del team Herzensmenschen lo ha trovato. Leone ha aspettato da Mirela finché ha potuto viaggiare, e a gennaio è arrivato dalla sua famiglia in Germania. Per tre settimane si è nascosto dal mondo; poi è arrivata la neve, e con lei i primi passi nella nuova vita. Oggi saluta ogni mattina con gioia.",
+      stKiwi: "Kiwi è arrivata dalla Romania con il nome Stormy, in una famiglia affidataria che non era il suo posto. La primissima famiglia che ha chiesto di lei era quella giusta: oggi è inseparabile dai suoi bambini, va in ufficio con loro e riempie la casa di allegra follia.",
+      stSassy: "La sua adottante in Svezia la chiama una dura in confezione di lusso. Sassy è arrivata adulta, già abituata al guinzaglio, e le è bastato poco per decidere che la sua nuova umana meritava fiducia. Con le parole della sua adottante: ho ricevuto molto più di quanto potessi sognare.",
+      stMore: "Leggi altri lieto fine",
+      stMore2: "Leggi altre storie di adozione",
       gaIntro: "I volti più nuovi da Movilița, un archivio che cresce a ogni visita, e le storie del prima e dopo.",
       gaLatestT: "Le ultime",
       gaLatestSub: "Foto fresche da Mirela e dagli amici che la visitano. Quando ne arrivano di nuove, le più vecchie scendono da sole nell'archivio.",
@@ -506,6 +530,14 @@
       ch_ch6: "Colophon"
     },
     ro: {
+      stTag: "Finalurile fericite",
+      stT: "Povești de adopție",
+      stIntro: "Pentru asta e toată munca: trei dintre mulții câini care au ajuns din Vrancea într-o familie a lor, povestiți de prietenii care i-au dus până acolo.",
+      stLeone: "Doi ani pe betonul rece al unui adăpost public, până când Sina din echipa Herzensmenschen l-a găsit. Leone a așteptat la Mirela până a putut călători, iar în ianuarie a ajuns la familia lui din Germania. Trei săptămâni s-a ascuns de lume; apoi a venit zăpada, și cu ea primii pași în noua viață. Astăzi întâmpină fiecare dimineață cu bucurie.",
+      stKiwi: "Kiwi a călătorit din România sub numele Stormy, într-o familie de plasament care nu era locul ei. Chiar prima familie care a întrebat de ea a fost cea potrivită: astăzi e nedespărțită de copiii ei, merge cu ei la birou și umple casa de năzbâtii vesele.",
+      stSassy: "Adoptatoarea ei din Suedia o numește o dură în ambalaj de lux. Sassy a sosit adultă, obișnuită cu lesa, și i-a trebuit puțin ca să decidă că noul ei om merită încredere. În cuvintele adoptatoarei: am primit mult mai mult decât am putut visa vreodată.",
+      stMore: "Citește mai multe finaluri fericite",
+      stMore2: "Citește mai multe povești de adopție",
       gaIntro: "Cele mai noi chipuri din Movilița, o arhivă care crește cu fiecare vizită și poveștile înainte și după.",
       gaLatestT: "Cele mai noi",
       gaLatestSub: "Fotografii proaspete de la Mirela și de la prietenii care o vizitează. Când vin altele noi, cele vechi coboară singure în arhivă.",
