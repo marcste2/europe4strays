@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="scrollcraft.css?v=20260903a">
-<link rel="stylesheet" href="site.css?v=20260903a">
+<link rel="stylesheet" href="scrollcraft.css?v=20260904a">
+<link rel="stylesheet" href="site.css?v=20260904a">
 <style>
   :root {
     --sc-canvas:     #E9F7F9;
@@ -145,7 +145,12 @@
   .copy-btn:active { transform: translateY(1px) scale(.97); }
   .map-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin-top: 1.1rem; }
   .map-fig { margin: 0; }
-  .map-fig iframe { width: 100%; height: 15rem; border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-sm); display: block; }
+  /* the whole map is one link to Google Maps; the iframe is a non-interactive
+     preview, cropped at the top to hide Google's "open in Maps" chip */
+  .map-shell { position: relative; height: 15rem; overflow: hidden; border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-sm); }
+  .map-shell iframe { position: absolute; top: -3.6rem; left: 0; width: 100%; height: calc(100% + 3.6rem); border: 0; pointer-events: none; }
+  .map-link { position: absolute; inset: 0; z-index: 2; cursor: pointer; }
+  .map-link:hover { box-shadow: inset 0 0 0 2px var(--sc-accent); border-radius: var(--sc-r-sm); }
   .map-fig figcaption { padding-top: .45rem; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); letter-spacing: .04em; }
   @media (max-width: 640px) { .map-grid { grid-template-columns: 1fr; } }
 
@@ -480,11 +485,17 @@
               <p data-i18n="h3p">Volunteers clean, feed, groom, walk, paint and play. It is hard work with animals that have known hard lives. Mirela will welcome you and help you plan the trip.</p>
               <div class="map-grid">
                 <figure class="map-fig">
-                  <iframe src="https://www.google.com/maps?q=Strada+Mare%C8%99al+Constantin+Prezan,+627210+Movili%C8%9Ba,+Romania&z=13&output=embed" title="Map: Movilița, Vrancea, Romania" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                  <div class="map-shell">
+                    <iframe src="https://www.google.com/maps?q=Strada+Mare%C8%99al+Constantin+Prezan,+627210+Movili%C8%9Ba,+Romania&z=13&output=embed" title="Map: Movilița, Vrancea, Romania" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Strada+Mare%C8%99al+Constantin+Prezan%2C+627210+Movili%C8%9Ba%2C+Romania" target="_blank" rel="noopener"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-i18n="mapOpen">Open in Google Maps</span></a>
+                  </div>
                   <figcaption data-i18n="mapAddr">The address: Movilița, Vrancea</figcaption>
                 </figure>
                 <figure class="map-fig">
-                  <iframe src="https://www.google.com/maps?q=45.957137,27.121161&z=14&output=embed" title="Map: the Cheerful Kindergarten shelter" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                  <div class="map-shell">
+                    <iframe src="https://www.google.com/maps?q=45.957137,27.121161&z=14&output=embed" title="Map: the Cheerful Kindergarten shelter" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=45.957137%2C27.121161" target="_blank" rel="noopener"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-i18n="mapOpen">Open in Google Maps</span></a>
+                  </div>
                   <figcaption data-i18n="mapShelter">Our shelter, the Cheerful Kindergarten</figcaption>
                 </figure>
               </div>
@@ -532,9 +543,9 @@
 
 </main>
 
-<script src="scrollcraft.js?v=20260903a"></script>
-<script src="i18n.js?v=20260903a"></script>
-<script src="site.js?v=20260903a"></script>
+<script src="scrollcraft.js?v=20260904a"></script>
+<script src="i18n.js?v=20260904a"></script>
+<script src="site.js?v=20260904a"></script>
 <script>ScrollCraft.mount(document.body);</script>
 </body>
 </html>

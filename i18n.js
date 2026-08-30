@@ -2,6 +2,7 @@
 (function () {
   const STRINGS = {
     en: {
+      mapOpen: "Open in Google Maps",
       mapAddr: "The address: Movilița, Vrancea",
       mapShelter: "Our shelter, the Cheerful Kindergarten",
       ctDE: "Germany",
@@ -124,6 +125,7 @@
       ch_ch6: "Colophon"
     },
     de: {
+      mapOpen: "In Google Maps öffnen",
       mapAddr: "Die Adresse: Movilița, Vrancea",
       mapShelter: "Unser Tierheim, der fröhliche Kindergarten",
       ctDE: "Deutschland",
@@ -246,6 +248,7 @@
       ch_ch6: "Kolophon"
     },
     it: {
+      mapOpen: "Apri in Google Maps",
       mapAddr: "L’indirizzo: Movilița, Vrancea",
       mapShelter: "Il nostro rifugio, l’asilo allegro",
       ctDE: "Germania",
@@ -368,6 +371,7 @@
       ch_ch6: "Colophon"
     },
     ro: {
+      mapOpen: "Deschide în Google Maps",
       mapAddr: "Adresa: Movilița, Vrancea",
       mapShelter: "Adăpostul nostru, Grădinița veselă",
       ctDE: "Germania",
