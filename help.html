@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="scrollcraft.css?v=20260905a">
-<link rel="stylesheet" href="site.css?v=20260905a">
+<link rel="stylesheet" href="scrollcraft.css?v=20260906a">
+<link rel="stylesheet" href="site.css?v=20260906a">
 <style>
   :root {
     --sc-canvas:     #E9F7F9;
@@ -49,6 +49,13 @@
   .copy-btn:active { transform: translateY(1px) scale(.97); }
   .pay-note { font-size: var(--sc-t-xs); color: var(--sc-ink-soft); letter-spacing: .05em; margin: 0 0 .3rem; }
 
+  .ad-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin: 1.3rem 0 .3rem; }
+  .ad-gallery img { width: 100%; height: 15rem; object-fit: cover; border-radius: var(--sc-r-sm); display: block; }
+  .ad-gallery .wide { grid-column: span 2; }
+  .ad-gallery .wide img { height: clamp(15rem, 38vh, 22rem); }
+  .ad-body p.ad-credit { font: 500 .58rem/1.4 var(--sc-font-text); letter-spacing: .09em; text-transform: uppercase; color: var(--sc-ink-soft); opacity: .75; margin: .35rem 0 0; }
+  @media (max-width: 640px) { .ad-gallery { grid-template-columns: 1fr; } .ad-gallery .wide { grid-column: auto; } }
+
   .map-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin-top: 1.1rem; }
   .map-fig { margin: 0; }
   .map-shell { position: relative; height: 15rem; overflow: hidden; border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-sm); }
@@ -76,6 +83,7 @@
     <a href="help.html" aria-current="page" data-i18n="navHelp">How to help</a>
     <a href="adopt.html" data-i18n="navAdopt">How to adopt</a>
     <a href="friends.html" data-i18n="navFriends">My Friends</a>
+    <a href="projects.html" data-i18n="navProjects">Projects</a>
     <a href="blog.html">The Cheerful Kindergarten Blog</a>
     <a href="index.html#faces" data-i18n="navGallery">The Dogs gallery</a>
   </nav>
@@ -112,6 +120,9 @@
     <div class="ad-block">
       <h2 data-i18n="hpMoneyT">Donate money</h2>
       <p data-i18n="hpMoney">Money goes furthest: food, vaccines, deworming, surgeries and the building work. Any amount, once or monthly.</p>
+      <div class="ad-gallery">
+        <div class="wide"><img src="assets/ch1-pack.webp" alt="The pack of dogs walking across the shelter yard at feeding time." loading="lazy"></div>
+      </div>
       <p class="pay-note" data-i18n="hpBankNote">Bank transfer · currency Euro · Banca Transilvania</p>
       <div class="pay-row"><code>RO49 BTRL EURC RT03 7925 4101</code><button class="copy-btn" type="button" data-copy="RO49BTRLEURCRT0379254101" data-i18n="h1btn">Copy IBAN</button></div>
       <div class="pay-row"><code>RO91 BTRL EURC RT04 0991 0001</code><button class="copy-btn" type="button" data-copy="RO91BTRLEURCRT0409910001" data-i18n="h1btn">Copy IBAN</button></div>
@@ -127,6 +138,10 @@
     <div class="ad-block">
       <h2 data-i18n="hpAmzT">The Amazon wishlist</h2>
       <p data-i18n="hpAmz">The easiest gift there is: open the list, pick something the dogs need, food, medicine, blankets, supplies, and Amazon delivers it straight to Mirela. You see exactly what your money becomes.</p>
+      <div class="ad-gallery">
+        <div><img src="assets/ch2-pup-white.webp" alt="A white puppy sitting on river pebbles." loading="lazy"></div>
+        <div><img src="assets/ch2-pup-bw.webp" alt="A black and white puppy looking up." loading="lazy"></div>
+      </div>
       <div class="ad-actions">
         <a class="donate-btn" href="https://www.amazon.de/hz/wishlist/ls/1I87FJKK3W54O?ref_=wl_share" target="_blank" rel="noopener" data-i18n="hpAmzBtn">Open the Amazon wishlist</a>
       </div>
@@ -145,6 +160,10 @@
     <div class="ad-block">
       <h2 data-i18n="h2t">Send a parcel</h2>
       <p data-i18n="h2p">Food, anti-flea and deworming treatments, blankets, beds, treats, toys, puppy supplies. Write to us for the delivery address.</p>
+      <div class="ad-gallery">
+        <div class="wide"><img src="assets/partners/hp-hug.webp" alt="A helper hugging one of the rescue dogs." loading="lazy"></div>
+      </div>
+      <p class="ad-credit">Photo: Tierschutzgruppe Herzensmenschen</p>
       <p><a href="mailto:contact.europe4strays@gmail.com" data-i18n="ctaLabel">Write to Mirela</a></p>
     </div>
 
@@ -195,7 +214,7 @@
   <span>Europe4strays · <span data-i18n="footNgo">registered Romanian NGO</span> · Bizighești, Vrancea · IBAN RO91BTRLEURCRT0409910001</span>
 </footer>
 
-<script src="i18n.js?v=20260905a"></script>
+<script src="i18n.js?v=20260906a"></script>
 <script>
   document.querySelectorAll(".copy-btn[data-copy]").forEach(function (btn) {
     var original = null;
