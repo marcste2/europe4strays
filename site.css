@@ -17,14 +17,26 @@
 .donate-btn:hover { transform: translateY(-1px); }
 .donate-btn:active { transform: translateY(1px) scale(.97); }
 .site-head select { font: 500 var(--sc-t-xs)/1 var(--sc-font-text); color: var(--sc-ink-soft); background: transparent; border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-sm); padding: .38rem .45rem; cursor: pointer; }
+/* mobile: brand + socials + language + donate all share the first row,
+   the nav takes its own scrollable row underneath */
 @media (max-width: 900px) {
-  .site-head { gap: .55rem .8rem; padding: .55rem var(--sc-gutter); }
-  .head-brand { font-size: 1.02rem; }
-  .head-brand .head-logo { width: 2rem; height: 2rem; }
-  .head-nav { order: 3; flex-basis: 100%; gap: 1rem; }
+  .site-head { gap: .4rem .55rem; padding: .5rem var(--sc-gutter); }
+  .head-brand { font-size: .95rem; gap: .45rem; min-width: 0; flex: 0 1 auto; }
+  .head-brand span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .head-brand .head-logo { width: 1.8rem; height: 1.8rem; }
+  .head-nav { order: 3; flex-basis: 100%; gap: 1rem; margin-right: 0; }
   .head-nav a { font-size: var(--sc-t-xs); }
-  .donate-btn { padding: .5rem .75rem; }
-  .site-head select { padding: .3rem .35rem; }
+  .head-actions { margin-left: auto; gap: .5rem; flex: 0 0 auto; }
+  .soc svg { width: 1.05rem; height: 1.05rem; }
+  .donate-btn { padding: .45rem .62rem; font-size: .72rem; }
+  .site-head select { padding: .28rem .22rem; font-size: .68rem; }
+}
+@media (max-width: 430px) {
+  .head-brand { font-size: .85rem; gap: .38rem; }
+  .head-brand .head-logo { width: 1.6rem; height: 1.6rem; }
+  .head-actions { gap: .42rem; }
+  .donate-btn { padding: .42rem .55rem; font-size: .68rem; }
+  .site-head select { font-size: .64rem; padding: .26rem .16rem; }
 }
 
 /* video embed frame */
