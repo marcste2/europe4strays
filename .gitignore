@@ -1,6 +1,7 @@
 lab/
 node_modules/
-photos/
+photos/*
+!photos/gallery/
 package.json
 package-lock.json
 BRIEF.md

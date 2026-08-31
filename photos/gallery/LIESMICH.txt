@@ -1,0 +1,46 @@
+GALERIE-ORDNER  ·  Europe4strays
+=================================
+
+So fügst du neue Fotos zur Galerie hinzu:
+
+1. Foto in den passenden JAHRES-ORDNER legen (2026, 2025, 2024 ...).
+   Formate: jpg, jpeg, png, webp. Originalgröße ist gut, wird automatisch
+   verkleinert.
+
+2. DER DATEINAME WIRD ZUR BILDUNTERSCHRIFT.
+   Beispiele:
+       Bianco im Schnee.jpg          ->  "Bianco im Schnee"
+       Welpen-am-Fluss.jpg           ->  "Welpen am Fluss"
+       Der neue Zaun__Hunderunde.jpg ->  "Der neue Zaun", Foto: Hunderunde
+
+   Der Teil nach dem doppelten Unterstrich (__) ist der Bildnachweis.
+   Ohne __ gilt das Foto als eigenes Foto von Europe4strays.
+
+3. Reihenfolge innerhalb eines Jahres:
+   Dateien werden nach Namen sortiert, neueste zuerst. Wenn du die
+   Reihenfolge steuern willst, stell eine Zahl voran:
+       01 Bianco im Schnee.jpg
+       02 Welpen am Fluss.jpg
+   Die Zahl erscheint nicht auf der Website.
+
+4. Bescheid sagen - dann laufen bei mir zwei Befehle:
+       node tools/build-gallery.mjs      (verkleinert + baut die Liste)
+       git add -A && git commit && git push
+   Nach ca. einer Minute ist alles live.
+
+WAS AUTOMATISCH PASSIERT
+------------------------
+- Die 6 neuesten Fotos stehen oben unter "Aktuell".
+- Alles andere wandert in "Archiv", dort nach Jahren gruppiert und
+  aufklappbar.
+- Kommen neue Fotos dazu, rutschen die bisherigen von selbst ins Archiv.
+
+VORHER-NACHHER
+--------------
+Paare fuer den Schieberegler kommen NICHT hierher, sondern in:
+       photos/gallery/vorher-nachher/
+Benennung: gleicher Name + "-vorher" bzw. "-nachher", zum Beispiel
+       luna-vorher.jpg
+       luna-nachher.jpg
+Eine fertige Collage (beides in einem Bild nebeneinander) geht auch:
+       luna-collage.jpg   ->  wird automatisch in zwei Haelften geteilt.
