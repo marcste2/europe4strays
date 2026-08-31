@@ -47,7 +47,8 @@ window.E4S_GALLERY = {
       "cap_de": "Lernt, dass Hände gut sind",
       "cap_it": "Impara che le mani sono gentili",
       "cap_ro": "Învață că mâinile sunt blânde",
-      "credit": "Tierschutzgruppe Herzensmenschen"
+      "credit": "Tierschutzgruppe Herzensmenschen",
+      "pos": "center 38%"
     },
     {
       "src": "assets/partners/st-leone.webp",
@@ -110,7 +111,8 @@ window.E4S_GALLERY = {
       "cap_de": "Am Zaun",
       "cap_it": "Alla recinzione",
       "cap_ro": "La gard",
-      "credit": "Hunderunde"
+      "credit": "Hunderunde",
+      "pos": "center 30%"
     },
     {
       "src": "assets/partners/hp-hug.webp",
@@ -128,7 +130,8 @@ window.E4S_GALLERY = {
       "cap_de": "Die beiden Gründer von Hunderunde",
       "cap_it": "I due fondatori di Hunderunde",
       "cap_ro": "Cei doi fondatori Hunderunde",
-      "credit": "Hunderunde"
+      "credit": "Hunderunde",
+      "pos": "center 26%"
     },
     {
       "src": "assets/partners/fr-hz2.webp",
@@ -137,7 +140,8 @@ window.E4S_GALLERY = {
       "cap_de": "In Sicherheit getragen",
       "cap_it": "Portato al sicuro",
       "cap_ro": "Dus la adăpost",
-      "credit": "Tierschutzgruppe Herzensmenschen"
+      "credit": "Tierschutzgruppe Herzensmenschen",
+      "pos": "center 32%"
     },
     {
       "src": "assets/ch1-pack.webp",
@@ -145,7 +149,8 @@ window.E4S_GALLERY = {
       "cap": "The yard at feeding time",
       "cap_de": "Der Hof zur Fütterungszeit",
       "cap_it": "Il cortile all'ora del pasto",
-      "cap_ro": "Curtea la ora mesei"
+      "cap_ro": "Curtea la ora mesei",
+      "pos": "center 28%"
     },
     {
       "src": "assets/ch2-white.webp",
@@ -172,7 +177,7 @@ window.E4S_GALLERY = {
       "cap_ro": "Cei mari și blânzi"
     },
     {
-      "src": "assets/ch2-pup-white.webp",
+      "src": "assets/ch2-pup-white-face.webp",
       "year": "2020",
       "cap": "Puppy on the river pebbles",
       "cap_de": "Welpe auf den Flusskieseln",
@@ -180,7 +185,7 @@ window.E4S_GALLERY = {
       "cap_ro": "Pui pe pietrele râului"
     },
     {
-      "src": "assets/ch2-pup-bw.webp",
+      "src": "assets/ch2-pup-bw-face.webp",
       "year": "2020",
       "cap": "Little face, big ears",
       "cap_de": "Kleines Gesicht, große Ohren",
@@ -201,7 +206,8 @@ window.E4S_GALLERY = {
       "cap": "Mirela carrying a traveller",
       "cap_de": "Mirela trägt einen Reisenden",
       "cap_it": "Mirela porta un viaggiatore",
-      "cap_ro": "Mirela duce un călător"
+      "cap_ro": "Mirela duce un călător",
+      "pos": "center 22%"
     },
     {
       "src": "assets/ch3-cones.webp",
@@ -209,7 +215,8 @@ window.E4S_GALLERY = {
       "cap": "Two patients of the spay campaign",
       "cap_de": "Zwei Patienten der Kastrationskampagne",
       "cap_it": "Due pazienti della campagna di sterilizzazione",
-      "cap_ro": "Doi pacienți ai campaniei de sterilizare"
+      "cap_ro": "Doi pacienți ai campaniei de sterilizare",
+      "pos": "center 30%"
     },
     {
       "src": "assets/ch3-car.webp",
@@ -241,7 +248,8 @@ window.E4S_GALLERY = {
       "cap": "The second building rises",
       "cap_de": "Das zweite Gebäude wächst",
       "cap_it": "Il secondo edificio prende forma",
-      "cap_ro": "A doua clădire se ridică"
+      "cap_ro": "A doua clădire se ridică",
+      "pos": "center 12%"
     }
   ],
   pairs: [

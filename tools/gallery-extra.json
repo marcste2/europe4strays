@@ -1,34 +1,253 @@
 {
   "_comment": "Photos that already live elsewhere in assets/ (shared with other pages). The build script merges these into the gallery manifest. Newest first within each year. cap = English; cap_de / cap_it / cap_ro are optional and fall back to cap.",
   "photos": [
-    { "src": "assets/partners/ad-happy.webp",  "year": "2026", "cap": "Waiting on the lawn", "cap_de": "Wartet auf der Wiese", "cap_it": "In attesa sul prato", "cap_ro": "Așteaptă pe iarbă", "credit": "Tierschutzgruppe Herzensmenschen" },
-    { "src": "assets/partners/fr-hz1.webp",    "year": "2026", "cap": "Two of the 350", "cap_de": "Zwei von 350", "cap_it": "Due dei 350", "cap_ro": "Doi dintre cei 350", "credit": "Tierschutzgruppe Herzensmenschen" },
-    { "src": "assets/partners/ad-mirela.webp", "year": "2026", "cap": "Mirela and her pack at the Kindergarten", "cap_de": "Mirela und ihr Rudel im Kindergarten", "cap_it": "Mirela e il suo branco all'asilo", "cap_ro": "Mirela și haita ei la Grădiniță", "credit": "Tierschutzgruppe Herzensmenschen" },
-    { "src": "assets/partners/pj-dog.webp",    "year": "2026", "cap": "A young one at the shelter", "cap_de": "Ein junger Hund im Shelter", "cap_it": "Un cucciolone al rifugio", "cap_ro": "Un tânăr la adăpost", "credit": "Tierschutzgruppe Herzensmenschen" },
-    { "src": "assets/partners/ad-foster.webp", "year": "2026", "cap": "Learning that hands are kind", "cap_de": "Lernt, dass Hände gut sind", "cap_it": "Impara che le mani sono gentili", "cap_ro": "Învață că mâinile sunt blânde", "credit": "Tierschutzgruppe Herzensmenschen" },
-    { "src": "assets/partners/st-leone.webp",  "year": "2026", "cap": "Leone in his new forest", "cap_de": "Leone in seinem neuen Wald", "cap_it": "Leone nel suo nuovo bosco", "cap_ro": "Leone în noua lui pădure", "credit": "Tierschutzgruppe Herzensmenschen" },
-    { "src": "assets/partners/st-kiwi.webp",   "year": "2026", "cap": "Kiwi, home at last", "cap_de": "Kiwi, endlich zu Hause", "cap_it": "Kiwi, finalmente a casa", "cap_ro": "Kiwi, în sfârșit acasă", "credit": "Tierschutzgruppe Herzensmenschen" },
-    { "src": "assets/partners/st-sassy.webp",  "year": "2025", "cap": "Sassy on a Swedish trail", "cap_de": "Sassy auf einem schwedischen Waldweg", "cap_it": "Sassy su un sentiero svedese", "cap_ro": "Sassy pe o potecă suedeză", "credit": "Skayla Dog Rescue" },
-    { "src": "assets/partners/fr-sk1.webp",    "year": "2025", "cap": "Evening in the yard", "cap_de": "Abend im Hof", "cap_it": "Sera nel cortile", "cap_ro": "Seară în curte", "credit": "Skayla Dog Rescue" },
-    { "src": "assets/partners/fr-sk2.webp",    "year": "2025", "cap": "Safe in an arm", "cap_de": "Sicher auf dem Arm", "cap_it": "Al sicuro tra le braccia", "cap_ro": "În siguranță pe braț", "credit": "Skayla Dog Rescue" },
-    { "src": "assets/partners/fr-team.webp",   "year": "2024", "cap": "Fabio, Luis and Mirela at the lodge", "cap_de": "Fabio, Luis und Mirela an der Lodge", "cap_it": "Fabio, Luis e Mirela al rifugio", "cap_ro": "Fabio, Luis și Mirela la adăpost", "credit": "Hunderunde" },
-    { "src": "assets/partners/pj-feed.webp",   "year": "2024", "cap": "At the fence", "cap_de": "Am Zaun", "cap_it": "Alla recinzione", "cap_ro": "La gard", "credit": "Hunderunde" },
-    { "src": "assets/partners/hp-hug.webp",    "year": "2024", "cap": "Trust", "cap_de": "Vertrauen", "cap_it": "Fiducia", "cap_ro": "Încredere", "credit": "Tierschutzgruppe Herzensmenschen" },
-    { "src": "assets/partners/fr-founders.webp", "year": "2024", "cap": "The two founders of Hunderunde", "cap_de": "Die beiden Gründer von Hunderunde", "cap_it": "I due fondatori di Hunderunde", "cap_ro": "Cei doi fondatori Hunderunde", "credit": "Hunderunde" },
-    { "src": "assets/partners/fr-hz2.webp",    "year": "2024", "cap": "Carried to safety", "cap_de": "In Sicherheit getragen", "cap_it": "Portato al sicuro", "cap_ro": "Dus la adăpost", "credit": "Tierschutzgruppe Herzensmenschen" },
-    { "src": "assets/ch1-pack.webp",           "year": "2020", "cap": "The yard at feeding time", "cap_de": "Der Hof zur Fütterungszeit", "cap_it": "Il cortile all'ora del pasto", "cap_ro": "Curtea la ora mesei" },
-    { "src": "assets/ch2-white.webp",          "year": "2020", "cap": "One blue eye, one brown", "cap_de": "Ein blaues Auge, ein braunes", "cap_it": "Un occhio azzurro, uno marrone", "cap_ro": "Un ochi albastru, unul căprui" },
-    { "src": "assets/ch2-bw.webp",             "year": "2020", "cap": "Most arrive in pairs", "cap_de": "Die meisten kommen zu zweit", "cap_it": "Quasi tutti arrivano in coppia", "cap_ro": "Cei mai mulți vin în perechi" },
-    { "src": "assets/ch2-pair.webp",           "year": "2020", "cap": "The big gentle ones", "cap_de": "Die großen Sanften", "cap_it": "I grandi e dolci", "cap_ro": "Cei mari și blânzi" },
-    { "src": "assets/ch2-pup-white.webp",      "year": "2020", "cap": "Puppy on the river pebbles", "cap_de": "Welpe auf den Flusskieseln", "cap_it": "Cucciolo sui ciottoli del fiume", "cap_ro": "Pui pe pietrele râului" },
-    { "src": "assets/ch2-pup-bw.webp",         "year": "2020", "cap": "Little face, big ears", "cap_de": "Kleines Gesicht, große Ohren", "cap_it": "Musetto piccolo, orecchie grandi", "cap_ro": "Botic mic, urechi mari" },
-    { "src": "assets/ch2-pup-two.webp",        "year": "2020", "cap": "Two puppies, one blanket of stones", "cap_de": "Zwei Welpen, ein Bett aus Steinen", "cap_it": "Due cuccioli, un letto di sassi", "cap_ro": "Doi pui, un pat de pietre" },
-    { "src": "assets/ch3-carry.webp",          "year": "2020", "cap": "Mirela carrying a traveller", "cap_de": "Mirela trägt einen Reisenden", "cap_it": "Mirela porta un viaggiatore", "cap_ro": "Mirela duce un călător" },
-    { "src": "assets/ch3-cones.webp",          "year": "2020", "cap": "Two patients of the spay campaign", "cap_de": "Zwei Patienten der Kastrationskampagne", "cap_it": "Due pazienti della campagna di sterilizzazione", "cap_ro": "Doi pacienți ai campaniei de sterilizare" },
-    { "src": "assets/ch3-car.webp",            "year": "2020", "cap": "The passenger seat is never empty", "cap_de": "Der Beifahrersitz ist nie leer", "cap_it": "Il sedile del passeggero non è mai vuoto", "cap_ro": "Scaunul din dreapta nu e niciodată gol" },
-    { "src": "assets/ch3-crate.webp",          "year": "2020", "cap": "A rescue day", "cap_de": "Ein Rettungstag", "cap_it": "Un giorno di salvataggio", "cap_ro": "O zi de salvare" },
-    { "src": "assets/blog/5492f727.webp",      "year": "2020", "cap": "Friends visiting the pack", "cap_de": "Freunde besuchen das Rudel", "cap_it": "Amici in visita al branco", "cap_ro": "Prieteni în vizită la haită" },
-    { "src": "assets/ch4-build.webp",          "year": "2020", "cap": "The second building rises", "cap_de": "Das zweite Gebäude wächst", "cap_it": "Il secondo edificio prende forma", "cap_ro": "A doua clădire se ridică" }
+    {
+      "src": "assets/partners/ad-happy.webp",
+      "year": "2026",
+      "cap": "Waiting on the lawn",
+      "cap_de": "Wartet auf der Wiese",
+      "cap_it": "In attesa sul prato",
+      "cap_ro": "Așteaptă pe iarbă",
+      "credit": "Tierschutzgruppe Herzensmenschen"
+    },
+    {
+      "src": "assets/partners/fr-hz1.webp",
+      "year": "2026",
+      "cap": "Two of the 350",
+      "cap_de": "Zwei von 350",
+      "cap_it": "Due dei 350",
+      "cap_ro": "Doi dintre cei 350",
+      "credit": "Tierschutzgruppe Herzensmenschen"
+    },
+    {
+      "src": "assets/partners/ad-mirela.webp",
+      "year": "2026",
+      "cap": "Mirela and her pack at the Kindergarten",
+      "cap_de": "Mirela und ihr Rudel im Kindergarten",
+      "cap_it": "Mirela e il suo branco all'asilo",
+      "cap_ro": "Mirela și haita ei la Grădiniță",
+      "credit": "Tierschutzgruppe Herzensmenschen"
+    },
+    {
+      "src": "assets/partners/pj-dog.webp",
+      "year": "2026",
+      "cap": "A young one at the shelter",
+      "cap_de": "Ein junger Hund im Shelter",
+      "cap_it": "Un cucciolone al rifugio",
+      "cap_ro": "Un tânăr la adăpost",
+      "credit": "Tierschutzgruppe Herzensmenschen"
+    },
+    {
+      "src": "assets/partners/ad-foster.webp",
+      "year": "2026",
+      "cap": "Learning that hands are kind",
+      "cap_de": "Lernt, dass Hände gut sind",
+      "cap_it": "Impara che le mani sono gentili",
+      "cap_ro": "Învață că mâinile sunt blânde",
+      "credit": "Tierschutzgruppe Herzensmenschen",
+      "pos": "center 38%"
+    },
+    {
+      "src": "assets/partners/st-leone.webp",
+      "year": "2026",
+      "cap": "Leone in his new forest",
+      "cap_de": "Leone in seinem neuen Wald",
+      "cap_it": "Leone nel suo nuovo bosco",
+      "cap_ro": "Leone în noua lui pădure",
+      "credit": "Tierschutzgruppe Herzensmenschen"
+    },
+    {
+      "src": "assets/partners/st-kiwi.webp",
+      "year": "2026",
+      "cap": "Kiwi, home at last",
+      "cap_de": "Kiwi, endlich zu Hause",
+      "cap_it": "Kiwi, finalmente a casa",
+      "cap_ro": "Kiwi, în sfârșit acasă",
+      "credit": "Tierschutzgruppe Herzensmenschen"
+    },
+    {
+      "src": "assets/partners/st-sassy.webp",
+      "year": "2025",
+      "cap": "Sassy on a Swedish trail",
+      "cap_de": "Sassy auf einem schwedischen Waldweg",
+      "cap_it": "Sassy su un sentiero svedese",
+      "cap_ro": "Sassy pe o potecă suedeză",
+      "credit": "Skayla Dog Rescue"
+    },
+    {
+      "src": "assets/partners/fr-sk1.webp",
+      "year": "2025",
+      "cap": "Evening in the yard",
+      "cap_de": "Abend im Hof",
+      "cap_it": "Sera nel cortile",
+      "cap_ro": "Seară în curte",
+      "credit": "Skayla Dog Rescue"
+    },
+    {
+      "src": "assets/partners/fr-sk2.webp",
+      "year": "2025",
+      "cap": "Safe in an arm",
+      "cap_de": "Sicher auf dem Arm",
+      "cap_it": "Al sicuro tra le braccia",
+      "cap_ro": "În siguranță pe braț",
+      "credit": "Skayla Dog Rescue"
+    },
+    {
+      "src": "assets/partners/fr-team.webp",
+      "year": "2024",
+      "cap": "Fabio, Luis and Mirela at the lodge",
+      "cap_de": "Fabio, Luis und Mirela an der Lodge",
+      "cap_it": "Fabio, Luis e Mirela al rifugio",
+      "cap_ro": "Fabio, Luis și Mirela la adăpost",
+      "credit": "Hunderunde"
+    },
+    {
+      "src": "assets/partners/pj-feed.webp",
+      "year": "2024",
+      "cap": "At the fence",
+      "cap_de": "Am Zaun",
+      "cap_it": "Alla recinzione",
+      "cap_ro": "La gard",
+      "credit": "Hunderunde",
+      "pos": "center 30%"
+    },
+    {
+      "src": "assets/partners/hp-hug.webp",
+      "year": "2024",
+      "cap": "Trust",
+      "cap_de": "Vertrauen",
+      "cap_it": "Fiducia",
+      "cap_ro": "Încredere",
+      "credit": "Tierschutzgruppe Herzensmenschen"
+    },
+    {
+      "src": "assets/partners/fr-founders.webp",
+      "year": "2024",
+      "cap": "The two founders of Hunderunde",
+      "cap_de": "Die beiden Gründer von Hunderunde",
+      "cap_it": "I due fondatori di Hunderunde",
+      "cap_ro": "Cei doi fondatori Hunderunde",
+      "credit": "Hunderunde",
+      "pos": "center 26%"
+    },
+    {
+      "src": "assets/partners/fr-hz2.webp",
+      "year": "2024",
+      "cap": "Carried to safety",
+      "cap_de": "In Sicherheit getragen",
+      "cap_it": "Portato al sicuro",
+      "cap_ro": "Dus la adăpost",
+      "credit": "Tierschutzgruppe Herzensmenschen",
+      "pos": "center 32%"
+    },
+    {
+      "src": "assets/ch1-pack.webp",
+      "year": "2020",
+      "cap": "The yard at feeding time",
+      "cap_de": "Der Hof zur Fütterungszeit",
+      "cap_it": "Il cortile all'ora del pasto",
+      "cap_ro": "Curtea la ora mesei",
+      "pos": "center 28%"
+    },
+    {
+      "src": "assets/ch2-white.webp",
+      "year": "2020",
+      "cap": "One blue eye, one brown",
+      "cap_de": "Ein blaues Auge, ein braunes",
+      "cap_it": "Un occhio azzurro, uno marrone",
+      "cap_ro": "Un ochi albastru, unul căprui"
+    },
+    {
+      "src": "assets/ch2-bw.webp",
+      "year": "2020",
+      "cap": "Most arrive in pairs",
+      "cap_de": "Die meisten kommen zu zweit",
+      "cap_it": "Quasi tutti arrivano in coppia",
+      "cap_ro": "Cei mai mulți vin în perechi"
+    },
+    {
+      "src": "assets/ch2-pair.webp",
+      "year": "2020",
+      "cap": "The big gentle ones",
+      "cap_de": "Die großen Sanften",
+      "cap_it": "I grandi e dolci",
+      "cap_ro": "Cei mari și blânzi"
+    },
+    {
+      "src": "assets/ch2-pup-white-face.webp",
+      "year": "2020",
+      "cap": "Puppy on the river pebbles",
+      "cap_de": "Welpe auf den Flusskieseln",
+      "cap_it": "Cucciolo sui ciottoli del fiume",
+      "cap_ro": "Pui pe pietrele râului"
+    },
+    {
+      "src": "assets/ch2-pup-bw-face.webp",
+      "year": "2020",
+      "cap": "Little face, big ears",
+      "cap_de": "Kleines Gesicht, große Ohren",
+      "cap_it": "Musetto piccolo, orecchie grandi",
+      "cap_ro": "Botic mic, urechi mari"
+    },
+    {
+      "src": "assets/ch2-pup-two.webp",
+      "year": "2020",
+      "cap": "Two puppies, one blanket of stones",
+      "cap_de": "Zwei Welpen, ein Bett aus Steinen",
+      "cap_it": "Due cuccioli, un letto di sassi",
+      "cap_ro": "Doi pui, un pat de pietre"
+    },
+    {
+      "src": "assets/ch3-carry.webp",
+      "year": "2020",
+      "cap": "Mirela carrying a traveller",
+      "cap_de": "Mirela trägt einen Reisenden",
+      "cap_it": "Mirela porta un viaggiatore",
+      "cap_ro": "Mirela duce un călător",
+      "pos": "center 22%"
+    },
+    {
+      "src": "assets/ch3-cones.webp",
+      "year": "2020",
+      "cap": "Two patients of the spay campaign",
+      "cap_de": "Zwei Patienten der Kastrationskampagne",
+      "cap_it": "Due pazienti della campagna di sterilizzazione",
+      "cap_ro": "Doi pacienți ai campaniei de sterilizare",
+      "pos": "center 30%"
+    },
+    {
+      "src": "assets/ch3-car.webp",
+      "year": "2020",
+      "cap": "The passenger seat is never empty",
+      "cap_de": "Der Beifahrersitz ist nie leer",
+      "cap_it": "Il sedile del passeggero non è mai vuoto",
+      "cap_ro": "Scaunul din dreapta nu e niciodată gol"
+    },
+    {
+      "src": "assets/ch3-crate.webp",
+      "year": "2020",
+      "cap": "A rescue day",
+      "cap_de": "Ein Rettungstag",
+      "cap_it": "Un giorno di salvataggio",
+      "cap_ro": "O zi de salvare"
+    },
+    {
+      "src": "assets/blog/5492f727.webp",
+      "year": "2020",
+      "cap": "Friends visiting the pack",
+      "cap_de": "Freunde besuchen das Rudel",
+      "cap_it": "Amici in visita al branco",
+      "cap_ro": "Prieteni în vizită la haită"
+    },
+    {
+      "src": "assets/ch4-build.webp",
+      "year": "2020",
+      "cap": "The second building rises",
+      "cap_de": "Das zweite Gebäude wächst",
+      "cap_it": "Il secondo edificio prende forma",
+      "cap_ro": "A doua clădire se ridică",
+      "pos": "center 12%"
+    }
   ],
   "pairs": [
     {
