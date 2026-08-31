@@ -2,6 +2,7 @@
 (function () {
   const STRINGS = {
     en: {
+      hpPpBtn: "Donate via PayPal",
       bd1: "May 26, 2020",
       bt1: "Concrete base for the second building, done!",
       bp1a: "My dear friends, concrete base done for the second building. I am so happy I am able to show you what my projects are, to offer a better and safe future to the stray dogs of my town.",
@@ -210,6 +211,7 @@
       ch_ch6: "Colophon"
     },
     de: {
+      hpPpBtn: "Mit PayPal spenden",
       bd1: "26. Mai 2020",
       bt1: "Bodenplatte für das zweite Gebäude ist fertig!",
       bp1a: "Meine lieben Freunde, die Bodenplatte für das zweite Gebäude steht. Ich bin so glücklich, euch zeigen zu können, was meine Projekte sind: den Straßenhunden meiner Stadt eine bessere und sichere Zukunft zu geben.",
@@ -418,6 +420,7 @@
       ch_ch6: "Kolophon"
     },
     it: {
+      hpPpBtn: "Dona con PayPal",
       bd1: "26 maggio 2020",
       bt1: "La platea del secondo edificio è pronta!",
       bp1a: "Cari amici, la platea di cemento del secondo edificio è finita. Sono così felice di potervi mostrare quali sono i miei progetti: offrire un futuro migliore e sicuro ai cani randagi del mio paese.",
@@ -626,6 +629,7 @@
       ch_ch6: "Colophon"
     },
     ro: {
+      hpPpBtn: "Donează cu PayPal",
       bd1: "26 mai 2020",
       bt1: "Placa de beton a celei de-a doua clădiri este gata!",
       bp1a: "Dragii mei prieteni, placa de beton pentru a doua clădire este gata. Sunt atât de fericită că vă pot arăta care sunt proiectele mele: să ofer un viitor mai bun și sigur câinilor fără stăpân din satul meu.",
