@@ -24,14 +24,20 @@
   .head-brand { font-size: .95rem; gap: .45rem; min-width: 0; flex: 0 1 auto; }
   .head-brand span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .head-brand .head-logo { width: 1.8rem; height: 1.8rem; }
-  .head-nav { order: 3; flex-basis: 100%; gap: 1rem; margin-right: 0; }
-  .head-nav a { font-size: var(--sc-t-xs); }
+  /* the row scrolls sideways; the soft right edge signals there is more */
+  .head-nav {
+    order: 3; flex-basis: 100%; gap: 1.15rem; margin-right: 0;
+    -webkit-mask-image: linear-gradient(to right, #000 88%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 88%, transparent 100%);
+  }
+  .head-nav a { font-size: .92rem; padding-block: .3rem; }
   .head-actions { margin-left: auto; gap: .5rem; flex: 0 0 auto; }
   .soc svg { width: 1.05rem; height: 1.05rem; }
   .donate-btn { padding: .45rem .62rem; font-size: .72rem; }
   .site-head select { padding: .28rem .22rem; font-size: .68rem; }
 }
 @media (max-width: 430px) {
+  .head-nav a { font-size: .88rem; }
   .head-brand { font-size: .85rem; gap: .38rem; }
   .head-brand .head-logo { width: 1.6rem; height: 1.6rem; }
   .head-actions { gap: .42rem; }
