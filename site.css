@@ -16,33 +16,53 @@
 .donate-btn { display: inline-block; font: 600 var(--sc-t-sm)/1 var(--sc-font-text); color: var(--sc-accent-ink); background: var(--sc-accent); border-radius: var(--sc-r-sm); padding: .62rem .95rem; text-decoration: none; white-space: nowrap; transition: transform 140ms var(--sc-ease-out); }
 .donate-btn:hover { transform: translateY(-1px); }
 .donate-btn:active { transform: translateY(1px) scale(.97); }
+/* the header button carries a short label for narrow screens */
+.donate-btn .d-short { display: none; }
 .site-head select { font: 500 var(--sc-t-xs)/1 var(--sc-font-text); color: var(--sc-ink-soft); background: transparent; border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-sm); padding: .38rem .45rem; cursor: pointer; }
 /* mobile: brand + socials + language + donate all share the first row,
    the nav takes its own scrollable row underneath */
 @media (max-width: 900px) {
-  .site-head { gap: .4rem .55rem; padding: .5rem var(--sc-gutter); }
-  .head-brand { font-size: .95rem; gap: .45rem; min-width: 0; flex: 0 1 auto; }
+  .site-head { gap: .5rem .6rem; padding: .7rem 1rem; }
+  .site-head .donate-btn .d-long { display: none; }
+  .site-head .donate-btn .d-short { display: inline; }
+  .head-brand { font-size: 1.15rem; gap: .5rem; min-width: 0; flex: 0 1 auto; }
   .head-brand span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .head-brand .head-logo { width: 1.8rem; height: 1.8rem; }
+  .head-brand .head-logo { width: 2.35rem; height: 2.35rem; border-radius: 9px; }
   /* the row scrolls sideways; the soft right edge signals there is more */
   .head-nav {
     order: 3; flex-basis: 100%; gap: 1.15rem; margin-right: 0;
     -webkit-mask-image: linear-gradient(to right, #000 88%, transparent 100%);
     mask-image: linear-gradient(to right, #000 88%, transparent 100%);
   }
-  .head-nav a { font-size: .92rem; padding-block: .3rem; }
-  .head-actions { margin-left: auto; gap: .5rem; flex: 0 0 auto; }
-  .soc svg { width: 1.05rem; height: 1.05rem; }
-  .donate-btn { padding: .45rem .62rem; font-size: .72rem; }
-  .site-head select { padding: .28rem .22rem; font-size: .68rem; }
+  .head-nav a { font-size: .95rem; padding-block: .35rem; }
+  .head-actions { margin-left: auto; gap: .6rem; flex: 0 0 auto; }
+  .soc svg { width: 1.35rem; height: 1.35rem; }
+  .donate-btn { padding: .55rem .78rem; font-size: .82rem; }
+  .site-head select { padding: .38rem .28rem; font-size: .78rem; }
 }
 @media (max-width: 430px) {
-  .head-nav a { font-size: .88rem; }
-  .head-brand { font-size: .85rem; gap: .38rem; }
-  .head-brand .head-logo { width: 1.6rem; height: 1.6rem; }
+  .site-head { padding: .6rem .85rem; gap: .45rem .5rem; }
+  .head-nav a { font-size: .9rem; }
+  .head-brand { font-size: 1.04rem; gap: .42rem; }
+  .head-brand .head-logo { width: 2.1rem; height: 2.1rem; }
+  .head-actions { gap: .5rem; }
+  .soc svg { width: 1.25rem; height: 1.25rem; }
+  .donate-btn { padding: .5rem .66rem; font-size: .78rem; }
+  .site-head select { font-size: .72rem; padding: .34rem .22rem; }
+}
+/* small phones: trim just enough to keep the one row in every language */
+@media (max-width: 389px) {
+  .site-head { padding: .55rem .7rem; gap: .4rem .42rem; }
+  .head-brand { font-size: .96rem; gap: .36rem; }
+  .head-brand .head-logo { width: 1.95rem; height: 1.95rem; }
   .head-actions { gap: .42rem; }
-  .donate-btn { padding: .42rem .55rem; font-size: .68rem; }
-  .site-head select { font-size: .64rem; padding: .26rem .16rem; }
+  .soc svg { width: 1.18rem; height: 1.18rem; }
+  .donate-btn { padding: .46rem .56rem; font-size: .74rem; }
+  .site-head select { font-size: .68rem; padding: .3rem .18rem; }
+}
+/* very small phones: the logo alone carries the brand */
+@media (max-width: 339px) {
+  .head-brand span { display: none; }
 }
 
 /* video embed frame */

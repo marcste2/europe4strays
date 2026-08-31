@@ -2,6 +2,7 @@
 (function () {
   const STRINGS = {
     en: {
+      donateShort: "Donate",
       stTag: "The happy endings",
       stT: "Adoption stories",
       stIntro: "This is what all the work is for. Three of the many dogs who made it from Vrancea to a family of their own, told by the friends who carried them there.",
@@ -178,6 +179,7 @@
       ch_ch6: "Colophon"
     },
     de: {
+      donateShort: "Spenden",
       stTag: "Die Happy Ends",
       stT: "Adoptionsgeschichten",
       stIntro: "Dafür ist all die Arbeit: Drei von den vielen Hunden, die es aus Vrancea bis in eine eigene Familie geschafft haben, erzählt von den Freunden, die sie dorthin getragen haben.",
@@ -354,6 +356,7 @@
       ch_ch6: "Kolophon"
     },
     it: {
+      donateShort: "Dona",
       stTag: "I lieto fine",
       stT: "Storie di adozione",
       stIntro: "È per questo che si fa tutto il lavoro: tre dei tanti cani che ce l'hanno fatta dalla Vrancea fino a una famiglia tutta loro, raccontati dagli amici che li hanno portati fin lì.",
@@ -530,6 +533,7 @@
       ch_ch6: "Colophon"
     },
     ro: {
+      donateShort: "Donează",
       stTag: "Finalurile fericite",
       stT: "Povești de adopție",
       stIntro: "Pentru asta e toată munca: trei dintre mulții câini care au ajuns din Vrancea într-o familie a lor, povestiți de prietenii care i-au dus până acolo.",
