@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="scrollcraft.css?v=20260918a">
-<link rel="stylesheet" href="site.css?v=20260918a">
+<link rel="stylesheet" href="scrollcraft.css?v=20260919a">
+<link rel="stylesheet" href="site.css?v=20260919a">
 <style>
   :root {
     --sc-canvas:     #E9F7F9;
@@ -40,9 +40,20 @@
   }
 
   /* ============ title page ============ */
-  .title-page { min-height: 84vh; display: grid; align-content: center; }
+  .title-page { position: relative; min-height: 84vh; display: grid; align-content: center; }
+  /* the club's heart, blown up as a watermark behind the whole hero */
+  .title-page::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: url("assets/logo-mark.webp") no-repeat center right 4%;
+    background-size: auto min(74vh, 78vw);
+    opacity: .13;
+    pointer-events: none;
+  }
+  .title-page .sc-wrap { position: relative; }
   @media (max-width: 860px) {
     .title-page { min-height: 0; align-content: start; padding: 2.4rem 0 3.5rem; }
+    .title-page::before { background-position: center top 18%; background-size: auto min(46vh, 96vw); opacity: .11; }
   }
   .title-page .sc-wrap { max-width: 62rem; }
   .title-kicker { font: 500 var(--sc-t-sm)/1.4 var(--sc-font-text); letter-spacing: .14em; text-transform: uppercase; color: var(--sc-ink-soft); margin: 0; }
@@ -544,9 +555,9 @@
 
 </main>
 
-<script src="scrollcraft.js?v=20260918a"></script>
-<script src="i18n.js?v=20260918a"></script>
-<script src="site.js?v=20260918a"></script>
+<script src="scrollcraft.js?v=20260919a"></script>
+<script src="i18n.js?v=20260919a"></script>
+<script src="site.js?v=20260919a"></script>
 <script>ScrollCraft.mount(document.body);</script>
 </body>
 </html>
