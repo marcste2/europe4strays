@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>How to adopt · Europe4strays</title>
-<meta name="description" content="Adopting a Europe4strays dog runs through our German partner, Tierschutzgruppe Herzensmenschen: dogs wait in foster homes in Germany, where you can meet them.">
+<meta name="description" content="Adopting a Europe4strays dog runs through two partner associations: Tierschutzgruppe Herzensmenschen in Germany and Skayla Dog Rescue in Sweden. Both routes, step by step.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="scrollcraft.css?v=20260919a">
-<link rel="stylesheet" href="site.css?v=20260919a">
+<link rel="stylesheet" href="scrollcraft.css?v=20260920a">
+<link rel="stylesheet" href="site.css?v=20260920a">
 <style>
   :root {
     --sc-canvas:     #E9F7F9;
@@ -33,6 +33,10 @@
   .ad-body { padding: clamp(2.5rem, 6vh, 4rem) var(--sc-gutter) 4rem; }
   .ad-body h2 { font-family: var(--sc-font-display); font-size: clamp(1.5rem, 3.2vw, 2.2rem); line-height: 1.1; font-weight: 560; margin: 0 0 .9rem; }
   .ad-body p { font-size: var(--sc-t-base); line-height: 1.65; margin: 0 0 1em; max-width: 62ch; }
+  .ad-body h3 { font-family: var(--sc-font-display); font-size: clamp(1.15rem, 2.3vw, 1.5rem); line-height: 1.2; font-weight: 560; margin: 1.9rem 0 .8rem; }
+  .ad-steps { counter-reset: adstep; list-style: none; padding: 0; margin: 0 0 1.3rem; max-width: 62ch; }
+  .ad-steps li { counter-increment: adstep; position: relative; padding-left: 2.6rem; font-size: var(--sc-t-base); line-height: 1.6; margin: 0 0 .9rem; }
+  .ad-steps li::before { content: counter(adstep); position: absolute; left: 0; top: .1em; width: 1.75rem; height: 1.75rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--sc-accent); color: var(--sc-accent-ink); font: 600 .8rem/1 var(--sc-font-text); }
   .ad-body a { color: var(--sc-accent); text-underline-offset: .22em; }
   .ad-block { border-top: 1px solid var(--sc-hairline-strong); padding: clamp(1.8rem, 4vh, 2.6rem) 0; }
   .ad-block:first-child { border-top: 0; padding-top: 0; }
@@ -97,16 +101,17 @@
 <main>
   <section class="ad-hero">
     <div class="inner">
-      <p class="ad-kicker">Europe4strays × Tierschutzgruppe Herzensmenschen</p>
+      <p class="ad-kicker">Europe4strays × Herzensmenschen × Skayla Dog Rescue</p>
       <h1 class="ad-title" data-i18n="adTitle">How to adopt</h1>
-      <p class="ad-intro" data-i18n="adIntro">Adopting one of Mirela's dogs runs through our German partner association, Tierschutzgruppe Herzensmenschen. They bring the dogs to foster homes in Germany, where you can meet them in person before they move in with you.</p>
+      <p class="ad-intro" data-i18n="adIntro">Mirela’s dogs find their families through two partner associations: Tierschutzgruppe Herzensmenschen in Germany and Skayla Dog Rescue in Sweden. Both know the dogs by name, both have stood in the yard in Bizighești themselves. Start with whichever one is closer to you.</p>
     </div>
   </section>
 
   <div class="ad-body">
 
     <div class="ad-block">
-      <h2 data-i18n="adOrgT">Who they are</h2>
+      <p class="ad-kicker" data-i18n="ctDE">Germany</p>
+      <h2>Tierschutzgruppe Herzensmenschen</h2>
       <p data-i18n="adOrg1">Tierschutzgruppe Herzensmenschen is a German animal welfare group dedicated to sustainable animal protection in Romania: castration campaigns, education work and reliable structures on the ground. Together with their local partners they care for around 400 dogs and cats.</p>
       <p data-i18n="adOrg2">Their dogs are placed exclusively through foster homes in Germany. The animals have time to arrive and settle, you can get to know them properly, and each one finds a home that truly fits, for a whole dog's life.</p>
       <div class="ad-gallery">
@@ -118,10 +123,8 @@
         <a class="donate-btn" href="https://tierschutzgruppe-herzensmenschen.de/adoptieren/" target="_blank" rel="noopener" data-i18n="adBtnDogs">See the dogs for adoption</a>
         <a class="btn-outline" href="https://tierschutzgruppe-herzensmenschen.de/" target="_blank" rel="noopener" data-i18n="adBtnSite">Visit their website</a>
       </div>
-    </div>
 
-    <div class="ad-block">
-      <h2 data-i18n="adFollowT">Follow their work</h2>
+      <h3 data-i18n="adFollowT">Follow their work</h3>
       <div class="ad-socials">
         <a href="https://www.instagram.com/tierschutz_herzensmenschen/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
@@ -138,10 +141,58 @@
       </div>
     </div>
 
+    <!-- Sweden · Skayla Dog Rescue -->
+    <div class="ad-block">
+      <p class="ad-kicker" data-i18n="ctSE">Sweden</p>
+      <h2>Skayla Dog Rescue</h2>
+      <p data-i18n="skaA1">Skayla Dog Rescue is a non-profit in Sweden. Nicholas and Emelie founded it — they also run the dog school Leonila DogCare — and Emelie Wendel and Anna Johansson work alongside them. In 2021 they became close friends of Mirela and Dragoș, went to Romania to see the streets and the shelter with their own eyes, and have been finding Swedish families for the dogs from here ever since.</p>
+      <p data-i18n="skaA2">Their website keeps two lists side by side: dogs waiting in Sweden, and dogs waiting in Romania. The Romanian list is Mirela’s dogs. Every dog they take on gets training and rehabilitation first, and Skayla matches dog and family carefully instead of handing a dog to whoever asks first.</p>
+      <div class="ad-gallery">
+        <div><img src="assets/partners/sk-shelter.webp" style="object-position:center top" alt="A brown shelter dog smiling under the Skayla Dog Rescue sign at Mirela’s shelter." loading="lazy"></div>
+        <div><img src="assets/partners/sk-hug.webp" style="object-position:center 20%" alt="A large golden dog standing up against a helper in the shelter yard." loading="lazy"></div>
+      </div>
+      <p class="ad-credit"><span data-i18n="photosBy">Photos:</span> Skayla Dog Rescue</p>
+
+      <h3 data-i18n="skaHowT">How adopting through Sweden works</h3>
+      <ol class="ad-steps">
+        <li data-i18n="skaS1">Read the adoption information on their site, and look through the dogs waiting in Romania.</li>
+        <li data-i18n="skaS2">Send them an email with your name, address and phone number, and as full a description as you can of yourself, your household, your everyday life and any other animals.</li>
+        <li data-i18n="skaS3">They come back to you with more questions and look for the dog that fits the life you described.</li>
+        <li data-i18n="skaS4">The adoption fee is usually 7,500 SEK. When you collect your dog you sign the adoption contract and receive an information sheet for the first weeks, together with the dog’s papers and passport.</li>
+        <li data-i18n="skaS5">Afterwards they stay in touch, to hear how it is going and to answer whatever comes up.</li>
+      </ol>
+      <div class="ad-gallery">
+        <div class="wide"><img src="assets/partners/sk-arrive.webp" alt="A young black, tan and white dog standing on a wooden deck in front of a red Swedish house." loading="lazy"></div>
+      </div>
+      <p class="ad-credit"><span data-i18n="photoBy">Photo:</span> Skayla Dog Rescue</p>
+
+      <h3 data-i18n="skaFosterT">Not ready to adopt yet?</h3>
+      <p data-i18n="skaFoster">Skayla is always looking for foster homes. You take a dog in for as long as it needs a place, treat it as your own and cover its food; the association stays the legal owner and pays the insurance. Every foster home frees up a place for the next dog.</p>
+
+      <div class="ad-actions">
+        <a class="donate-btn" href="https://www.skayladogrescue.se/hundar-f%C3%B6r-adoption/" target="_blank" rel="noopener" data-i18n="skaBtnDogs">The dogs waiting in Romania</a>
+        <a class="btn-outline" href="https://www.skayladogrescue.se/" target="_blank" rel="noopener" data-i18n="adBtnSite">Visit their website</a>
+        <a class="btn-outline" href="mailto:skayladogrescue@gmail.com" data-i18n="skaBtnMail">Write to Skayla</a>
+      </div>
+
+      <h3 data-i18n="adFollowT">Follow their work</h3>
+      <div class="ad-socials">
+        <a href="https://www.instagram.com/skayladogrescue/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          <span>@skayladogrescue</span>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100094486330748" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 4.5H16V1.8c-.5-.07-1.4-.15-2.4-.15-2.4 0-4 1.5-4 4.2V8.5H7v3h2.6V22h3.1V11.5h2.6l.4-3h-3V6.3c0-.9.24-1.8 1.8-1.8z"/></svg>
+          <span>Skayla Dog Rescue</span>
+        </a>
+      </div>
+    </div>
+
     <div class="ad-block">
       <h2 data-i18n="adPracT">The practical part</h2>
       <p data-i18n="h4p1">Adopting is a long-term commitment, and it starts with a form and a phone call. A home check is done by the nearest Europe4strays member, then your dog is prepared: vaccinated, chipped, sterilized, passported.</p>
       <p data-i18n="h4p2">Preparation is around 100 EUR, transport between 150 and 300 EUR depending on your country.</p>
+      <p data-i18n="adPracRoute">These figures are for the German route. Skayla in Sweden has its own adoption fee, named in the steps above.</p>
       <div class="ad-gallery">
         <div class="wide"><img src="assets/partners/ad-mirela.webp" alt="Mirela at the Cheerful Kindergarten, surrounded by her dogs." loading="lazy"></div>
       </div>
@@ -156,6 +207,6 @@
   <span>Europe4strays · <span data-i18n="footNgo">registered Romanian NGO</span> · Bizighești, Vrancea · IBAN RO91BTRLEURCRT0409910001</span>
 </footer>
 
-<script src="i18n.js?v=20260919a"></script>
+<script src="i18n.js?v=20260920a"></script>
 </body>
 </html>
