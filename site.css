@@ -68,6 +68,17 @@
 /* video embed frame */
 .video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: var(--sc-r-md); overflow: hidden; box-shadow: var(--sc-e2); }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* click-to-play: a local thumbnail until someone presses play (embeds.js) */
+.yt-facade { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; display: block; background: #0B2533; color: #fff; font: inherit; cursor: pointer; }
+.yt-facade img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 500ms var(--sc-ease-out); }
+.yt-facade::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(4, 20, 30, .66), rgba(4, 20, 30, 0) 42%); }
+.yt-play { position: absolute; left: 50%; top: 50%; z-index: 1; width: 4.4rem; height: 4.4rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #D6231B; box-shadow: 0 6px 22px rgba(0, 0, 0, .35); transform: translate(-50%, -50%); transition: transform 180ms var(--sc-ease-out); }
+.yt-play svg { width: 1.7rem; height: 1.7rem; margin-left: .18rem; fill: #fff; }
+.yt-facade:hover .yt-play, .yt-facade:focus-visible .yt-play { transform: translate(-50%, -50%) scale(1.08); }
+.yt-facade:hover img { transform: scale(1.02); }
+.yt-facade:focus-visible { outline: 3px solid #fff; outline-offset: -3px; }
+.yt-note { position: absolute; left: 0; right: 0; bottom: .75rem; z-index: 1; padding: 0 1rem; text-align: center; font: 500 .72rem/1.35 var(--sc-font-text); letter-spacing: .03em; color: rgba(255, 255, 255, .9); }
+.yt-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* donate row with payment marks */
 .donate-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }

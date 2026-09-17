@@ -6,11 +6,11 @@
 <title>Europe4strays · Romanian dog rescue by Mirela Mistodinis</title>
 <meta name="description" content="Europe4strays is a volunteer-run Romanian NGO caring for 350 rescued stray dogs in Vrancea County. Read the story, then help: donate, volunteer, adopt.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="scrollcraft.css?v=20260921a">
-<link rel="stylesheet" href="site.css?v=20260921a">
+<link rel="preload" href="fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css?v=20260922a">
+<link rel="stylesheet" href="scrollcraft.css?v=20260922a">
+<link rel="stylesheet" href="site.css?v=20260922a">
 <style>
   :root {
     --sc-canvas:     #E9F7F9;
@@ -160,10 +160,15 @@
   .copy-btn:active { transform: translateY(1px) scale(.97); }
   .map-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin-top: 1.1rem; }
   .map-fig { margin: 0; }
-  /* the whole map is one link to Google Maps; the iframe is a non-interactive
-     preview, cropped at the top to hide Google's "open in Maps" chip */
+  /* the whole map is one link to Google Maps. The picture itself is a static
+     OpenStreetMap render (tools/build-maps.py), so nothing loads from Google
+     until someone clicks. Shown unscaled so labels stay readable. */
   .map-shell { position: relative; height: 15rem; overflow: hidden; border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-sm); }
-  .map-shell iframe { position: absolute; top: -3.6rem; left: 0; width: 100%; height: calc(100% + 3.6rem); border: 0; pointer-events: none; }
+  .map-shell img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: none; object-position: 50% 50%; filter: saturate(.82); }
+  .map-pin { position: absolute; left: 50%; top: 50%; z-index: 1; line-height: 0; transform: translate(-50%, -100%); pointer-events: none; filter: drop-shadow(0 2px 2px rgba(0,0,0,.28)); }
+  .map-pin path { fill: #D6231B; } .map-pin circle { fill: #fff; }
+  .map-attrib { position: absolute; right: 0; bottom: 0; z-index: 3; padding: .12rem .4rem; font: 500 .62rem/1.3 var(--sc-font-text); color: #333 !important; background: rgba(255,255,255,.78); border-top-left-radius: 4px; text-decoration: none; }
+  .map-attrib:hover { text-decoration: underline; }
   .map-link { position: absolute; inset: 0; z-index: 2; cursor: pointer; }
   .map-link:hover { box-shadow: inset 0 0 0 2px var(--sc-accent); border-radius: var(--sc-r-sm); }
   .map-fig figcaption { padding-top: .45rem; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); letter-spacing: .04em; }
@@ -405,7 +410,7 @@
 
     <!-- authored silence -->
     <div class="silence">
-      <p data-i18n="silence">Not every dog is one of hers.</p>
+      <p data-i18n="silence">A heart for every dog.</p>
     </div>
   </section>
 
@@ -431,7 +436,7 @@
           <p class="sc-body" style="color: var(--sc-ink-soft); max-width: var(--sc-measure);" data-i18n="docuCap">Hunderunde, the German channel whose donations fenced the plot and raised the main building, travelled to Romania and filmed the journey: "Hunde in Rumänien, eine Reise die wir niemals vergessen." It picks up right where Mirela's part begins.</p>
         </div>
         <div class="video-frame" data-sc-in>
-          <iframe src="https://www.youtube-nocookie.com/embed/skqR2h3WgBA?start=394" title="Hunde in Rumänien - Eine Reise die wir niemals vergessen (Hunderunde)" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          <button class="yt-facade" type="button" data-yt="skqR2h3WgBA" data-yt-start="394" data-yt-title="Hunde in Rumänien - Eine Reise die wir niemals vergessen (Hunderunde)"><img src="assets/video/skqR2h3WgBA.webp" width="1280" height="720" alt="" loading="lazy"><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.2v13.6L19 12z"/></svg></span><span class="yt-note" data-i18n="ytNote">Loads from YouTube when you press play</span><span class="yt-sr"><span data-i18n="ytPlay">Play video</span>: Hunde in Rumänien - Eine Reise die wir niemals vergessen (Hunderunde)</span></button>
         </div>
       </div>
     </div>
@@ -502,14 +507,14 @@
               <div class="map-grid">
                 <figure class="map-fig">
                   <div class="map-shell">
-                    <iframe src="https://www.google.com/maps?q=Strada+Mare%C8%99al+Constantin+Prezan,+627210+Movili%C8%9Ba,+Romania&z=13&output=embed" title="Map: Movilița, Vrancea, Romania" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <img src="assets/map-address.webp" width="800" height="400" alt="Map: Movilița, Vrancea, Romania" loading="lazy"><span class="map-pin" aria-hidden="true"><svg viewBox="0 0 24 34" width="26" height="37"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20.8 12 34 12 34s12-13.2 12-22.1C24 5.3 18.6 0 12 0z"/><circle cx="12" cy="12" r="4.4"/></svg></span><a class="map-attrib" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a>
                     <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Strada+Mare%C8%99al+Constantin+Prezan%2C+627210+Movili%C8%9Ba%2C+Romania" target="_blank" rel="noopener"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-i18n="mapOpen">Open in Google Maps</span></a>
                   </div>
                   <figcaption data-i18n="mapAddr">The address: Movilița, Vrancea</figcaption>
                 </figure>
                 <figure class="map-fig">
                   <div class="map-shell">
-                    <iframe src="https://www.google.com/maps?q=45.957137,27.121161&z=14&output=embed" title="Map: the Cheerful Kindergarten shelter" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <img src="assets/map-shelter.webp" width="800" height="400" alt="Map: the Cheerful Kindergarten shelter near Movilița" loading="lazy"><span class="map-pin" aria-hidden="true"><svg viewBox="0 0 24 34" width="26" height="37"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20.8 12 34 12 34s12-13.2 12-22.1C24 5.3 18.6 0 12 0z"/><circle cx="12" cy="12" r="4.4"/></svg></span><a class="map-attrib" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a>
                     <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=45.957137%2C27.121161" target="_blank" rel="noopener"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-i18n="mapOpen">Open in Google Maps</span></a>
                   </div>
                   <figcaption data-i18n="mapShelter">Our shelter, the Cheerful Kindergarten</figcaption>
@@ -551,7 +556,7 @@
         </p>
       </div>
       <footer class="colophon-foot">
-        <span>Europe4strays · <span data-i18n="footNgo">registered Romanian NGO</span> · Bizighești, Vrancea</span>
+        <span>Europe4strays · <span data-i18n="footNgo">registered Romanian NGO</span> · Movilița, Vrancea</span>
         <span>IBAN RO91BTRLEURCRT0409910001</span>
       </footer>
     </div>
@@ -559,9 +564,10 @@
 
 </main>
 
-<script src="scrollcraft.js?v=20260921a"></script>
-<script src="i18n.js?v=20260921a"></script>
-<script src="site.js?v=20260921a"></script>
+<script src="scrollcraft.js?v=20260922a"></script>
+<script src="i18n.js?v=20260922a"></script>
+<script src="embeds.js?v=20260922a"></script>
+<script src="site.js?v=20260922a"></script>
 <script>ScrollCraft.mount(document.body);</script>
 </body>
 </html>
