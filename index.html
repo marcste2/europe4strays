@@ -8,9 +8,9 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preload" href="fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/archivo-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="fonts.css?v=20260923a">
-<link rel="stylesheet" href="scrollcraft.css?v=20260923a">
-<link rel="stylesheet" href="site.css?v=20260923a">
+<link rel="stylesheet" href="fonts.css?v=20260925a">
+<link rel="stylesheet" href="scrollcraft.css?v=20260925a">
+<link rel="stylesheet" href="site.css?v=20260925a">
 <style>
   :root {
     --sc-canvas:     #E9F7F9;
@@ -181,7 +181,7 @@
   @media (max-width: 860px) { .help-grid { grid-template-columns: 1fr; } }
 
   /* ============ colophon ============ */
-  .colophon-stage { display: grid; place-content: center; text-align: center; gap: var(--sc-4); padding: 0 var(--sc-gutter); }
+  .colophon-stage { display: grid; place-content: center; text-align: center; gap: var(--sc-4); padding: 0 var(--sc-gutter) 5.5rem; }
   .colophon-heart { width: min(46vh, 78vw); margin: 0 auto; }
   .colophon-heart svg { width: 100%; height: auto; display: block; }
   .colophon-line { font-family: var(--sc-font-display); font-size: clamp(1.5rem, 3.4vw, 2.4rem); font-weight: 520; max-width: 26ch; margin: 0 auto; text-wrap: balance; }
@@ -192,9 +192,20 @@
   .colophon-actions .soc svg { width: 1.35rem; height: 1.35rem; }
   .colophon-foot a { pointer-events: auto; color: inherit; text-decoration: underline; text-underline-offset: .2em; }
   .colophon-foot { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--sc-4) var(--sc-gutter); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); pointer-events: none; }
+  @media (max-height: 720px) and (min-width: 861px) {
+    .colophon-heart { width: min(34vh, 52vw); }
+    .colophon-stage { gap: var(--sc-2); padding-bottom: 4.6rem; }
+    .colophon-line { font-size: clamp(1.15rem, 2.4vw, 1.7rem); }
+  }
+  @media (max-height: 560px) and (min-width: 861px) {
+    .colophon-heart { width: min(24vh, 38vw); }
+    .colophon-stage { gap: var(--sc-1); padding-bottom: 4rem; }
+    .colophon-line { font-size: 1.05rem; }
+    .colophon-cta { font-size: var(--sc-t-sm); }
+  }
   @media (max-width: 860px) {
-    .colophon-stage { gap: var(--sc-3); padding-top: 8.5rem; padding-bottom: 6rem; }
-    .colophon-heart { width: min(30vh, 60vw); }
+    .colophon-stage { gap: var(--sc-3); padding-top: 6.5rem; padding-bottom: 8.2rem; }
+    .colophon-heart { width: min(26vh, 50vw); }
     .colophon-line { font-size: 1.3rem; }
     .colophon-cta { font-size: var(--sc-t-base); }
     .colophon-foot { flex-direction: column; gap: .2rem; align-items: center; text-align: center; padding-bottom: .9rem; }
@@ -557,8 +568,7 @@
         </p>
       </div>
       <footer class="colophon-foot">
-        <span>Europe4strays · <span data-i18n="footNgo">registered Romanian NGO</span> · Movilița, Vrancea</span>
-        <span>IBAN RO91BTRLEURCRT0409910001</span>
+        <span>Europe4strays · <span data-i18n="footNgo">registered Romanian NGO</span> · Movilița, Vrancea · IBAN RO91BTRLEURCRT0409910001</span>
         <span class="lg-foot-links"><a href="impressum.html" data-i18n="navImprint">Legal notice</a> · <a href="datenschutz.html" data-i18n="navPrivacy">Privacy policy</a></span>
       </footer>
     </div>
@@ -566,10 +576,10 @@
 
 </main>
 
-<script src="scrollcraft.js?v=20260923a"></script>
-<script src="i18n.js?v=20260923a"></script>
-<script src="embeds.js?v=20260923a"></script>
-<script src="site.js?v=20260923a"></script>
+<script src="scrollcraft.js?v=20260925a"></script>
+<script src="i18n.js?v=20260925a"></script>
+<script src="embeds.js?v=20260925a"></script>
+<script src="site.js?v=20260925a"></script>
 <script>ScrollCraft.mount(document.body);</script>
 </body>
 </html>
