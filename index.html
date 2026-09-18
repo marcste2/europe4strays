@@ -8,9 +8,9 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preload" href="fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/archivo-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="fonts.css?v=20260927a">
-<link rel="stylesheet" href="scrollcraft.css?v=20260927a">
-<link rel="stylesheet" href="site.css?v=20260927a">
+<link rel="stylesheet" href="fonts.css?v=20260928a">
+<link rel="stylesheet" href="scrollcraft.css?v=20260928a">
+<link rel="stylesheet" href="site.css?v=20260928a">
 <style>
   :root {
     --sc-canvas:     #E9F7F9;
@@ -63,7 +63,7 @@
   .title-page .donate-row { position: relative; margin: .4rem 0 .2rem; }
   .title-page .donate-row .donate-btn { font-size: var(--sc-t-base); padding: .78rem 1.35rem; }
   .title-place { color: var(--sc-ink-soft); font-size: var(--sc-t-sm); letter-spacing: .06em; }
-  /* Mirela's two photos: loose prints on the heart, next to the name */
+  /* Mirela's two photos: loose prints between the name and the club heart */
   .title-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.2rem; }
   .title-photos { position: relative; width: min(100%, 27rem); aspect-ratio: 5 / 4; margin: .4rem auto 0; }
   .tp-card { position: absolute; margin: 0; width: 54%; aspect-ratio: 3 / 4; padding: .45rem .45rem 1.3rem; background: #fff; border-radius: 4px; box-shadow: 0 18px 38px -14px rgba(12, 50, 71, .42), 0 2px 6px rgba(12, 50, 71, .12); transition: transform 260ms var(--sc-ease-out); }
@@ -72,12 +72,14 @@
   .tp-card--b { right: 0; bottom: 0; z-index: 1; transform: rotate(3.5deg); }
   .tp-card--a:hover { transform: rotate(-2.5deg) translateY(-4px); }
   .tp-card--b:hover { transform: rotate(1.5deg) translateY(-4px); }
+  /* desktop: name | photos in the middle | the club heart, left free so it stays readable */
   @media (min-width: 1024px) {
-    .title-page .sc-wrap.title-grid { max-width: 78rem; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: center; gap: clamp(2rem, 4vw, 4.5rem); }
-    .title-grid .title-name { font-size: clamp(3.1rem, 6.4vw, 6.6rem); }
-    .title-photos { width: 100%; aspect-ratio: 1 / 1.1; margin: 0; }
-    .tp-card { width: 60%; padding: .55rem .55rem 1.6rem; }
+    .title-page .sc-wrap.title-grid { max-width: 86rem; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, .8fr); align-items: center; gap: clamp(1.6rem, 3vw, 3rem); }
+    .title-grid .title-name { font-size: clamp(3.1rem, 5.9vw, 5.6rem); }
+    .title-photos { width: 100%; aspect-ratio: 1 / 1.12; margin: 0; }
+    .tp-card { width: 64%; padding: .55rem .55rem 1.6rem; }
     .tp-card--a { top: 2%; }
+    .title-page::before { background-position: right 4% center; background-size: auto min(58vh, 34vw); opacity: .16; }
   }
   /* "Europe4strays" cannot break; below ~360px it would run past the edge */
   @media (max-width: 360px) {
@@ -634,10 +636,10 @@
 
 </main>
 
-<script src="scrollcraft.js?v=20260927a"></script>
-<script src="i18n.js?v=20260927a"></script>
-<script src="embeds.js?v=20260927a"></script>
-<script src="site.js?v=20260927a"></script>
+<script src="scrollcraft.js?v=20260928a"></script>
+<script src="i18n.js?v=20260928a"></script>
+<script src="embeds.js?v=20260928a"></script>
+<script src="site.js?v=20260928a"></script>
 <script>ScrollCraft.mount(document.body);</script>
 </body>
 </html>
