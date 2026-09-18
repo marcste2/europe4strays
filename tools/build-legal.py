@@ -116,10 +116,10 @@ add("dpTitle", "Privacy policy · Europe4strays", "Datenschutzerklärung · Euro
 add("dpH1", "Privacy policy", "Datenschutzerklärung",
     "Informativa sulla privacy", "Politica de confidențialitate")
 add("dpLead",
-    "Protecting your personal data matters to us. We treat personal data confidentially and in accordance with the law, in particular the EU General Data Protection Regulation (GDPR).",
-    "Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Wir behandeln personenbezogene Daten vertraulich und nach den gesetzlichen Vorschriften, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO).",
-    "La protezione dei vostri dati personali ci sta a cuore. Trattiamo i dati personali in modo riservato e secondo le disposizioni di legge, in particolare il Regolamento generale UE sulla protezione dei dati (GDPR).",
-    "Protecția datelor dumneavoastră personale este importantă pentru noi. Tratăm datele personale confidențial și în conformitate cu legea, în special cu Regulamentul general UE privind protecția datelor (GDPR).")
+    "Protecting your personal data matters to us. We treat personal data confidentially and in accordance with the law: above all the EU General Data Protection Regulation (GDPR), which applies directly in Romania, and the Romanian laws that complement it, Legea nr. 190/2018 and Legea nr. 506/2004.",
+    "Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Wir behandeln personenbezogene Daten vertraulich und nach den gesetzlichen Vorschriften: vor allem nach der EU-Datenschutz-Grundverordnung (DSGVO), die in Rumänien unmittelbar gilt, und nach den rumänischen Gesetzen, die sie ergänzen, Legea Nr. 190/2018 und Legea Nr. 506/2004.",
+    "La protezione dei vostri dati personali ci sta a cuore. Trattiamo i dati personali in modo riservato e secondo la legge: soprattutto il Regolamento generale UE sulla protezione dei dati (GDPR), direttamente applicabile in Romania, e le leggi romene che lo integrano, Legea nr. 190/2018 e Legea nr. 506/2004.",
+    "Protecția datelor dumneavoastră personale este importantă pentru noi. Tratăm datele personale confidențial și în conformitate cu legea: în primul rând cu Regulamentul general UE privind protecția datelor (GDPR), aplicabil direct în România, și cu legile românești care îl completează, Legea nr. 190/2018 și Legea nr. 506/2004.")
 
 add("dp1T", "1. The short version", "1. Das Wichtigste vorweg",
     "1. In breve", "1. Pe scurt")
@@ -231,10 +231,10 @@ add("dp4l",
     "(la voce e4s-lang nella memoria locale del browser). Contiene soltanto quale delle quattro lingue avete scelto, per esempio „de“. Non lascia mai il vostro dispositivo, non contiene alcun identificativo e serve solo a mostrarvi il sito nella stessa lingua alla visita successiva.",
     "(intrarea e4s-lang în memoria locală a browserului). Conține doar care dintre cele patru limbi ați ales, de exemplu „de”. Nu părăsește niciodată dispozitivul dumneavoastră, nu conține niciun identificator și există doar pentru ca site-ul să se deschidă în aceeași limbă la următoarea vizită.")
 add("dp4b",
-    "This is storage strictly necessary for a service you explicitly requested and therefore requires no consent under § 25(2) no. 2 TDDDG (Germany) and § 165(3) TKG 2021 (Austria). You can delete the entry at any time by clearing this site's data in your browser.",
-    "Das ist eine technisch erforderliche Speicherung für einen von Ihnen ausdrücklich gewünschten Dienst und deshalb nach § 25 Abs. 2 Nr. 2 TDDDG (Deutschland) bzw. § 165 Abs. 3 TKG 2021 (Österreich) nicht einwilligungspflichtig. Sie können den Eintrag jederzeit löschen, indem Sie in Ihrem Browser die Websitedaten für diese Seite entfernen.",
-    "Si tratta di una memorizzazione tecnicamente necessaria per un servizio da voi espressamente richiesto e pertanto non richiede consenso ai sensi del § 25, comma 2, n. 2 TDDDG (Germania) e del § 165, comma 3 TKG 2021 (Austria). Potete cancellare la voce in qualsiasi momento eliminando i dati del sito nel vostro browser.",
-    "Este o stocare strict necesară pentru un serviciu solicitat expres de dumneavoastră și, prin urmare, nu necesită consimțământ conform § 25 alin. 2 nr. 2 TDDDG (Germania) și § 165 alin. 3 TKG 2021 (Austria). Puteți șterge intrarea oricând, eliminând datele acestui site din browserul dumneavoastră.")
+    "This is storage strictly necessary for a service you explicitly requested and therefore requires no consent: under Art. 5(3) of the EU ePrivacy Directive 2002/58/EC, which Romania implements in Art. 4(5) and (6) of Legea nr. 506/2004, and likewise under § 25(2) no. 2 TDDDG for visitors from Germany and § 165(3) TKG 2021 for visitors from Austria. You can delete the entry at any time by clearing this site's data in your browser.",
+    "Das ist eine technisch erforderliche Speicherung für einen von Ihnen ausdrücklich gewünschten Dienst und deshalb nicht einwilligungspflichtig: nach Art. 5 Abs. 3 der EU-ePrivacy-Richtlinie 2002/58/EG, in Rumänien umgesetzt in Art. 4 Abs. 5 und 6 Legea Nr. 506/2004, und ebenso nach § 25 Abs. 2 Nr. 2 TDDDG für Besucher aus Deutschland und § 165 Abs. 3 TKG 2021 für Besucher aus Österreich. Sie können den Eintrag jederzeit löschen, indem Sie in Ihrem Browser die Websitedaten für diese Seite entfernen.",
+    "Si tratta di una memorizzazione tecnicamente necessaria per un servizio da voi espressamente richiesto e pertanto non richiede consenso: ai sensi dell'art. 5, par. 3 della direttiva UE ePrivacy 2002/58/CE, recepita in Romania dall'art. 4, commi 5 e 6 della Legea nr. 506/2004, e allo stesso modo del § 25, comma 2, n. 2 TDDDG per i visitatori dalla Germania e del § 165, comma 3 TKG 2021 per quelli dall'Austria. Potete cancellare la voce in qualsiasi momento eliminando i dati del sito nel vostro browser.",
+    "Este o stocare strict necesară pentru un serviciu solicitat expres de dumneavoastră și, prin urmare, nu necesită consimțământ: conform art. 5 alin. (3) din Directiva UE ePrivacy 2002/58/CE, transpusă în România prin art. 4 alin. (5) și (6) din Legea nr. 506/2004, și la fel conform § 25 alin. 2 nr. 2 TDDDG pentru vizitatorii din Germania și § 165 alin. 3 TKG 2021 pentru cei din Austria. Puteți șterge intrarea oricând, eliminând datele acestui site din browserul dumneavoastră.")
 
 add("dp5T", "5. Fonts and maps are hosted by us", "5. Schriften und Karten liegen bei uns",
     "5. Caratteri e mappe sono ospitati da noi", "5. Fonturile și hărțile sunt găzduite de noi")
@@ -328,6 +328,8 @@ add("dp7c",
     "Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland; Muttergesellschaft Google LLC, USA, zertifiziert unter dem EU-U.S. Data Privacy Framework. Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO, die Sie mit dem Klick auf den Play-Knopf erteilen. Sie können diese Einwilligung jederzeit widerrufen, indem Sie die Seite neu laden und das Video nicht abspielen. Näheres in der",
     "Fornitore: Google Ireland Limited, Gordon House, Barrow Street, Dublino 4, Irlanda; società madre Google LLC, USA, certificata secondo l'EU-U.S. Data Privacy Framework. La base giuridica è il vostro consenso ai sensi dell'art. 6, par. 1, lett. a GDPR, che date cliccando sul pulsante play. Potete revocarlo in qualsiasi momento ricaricando la pagina e non riproducendo il video. Maggiori dettagli nell'",
     "Furnizor: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irlanda; societatea-mamă Google LLC, SUA, certificată conform EU-U.S. Data Privacy Framework. Baza juridică este consimțământul dumneavoastră conform art. 6 alin. 1 lit. a GDPR, pe care îl acordați prin clic pe butonul de play. Îl puteți retrage oricând reîncărcând pagina și nedând redare videoclipului. Mai multe detalii în")
+add("dpPolPl", "Privacy policy:", "Datenschutzerklärung:",
+    "Informativa sulla privacy:", "Politica de confidențialitate:")
 add("dp7Link", "Google privacy policy", "Datenschutzerklärung von Google",
     "informativa sulla privacy di Google", "politica de confidențialitate a Google")
 
@@ -417,12 +419,17 @@ def plink(k, href, klink, tail=".", extra=""):
     return ('    <p><span data-i18n="%s">%s</span> <a href="%s"%s data-i18n="%s">%s</a>%s</p>'
             % (k, txt(k), href, extra, klink, txt(klink), tail))
 
+def pol(*links):
+    """a 'Privacy policy: <a>Provider</a> · <a>Provider</a>' line under a provider"""
+    a = " · ".join('<a href="%s" target="_blank" rel="noopener">%s</a>' % (u, n) for n, u in links)
+    return '    <p class="lg-pol"><span data-i18n="dpPolPl">%s</span> %s</p>' % (txt("dpPolPl"), a)
+
 def para_pair(kt, k):
     return ('    <p><strong data-i18n="%s">%s</strong> <span data-i18n="%s">%s</span></p>'
             % (kt, txt(kt), k, txt(k)))
 
 ADDR_DE = ('      <p class="lg-addr">\n'
-           '        <strong>Asociația pentru protecția animalelor Europe4Strays</strong><br>\n'
+           '        <strong>Asociația pentru Protecția Animalelor „Europe4Strays”</strong><br>\n'
            '        Strada Mareșal Constantin Prezan nr. 10<br>\n'
            '        627210 Movilița, Județul Vrancea<br>\n'
            '        România\n'
@@ -494,12 +501,21 @@ DATENSCHUTZ_BODY = "\n".join([
     h("h2", "dp6T"),
     h("p", "dp6a"),
     h("h3", "dp6bT"), h("p", "dp6b"),
+    pol(("PayPal", "https://www.paypal.com/de/legalhub/paypal/privacy-full")),
     h("h3", "dp6cT"), h("p", "dp6c"),
+    pol(("Teaming", "https://www.teaming.net/condiciones-legales/2/proteccion-datos")),
     h("h3", "dp6dT"), h("p", "dp6d"),
+    pol(("Amazon", "https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010")),
     h("h3", "dp6eT"), h("p", "dp6e"),
+    pol(("Meta (Facebook)", "https://www.facebook.com/privacy/policy/"),
+        ("Instagram", "https://privacycenter.instagram.com/policy")),
     h("h3", "dp6fT"), h("p", "dp6f"),
+    pol(("Tierschutzgruppe Herzensmenschen", "https://tierschutzgruppe-herzensmenschen.de/datenschutz/")),
     h("h3", "dp6gT"), h("p", "dp6g"),
+    pol(("Hunderunde", "https://hunderunde.shop/policies/privacy-policy")),
     h("h3", "dp6hT"), h("p", "dp6h"),
+    pol(("Google", "https://policies.google.com/privacy"),
+        ("OpenStreetMap", "https://osmfoundation.org/wiki/Privacy_Policy")),
 
     h("h2", "dp7T"),
     h("p", "dp7a"),

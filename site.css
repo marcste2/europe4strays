@@ -101,6 +101,7 @@
 .lg-card > :last-child { margin-bottom: .75rem; }
 .lg-addr { line-height: 1.75; }
 .lg-note { font-size: var(--sc-t-xs); color: var(--sc-ink-soft); line-height: 1.6; margin-top: 1.8rem; }
+.lg-body p.lg-pol { font-size: var(--sc-t-xs); color: var(--sc-ink-soft); margin: -.4em 0 1.1em; }
 .lg-foot { border-top: 1px solid var(--sc-hairline-strong); max-width: 46rem; margin: 0 auto; padding: 2rem var(--sc-gutter) 3rem; display: flex; justify-content: space-between; gap: .6rem 1rem; flex-wrap: wrap; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
 .lg-foot-links a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
 .lg-foot-links a:hover { color: var(--sc-accent); }

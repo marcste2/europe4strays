@@ -183,6 +183,40 @@
     updArrows();
   }
 
+  /* ---------- ch4 build carousel: arrows, swipe, counter, caption ---------- */
+  document.querySelectorAll("[data-build-rail]").forEach(function (wrap) {
+    var track = wrap.querySelector(".build-track");
+    var slides = track.querySelectorAll(".build-slide");
+    var prev = wrap.querySelector(".rail-arrow--prev");
+    var next = wrap.querySelector(".rail-arrow--next");
+    var idx = wrap.querySelector(".build-i");
+    var cap = wrap.querySelector(".build-cap");
+    wrap.querySelector(".build-n").textContent = slides.length;
+    var at = function () { return Math.round(track.scrollLeft / Math.max(1, track.clientWidth)); };
+    var go = function (d) {
+      var i = Math.max(0, Math.min(slides.length - 1, at() + d));
+      track.scrollTo({ left: i * track.clientWidth, behavior: reduced ? "auto" : "smooth" });
+    };
+    var upd = function () {
+      var i = at();
+      idx.textContent = i + 1;
+      prev.toggleAttribute("hidden", i <= 0);
+      next.toggleAttribute("hidden", i >= slides.length - 1);
+      var fc = slides[i] && slides[i].querySelector("figcaption");
+      cap.textContent = fc ? fc.textContent : "";
+    };
+    prev.addEventListener("click", function () { go(-1); });
+    next.addEventListener("click", function () { go(1); });
+    track.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+    });
+    track.addEventListener("scroll", function () { requestAnimationFrame(upd); }, { passive: true });
+    window.addEventListener("resize", upd);
+    document.addEventListener("e4s:lang", upd);
+    upd();
+  });
+
   /* ---------- deep links: re-aim after the engine grows the pinned acts ---------- */
   if (location.hash) {
     var hashTarget = null;
