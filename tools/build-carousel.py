@@ -1,48 +1,78 @@
 # -*- coding: utf-8 -*-
 """Fill the chapter-4 photo carousel ("Built so far") from a folder.
 
-Put photos into photos/aufbau/ (any jpg/png/webp/heic from WhatsApp is fine),
-then run:
+Put photos into photos/aufbau/ and name them in the order they should appear
+(01-..., 02-..., the file name is the order). Then run:
     python tools/build-carousel.py
 
-Each photo is resized and saved as assets/build/<name>.webp, and the slides
-between the build-slides markers in index.html are rewritten: the two captioned
-photos (the concrete base, then the finished shell) first, then the folder's
-photos in file-name order. Running it again only converts new photos.
+Every photo is shown whole, never cropped: portrait and landscape shots sit on a
+softly blurred copy of themselves. Photos are resized and saved as
+assets/build/<name>.webp; the slides between the build-slides markers in
+index.html are rewritten. Running it again only converts new photos.
 """
 import glob
 import io
 import os
 import re
+import shutil
 import sys
 
 from PIL import Image, ImageOps
 
 SRC = "photos/aufbau"
 OUT = "assets/build"
-MAX_W, MAX_H = 1080, 1440      # 3:4 frame, 2x for sharp phones
+MAX_SIDE = 1400        # longest side; the frame is about 560 css px, so 2x is plenty
 
-FIXED = [
-    ('assets/ch4-slab.webp', "The freshly poured concrete base of the second building, timber stacked behind it.", "wipeA", "May 2020 · a concrete base"),
-    ('assets/ch4-build.webp', "The finished shell of the second building standing under a blue sky.", "wipeB", "months later · a building"),
-]
-ALT = "The Cheerful Kindergarten in its early days: the yard, the buildings and the dogs."
+# captions that are translated (i18n keys), by file name without extension
+CAPTIONS = {
+    "04-bodenplatte": ("wipeA", "May 2020 · a concrete base"),
+    "08-rohbau": ("wipeB", "months later · a building"),
+}
+ALTS = {
+    "01-grundstueck": "The plot in the early days: one building far off across a green field.",
+    "02-zaun": "The new fence around the plot, the first building in the distance.",
+    "03-bodenplatte-vorne": "A fresh concrete base in front of the first building under a stormy sky.",
+    "04-bodenplatte": "The freshly poured concrete base of the second building, timber stacked behind it.",
+    "05-waende": "The walls of the second building standing, a ladder against the side.",
+    "06-auf-dem-dach": "A helper on the roof of the new building.",
+    "07-dachdecken": "Two helpers roofing the building, timber piled in front.",
+    "08-rohbau": "The finished shell of the second building standing under a blue sky.",
+    "09-fertig-blau-weiss": "The finished blue and white building under a clear sky.",
+    "10-stahlgeruest": "The steel frame of another building rising next to the long white one.",
+    "11-stahlgeruest-nah": "The steel frame and blue wall panels up close.",
+    "12-geruest-mit-hunden": "Dogs on the gravel in front of the steel frame.",
+    "13-abends-im-gras": "Dogs in the tall grass in the evening light, the building behind them.",
+    "14-rotes-dach": "The building with its red roof edge under white clouds, dogs in the grass.",
+    "15-rotes-dach-hunde": "Dogs gathered in front of the building with the red roof edge.",
+    "16-am-container": "A helper with dogs beside the yellow container.",
+    "17-hof-mit-brennholz": "The yard with firewood stacked by the building and dogs everywhere.",
+    "18-kieshof": "A fenced gravel yard full of dogs.",
+    "19-das-rudel": "A big pack of dogs in the yard in front of the blue building.",
+    "20-das-grosse-rudel": "Dozens of dogs crowding towards the camera in the yard.",
+    "21-in-der-grube": "Young dogs playing in a muddy pit.",
+}
+DEFAULT_ALT = "The Cheerful Kindergarten in its early days."
 
 os.makedirs(OUT, exist_ok=True)
 files = sorted(f for f in glob.glob(os.path.join(SRC, "*"))
                if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp", ".heic")))
+if not files:
+    sys.exit("no photos in " + SRC)
 
 slides = []
-for i, f in enumerate(files, 1):
-    base = re.sub(r"[^a-z0-9]+", "-", os.path.splitext(os.path.basename(f))[0].lower()).strip("-")[:48]
-    dst = os.path.join(OUT, "%02d-%s.webp" % (i, base))
+for f in files:
+    stem = re.sub(r"[^a-z0-9-]+", "-", os.path.splitext(os.path.basename(f))[0].lower()).strip("-")
+    dst = os.path.join(OUT, stem + ".webp")
     if not os.path.exists(dst):
         im = ImageOps.exif_transpose(Image.open(f)).convert("RGB")
-        im.thumbnail((MAX_W, MAX_H), Image.LANCZOS)
-        im.save(dst, "WEBP", quality=80, method=6)
-        print("converted  %s -> %s  %dx%d" % (os.path.basename(f), dst, im.width, im.height))
+        if max(im.size) > MAX_SIDE or not f.lower().endswith(".webp"):
+            im.thumbnail((MAX_SIDE, MAX_SIDE), Image.LANCZOS)
+            im.save(dst, "WEBP", quality=80, method=6)
+        else:
+            shutil.copyfile(f, dst)
+        print("converted  %-34s -> %s  %dx%d" % (os.path.basename(f), dst, im.width, im.height))
     w, h = Image.open(dst).size
-    slides.append((dst.replace(os.sep, "/"), w, h))
+    slides.append((stem, dst.replace(os.sep, "/"), w, h))
 
 html = io.open("index.html", encoding="utf-8").read()
 start = "<!-- build-slides:start (generated by tools/build-carousel.py) -->"
@@ -52,14 +82,16 @@ if start not in html or end not in html:
 
 ind = " " * 18
 rows = []
-for src, alt, key, cap in FIXED:
-    rows.append('%s<figure class="build-slide"><img src="%s" width="720" height="960" alt="%s" loading="lazy">'
-                '<figcaption data-i18n="%s">%s</figcaption></figure>' % (ind, src, alt, key, cap))
-for src, w, h in slides:
-    rows.append('%s<figure class="build-slide"><img src="%s" width="%d" height="%d" alt="%s" loading="lazy"></figure>'
-                % (ind, src, w, h, ALT))
+for stem, src, w, h in slides:
+    cap = ""
+    if stem in CAPTIONS:
+        key, text = CAPTIONS[stem]
+        cap = '<figcaption data-i18n="%s">%s</figcaption>' % (key, text)
+    rows.append('%s<figure class="build-slide"><img class="build-bg" src="%s" alt="" aria-hidden="true" loading="lazy">'
+                '<img src="%s" width="%d" height="%d" alt="%s" loading="lazy">%s</figure>'
+                % (ind, src, src, w, h, ALTS.get(stem, DEFAULT_ALT), cap))
 
 block = start + "\n" + "\n".join(rows) + "\n" + ind + end
 html = re.sub(re.escape(start) + r".*?" + re.escape(end), lambda m: block, html, count=1, flags=re.S)
 io.open("index.html", "w", encoding="utf-8", newline="\n").write(html)
-print("index.html: %d slides (%d fixed + %d from %s)" % (len(rows), len(FIXED), len(slides), SRC))
+print("index.html: %d slides from %s" % (len(rows), SRC))

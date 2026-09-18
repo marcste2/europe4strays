@@ -8,9 +8,9 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preload" href="fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/archivo-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="fonts.css?v=20260926a">
-<link rel="stylesheet" href="scrollcraft.css?v=20260926a">
-<link rel="stylesheet" href="site.css?v=20260926a">
+<link rel="stylesheet" href="fonts.css?v=20260927a">
+<link rel="stylesheet" href="scrollcraft.css?v=20260927a">
+<link rel="stylesheet" href="site.css?v=20260927a">
 <style>
   :root {
     --sc-canvas:     #E9F7F9;
@@ -63,6 +63,22 @@
   .title-page .donate-row { position: relative; margin: .4rem 0 .2rem; }
   .title-page .donate-row .donate-btn { font-size: var(--sc-t-base); padding: .78rem 1.35rem; }
   .title-place { color: var(--sc-ink-soft); font-size: var(--sc-t-sm); letter-spacing: .06em; }
+  /* Mirela's two photos: loose prints on the heart, next to the name */
+  .title-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.2rem; }
+  .title-photos { position: relative; width: min(100%, 27rem); aspect-ratio: 5 / 4; margin: .4rem auto 0; }
+  .tp-card { position: absolute; margin: 0; width: 54%; aspect-ratio: 3 / 4; padding: .45rem .45rem 1.3rem; background: #fff; border-radius: 4px; box-shadow: 0 18px 38px -14px rgba(12, 50, 71, .42), 0 2px 6px rgba(12, 50, 71, .12); transition: transform 260ms var(--sc-ease-out); }
+  .tp-card img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 2px; }
+  .tp-card--a { left: 0; top: 0; transform: rotate(-4.5deg); }
+  .tp-card--b { right: 0; bottom: 0; z-index: 1; transform: rotate(3.5deg); }
+  .tp-card--a:hover { transform: rotate(-2.5deg) translateY(-4px); }
+  .tp-card--b:hover { transform: rotate(1.5deg) translateY(-4px); }
+  @media (min-width: 1024px) {
+    .title-page .sc-wrap.title-grid { max-width: 78rem; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: center; gap: clamp(2rem, 4vw, 4.5rem); }
+    .title-grid .title-name { font-size: clamp(3.1rem, 6.4vw, 6.6rem); }
+    .title-photos { width: 100%; aspect-ratio: 1 / 1.1; margin: 0; }
+    .tp-card { width: 60%; padding: .55rem .55rem 1.6rem; }
+    .tp-card--a { top: 2%; }
+  }
   /* "Europe4strays" cannot break; below ~360px it would run past the edge */
   @media (max-width: 360px) {
     .title-name { font-size: clamp(2.4rem, 13vw, 3.1rem); }
@@ -142,11 +158,13 @@
   /* chapter 4: one photo at a time, arrows or swipe; the page never moves under the reader */
   .build-rail { position: relative; }
   .build-frame { position: relative; }
-  .build-track { display: flex; aspect-ratio: 3 / 4; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; border-radius: var(--sc-r-md); box-shadow: var(--sc-e3); background: var(--sc-surface); }
+  .build-track { display: flex; aspect-ratio: 1 / 1; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; border-radius: var(--sc-r-md); box-shadow: var(--sc-e3); background: var(--sc-surface); }
   .build-track::-webkit-scrollbar { display: none; }
   .build-track:focus-visible { outline: 2px solid var(--sc-accent); outline-offset: 3px; }
-  .build-slide { flex: 0 0 100%; margin: 0; scroll-snap-align: start; scroll-snap-stop: always; }
-  .build-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .build-slide { position: relative; flex: 0 0 100%; margin: 0; overflow: hidden; scroll-snap-align: start; scroll-snap-stop: always; }
+  /* portrait and landscape shots alike are shown whole, on a soft copy of themselves */
+  .build-slide img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; display: block; }
+  .build-slide .build-bg { position: absolute; inset: -6%; z-index: 0; width: 112%; height: 112%; object-fit: cover; filter: blur(22px) saturate(1.1) brightness(.92); }
   .build-slide figcaption { display: none; }
   .build-frame .rail-arrow--prev { left: .8rem; }
   .build-frame .rail-arrow--next { right: .8rem; }
@@ -299,7 +317,8 @@
   <!-- TITLE PAGE -->
   <section class="chapter ch-light" data-chapter="" data-chapter-key="ch0">
     <div class="title-page">
-      <div class="sc-wrap sc-stack" data-sc-in data-sc-stagger="80">
+      <div class="sc-wrap title-grid">
+      <div class="sc-stack" data-sc-in data-sc-stagger="80">
         <p class="title-kicker" data-i18n="kicker">A Romanian dog rescue, run by one woman</p>
         <h1 class="title-name">Europe<em>4</em>strays</h1>
         <p class="title-deck sc-body" data-i18n="deck">Building a better future for the stray dogs of Vrancea County: one rescue, one sterilization, one adoption at a time.</p>
@@ -315,6 +334,11 @@
           <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Visa, Mastercard, American Express, Discover, PayPal</span>
         </div>
         <p class="title-place">Movilița · Vrancea · Romania · <span data-i18n="since">since 2015</span></p>
+      </div>
+      <div class="title-photos" data-sc-in>
+        <figure class="tp-card tp-card--a"><img src="assets/hero-mirela-dogs.webp" width="900" height="1200" alt="Mirela taking a selfie in a corridor full of her dogs."></figure>
+        <figure class="tp-card tp-card--b"><img src="assets/hero-mirela-puppy.webp" width="900" height="1200" alt="Mirela laughing while a black and white puppy licks her face."></figure>
+      </div>
       </div>
     </div>
   </section>
@@ -479,8 +503,27 @@
               <div class="build-frame">
                 <div class="build-track" tabindex="0">
                   <!-- build-slides:start (generated by tools/build-carousel.py) -->
-                  <figure class="build-slide"><img src="assets/ch4-slab.webp" width="720" height="960" alt="The freshly poured concrete base of the second building, timber stacked behind it." loading="lazy"><figcaption data-i18n="wipeA">May 2020 · a concrete base</figcaption></figure>
-                  <figure class="build-slide"><img src="assets/ch4-build.webp" width="720" height="960" alt="The finished shell of the second building standing under a blue sky." loading="lazy"><figcaption data-i18n="wipeB">months later · a building</figcaption></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/01-grundstueck.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/01-grundstueck.webp" width="1179" height="752" alt="The plot in the early days: one building far off across a green field." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/02-zaun.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/02-zaun.webp" width="1179" height="862" alt="The new fence around the plot, the first building in the distance." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/03-bodenplatte-vorne.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/03-bodenplatte-vorne.webp" width="1179" height="828" alt="A fresh concrete base in front of the first building under a stormy sky." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/04-bodenplatte.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/04-bodenplatte.webp" width="720" height="960" alt="The freshly poured concrete base of the second building, timber stacked behind it." loading="lazy"><figcaption data-i18n="wipeA">May 2020 · a concrete base</figcaption></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/05-waende.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/05-waende.webp" width="1179" height="1362" alt="The walls of the second building standing, a ladder against the side." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/06-auf-dem-dach.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/06-auf-dem-dach.webp" width="1179" height="1362" alt="A helper on the roof of the new building." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/07-dachdecken.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/07-dachdecken.webp" width="1081" height="1400" alt="Two helpers roofing the building, timber piled in front." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/08-rohbau.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/08-rohbau.webp" width="720" height="960" alt="The finished shell of the second building standing under a blue sky." loading="lazy"><figcaption data-i18n="wipeB">months later · a building</figcaption></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/09-fertig-blau-weiss.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/09-fertig-blau-weiss.webp" width="1179" height="607" alt="The finished blue and white building under a clear sky." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/10-stahlgeruest.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/10-stahlgeruest.webp" width="1179" height="842" alt="The steel frame of another building rising next to the long white one." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/11-stahlgeruest-nah.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/11-stahlgeruest-nah.webp" width="1112" height="1400" alt="The steel frame and blue wall panels up close." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/12-geruest-mit-hunden.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/12-geruest-mit-hunden.webp" width="983" height="1400" alt="Dogs on the gravel in front of the steel frame." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/13-abends-im-gras.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/13-abends-im-gras.webp" width="1179" height="845" alt="Dogs in the tall grass in the evening light, the building behind them." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/14-rotes-dach.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/14-rotes-dach.webp" width="968" height="1400" alt="The building with its red roof edge under white clouds, dogs in the grass." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/15-rotes-dach-hunde.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/15-rotes-dach-hunde.webp" width="896" height="1400" alt="Dogs gathered in front of the building with the red roof edge." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/16-am-container.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/16-am-container.webp" width="924" height="1400" alt="A helper with dogs beside the yellow container." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/17-hof-mit-brennholz.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/17-hof-mit-brennholz.webp" width="1179" height="823" alt="The yard with firewood stacked by the building and dogs everywhere." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/18-kieshof.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/18-kieshof.webp" width="1179" height="836" alt="A fenced gravel yard full of dogs." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/19-das-rudel.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/19-das-rudel.webp" width="1179" height="830" alt="A big pack of dogs in the yard in front of the blue building." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/20-das-grosse-rudel.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/20-das-grosse-rudel.webp" width="1179" height="836" alt="Dozens of dogs crowding towards the camera in the yard." loading="lazy"></figure>
+                  <figure class="build-slide"><img class="build-bg" src="assets/build/21-in-der-grube.webp" alt="" aria-hidden="true" loading="lazy"><img src="assets/build/21-in-der-grube.webp" width="905" height="1400" alt="Young dogs playing in a muddy pit." loading="lazy"></figure>
                   <!-- build-slides:end -->
                 </div>
                 <button class="rail-arrow rail-arrow--prev" type="button" hidden><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-i18n="railPrev">Previous photos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6 8.5 12l6 6"/></svg></button>
@@ -591,10 +634,10 @@
 
 </main>
 
-<script src="scrollcraft.js?v=20260926a"></script>
-<script src="i18n.js?v=20260926a"></script>
-<script src="embeds.js?v=20260926a"></script>
-<script src="site.js?v=20260926a"></script>
+<script src="scrollcraft.js?v=20260927a"></script>
+<script src="i18n.js?v=20260927a"></script>
+<script src="embeds.js?v=20260927a"></script>
+<script src="site.js?v=20260927a"></script>
 <script>ScrollCraft.mount(document.body);</script>
 </body>
 </html>
