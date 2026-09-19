@@ -69,13 +69,14 @@ window.E4S_GALLERY = {
       "credit": "Tierschutzgruppe Herzensmenschen"
     },
     {
-      "src": "assets/partners/st-sassy.webp",
+      "src": "assets/partners/st-sassy-deck.webp",
       "year": "2025",
-      "cap": "Sassy on a Swedish trail",
-      "cap_de": "Sassy auf einem schwedischen Waldweg",
-      "cap_it": "Sassy su un sentiero svedese",
-      "cap_ro": "Sassy pe o potecă suedeză",
-      "credit": "Skayla Dog Rescue"
+      "cap": "Sassy, at home in Sweden",
+      "cap_de": "Sassy, zu Hause in Schweden",
+      "cap_it": "Sassy, a casa in Svezia",
+      "cap_ro": "Sassy, acasă în Suedia",
+      "credit": "Skayla Dog Rescue",
+      "pos": "center top"
     },
     {
       "src": "assets/partners/fr-sk1.webp",
