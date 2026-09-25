@@ -291,10 +291,10 @@ add("dp6fT", "e) Partner associations in Germany and Sweden",
     "e) Associazioni partner in Germania e Svezia",
     "e) Asociații partenere în Germania și Suedia")
 add("dp6f",
-    "For questions about adoption we link to the websites of our independent partner associations Tierschutzgruppe Herzensmenschen e. V. (Germany) and Skayla Dog Rescue (Sweden). As soon as you visit those sites, their own privacy policies apply.",
-    "Bei Fragen zur Adoption verlinken wir auf die Webseiten unserer selbstständigen Partnervereine Tierschutzgruppe Herzensmenschen e. V. (Deutschland) und Skayla Dog Rescue (Schweden). Sobald Sie diese Seiten besuchen, gelten die Datenschutzerklärungen der jeweiligen Vereine.",
-    "Per le domande sull'adozione rimandiamo ai siti delle nostre associazioni partner indipendenti Tierschutzgruppe Herzensmenschen e. V. (Germania) e Skayla Dog Rescue (Svezia). Appena visitate quei siti, valgono le loro informative sulla privacy.",
-    "Pentru întrebări despre adopție facem legătura cu site-urile asociațiilor noastre partenere independente Tierschutzgruppe Herzensmenschen e. V. (Germania) și Skayla Dog Rescue (Suedia). Imediat ce vizitați acele site-uri, se aplică politicile lor de confidențialitate.")
+    "For questions about adoption we link to the websites of our independent partner associations Tierschutzgruppe Herzensmenschen e. V. (Germany) and Skayla Dog Rescue (Sweden). As soon as you visit those sites, their own privacy policies apply.",
+    "Bei Fragen zur Adoption verlinken wir auf die Webseiten unserer selbstständigen Partnervereine Tierschutzgruppe Herzensmenschen e. V. (Deutschland) und Skayla Dog Rescue (Schweden). Sobald Sie diese Seiten besuchen, gelten die Datenschutzerklärungen der jeweiligen Vereine.",
+    "Per le domande sull'adozione rimandiamo ai siti delle nostre associazioni partner indipendenti Tierschutzgruppe Herzensmenschen e. V. (Germania) e Skayla Dog Rescue (Svezia). Appena visitate quei siti, valgono le loro informative sulla privacy.",
+    "Pentru întrebări despre adopție facem legătura cu site-urile asociațiilor noastre partenere independente Tierschutzgruppe Herzensmenschen e. V. (Germania) și Skayla Dog Rescue (Suedia). Imediat ce vizitați acele site-uri, se aplică politicile lor de confidențialitate.")
 add("dp6gT", "f) Hunderunde", "f) Hunderunde", "f) Hunderunde", "f) Hunderunde")
 add("dp6g",
     "We link to Hunderunde, who support us through the sale of dog food and accessories within animal welfare projects. They process your data when you visit their online shop on their own responsibility.",
@@ -510,7 +510,7 @@ DATENSCHUTZ_BODY = "\n".join([
     pol(("Meta (Facebook)", "https://www.facebook.com/privacy/policy/"),
         ("Instagram", "https://privacycenter.instagram.com/policy")),
     h("h3", "dp6fT"), h("p", "dp6f"),
-    pol(("Tierschutzgruppe Herzensmenschen", "https://tierschutzgruppe-herzensmenschen.de/datenschutz/")),
+    pol(("Tierschutzgruppe Herzensmenschen e. V.", "https://tierschutzgruppe-herzensmenschen.de/datenschutz/")),
     h("h3", "dp6gT"), h("p", "dp6g"),
     pol(("Hunderunde", "https://hunderunde.shop/policies/privacy-policy")),
     h("h3", "dp6hT"), h("p", "dp6h"),
@@ -543,9 +543,9 @@ def rewrite(path, h1_key, lead_key, title_key, body):
                 '    </div>\n'
                 '  </section>\n\n'
                 '  <div class="lg-body">\n\n%s\n\n  </div>\n' % (h1_key, txt(h1_key), lead_key, txt(lead_key), body))
-    s2 = re.sub(r'  <section class="lg-hero">.*?\n  </div>\n(?=</main>)', new_main, s, count=1, flags=re.S)
-    if s2 == s:
-        sys.exit("could not replace <main> content of " + path)
+    s2, n = re.subn(r'  <section class="lg-hero">.*?\n  </div>\n(?=</main>)', lambda m: new_main, s, count=1, flags=re.S)
+    if n != 1:
+        sys.exit("could not find the <main> content of " + path)
     s2 = re.sub(r"<title[^>]*>.*?</title>",
                 '<title data-i18n="%s">%s</title>' % (title_key, txt(title_key)), s2, count=1)
     io.open(path, "w", encoding="utf-8", newline="\n").write(s2)
