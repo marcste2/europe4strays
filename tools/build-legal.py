@@ -102,8 +102,8 @@ add("imPrivB",
     "Kurz gesagt: Diese Webseite setzt keine Cookies und lädt beim Aufrufen nichts von Servern Dritter.",
     "In breve: questo sito non usa cookie e all'apertura non carica nulla da server di terzi.",
     "Pe scurt: acest site nu folosește cookie-uri și, la deschidere, nu încarcă nimic de pe servere terțe.")
-add("imUpdated", "Last updated: September 2026", "Stand: September 2026",
-    "Ultimo aggiornamento: settembre 2026", "Ultima actualizare: septembrie 2026")
+add("imUpdated", "Last updated: October 2026", "Stand: Oktober 2026",
+    "Ultimo aggiornamento: ottobre 2026", "Ultima actualizare: octombrie 2026")
 add("lgAuth",
     "The German wording of this text is the authoritative one.",
     "Maßgeblich ist die deutsche Fassung dieses Textes.",
@@ -444,7 +444,7 @@ IMPRESSUM_BODY = "\n".join([
     '    </div>',
     h("h2", "imContactT"),
     labelled([("imLblEmail", '<a href="mailto:mirelamistodinis@gmail.com">mirelamistodinis@gmail.com</a>'),
-              ("imLblWeb", '<a href="https://stelzerweb.at/europe4strays/">stelzerweb.at/europe4strays</a>')]) ,
+              ("imLblWeb", '<a href="https://europe4strays.com/">europe4strays.com</a>')]) ,
     '    <ul><li>Facebook: <a href="https://www.facebook.com/europe4straysbyMM" target="_blank" rel="noopener">facebook.com/europe4straysbyMM</a></li></ul>',
     h("h2", "imRegT"),
     labelled([("imLblCourt", "Judecătoria Focșani, România"),
